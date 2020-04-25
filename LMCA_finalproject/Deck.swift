@@ -7,3 +7,21 @@
 //
 
 import Foundation
+class Deck{
+    var deck = [Card]()
+    init(){
+        let x = Card(value: 0, suit: "")
+        for num in x.getRanks(){
+            for suit in x.getSuits(){
+                let card = Card(value: num, suit: suit)
+                self.deck.append(card)
+            }
+        }
+    }
+    func shuffle(){
+        deck.shuffle()
+    }
+    func deal() -> Card{
+        return deck.popLast()!
+    }
+}
