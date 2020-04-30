@@ -1,5 +1,5 @@
 //
-//  chipGraphic.swift
+//  ChipGraphics.swift
 //  LMCA_finalproject
 //
 //  Created by Arjun Nagpal on 4/29/20.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class chipGraphic: UIView {
+class ChipGraphics: UIView {
 
     @IBInspectable var fillColor: UIColor = UIColor.black
     @IBInspectable var tabColor: UIColor = UIColor.white
@@ -31,11 +31,11 @@ class chipGraphic: UIView {
             path2.stroke()
         
         }
-        let path3 = UIBezierPath(ovalIn:CGRect(origin: CGPoint(x: bounds.width*3/16, y: bounds.height*3/16), size: CGSize(width: bounds.width*5/8, height: bounds.height*5/8)))
+        let path3 = UIBezierPath(ovalIn:CGRect(origin: CGPoint(x: bounds.width*1/5, y: bounds.height*1/5), size: CGSize(width: bounds.width*3/5, height: bounds.height*3/5)))
         tabColor.setFill()
         path3.fill()
         
-        let path4 = UIBezierPath(arcCenter: CGPoint(x: bounds.width/2, y: bounds.height/2), radius: bounds.width*68/200, startAngle: 0, endAngle: 2 * .pi, clockwise: true)
+        let path4 = UIBezierPath(arcCenter: CGPoint(x: bounds.width/2, y: bounds.height/2), radius: bounds.width*33/100, startAngle: 0, endAngle: 2 * .pi, clockwise: true)
         path4.lineWidth = 1
         path4.stroke()
         

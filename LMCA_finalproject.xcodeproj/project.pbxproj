@@ -10,7 +10,8 @@
 		D599A50D2454C9CB00AAA7FC /* MultiStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A50C2454C9CB00AAA7FC /* MultiStartViewController.swift */; };
 		D599A50F2454C9E500AAA7FC /* BlackJackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A50E2454C9E500AAA7FC /* BlackJackViewController.swift */; };
 		D599A53B245A5E5300AAA7FC /* SuitGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A53A245A5E5300AAA7FC /* SuitGraphics.swift */; };
-		D599A53D245A70AB00AAA7FC /* chipGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A53C245A70AB00AAA7FC /* chipGraphic.swift */; };
+		D599A53D245A70AB00AAA7FC /* ChipGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A53C245A70AB00AAA7FC /* ChipGraphics.swift */; };
+		D599A53F245A8D6800AAA7FC /* CardGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A53E245A8D6800AAA7FC /* CardGraphics.swift */; };
 		D9ECFE522457931E0029E57F /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECFE512457931E0029E57F /* RulesViewController.swift */; };
 		E20BA24624537E3C00E39FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA24524537E3C00E39FE3 /* AppDelegate.swift */; };
 		E20BA24824537E3C00E39FE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA24724537E3C00E39FE3 /* SceneDelegate.swift */; };
@@ -27,7 +28,8 @@
 		D599A50C2454C9CB00AAA7FC /* MultiStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiStartViewController.swift; sourceTree = "<group>"; };
 		D599A50E2454C9E500AAA7FC /* BlackJackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackViewController.swift; sourceTree = "<group>"; };
 		D599A53A245A5E5300AAA7FC /* SuitGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitGraphics.swift; sourceTree = "<group>"; };
-		D599A53C245A70AB00AAA7FC /* chipGraphic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chipGraphic.swift; sourceTree = "<group>"; };
+		D599A53C245A70AB00AAA7FC /* ChipGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipGraphics.swift; sourceTree = "<group>"; };
+		D599A53E245A8D6800AAA7FC /* CardGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGraphics.swift; sourceTree = "<group>"; };
 		D9ECFE512457931E0029E57F /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		E20BA24224537E3C00E39FE3 /* LMCA_finalproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMCA_finalproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20BA24524537E3C00E39FE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,13 +78,14 @@
 				E20BA24724537E3C00E39FE3 /* SceneDelegate.swift */,
 				E20BA24924537E3C00E39FE3 /* InitialViewController.swift */,
 				D599A50E2454C9E500AAA7FC /* BlackJackViewController.swift */,
-				D599A53C245A70AB00AAA7FC /* chipGraphic.swift */,
 				D599A50C2454C9CB00AAA7FC /* MultiStartViewController.swift */,
+				D9ECFE512457931E0029E57F /* RulesViewController.swift */,
 				E20BA25C2453889600E39FE3 /* Card.swift */,
 				E20BA25E245388A300E39FE3 /* Deck.swift */,
+				D599A53C245A70AB00AAA7FC /* ChipGraphics.swift */,
 				D599A53A245A5E5300AAA7FC /* SuitGraphics.swift */,
+				D599A53E245A8D6800AAA7FC /* CardGraphics.swift */,
 				E20BA24B24537E3C00E39FE3 /* Main.storyboard */,
-				D9ECFE512457931E0029E57F /* RulesViewController.swift */,
 				E20BA25124537E3D00E39FE3 /* Assets.xcassets */,
 				E20BA25324537E3D00E39FE3 /* LaunchScreen.storyboard */,
 				E20BA25624537E3D00E39FE3 /* Info.plist */,
@@ -166,10 +169,11 @@
 				D599A53B245A5E5300AAA7FC /* SuitGraphics.swift in Sources */,
 				E20BA25F245388A300E39FE3 /* Deck.swift in Sources */,
 				E20BA24A24537E3C00E39FE3 /* InitialViewController.swift in Sources */,
+				D599A53F245A8D6800AAA7FC /* CardGraphics.swift in Sources */,
 				E20BA24624537E3C00E39FE3 /* AppDelegate.swift in Sources */,
 				D9ECFE522457931E0029E57F /* RulesViewController.swift in Sources */,
 				E20BA25D2453889600E39FE3 /* Card.swift in Sources */,
-				D599A53D245A70AB00AAA7FC /* chipGraphic.swift in Sources */,
+				D599A53D245A70AB00AAA7FC /* ChipGraphics.swift in Sources */,
 				D599A50F2454C9E500AAA7FC /* BlackJackViewController.swift in Sources */,
 				E20BA24824537E3C00E39FE3 /* SceneDelegate.swift in Sources */,
 				E20BA25024537E3C00E39FE3 /* LMCA_finalproject.xcdatamodeld in Sources */,
@@ -317,8 +321,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LMCA_finalproject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,8 +340,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LMCA_finalproject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
