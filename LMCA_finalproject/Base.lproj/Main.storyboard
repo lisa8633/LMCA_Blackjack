@@ -41,7 +41,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="JWX-HW-4tm" kind="show" id="e3g-kA-3w4"/>
+                                    <segue destination="JWX-HW-4tm" kind="show" identifier="toSingle" id="e3g-kA-3w4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZL-TW-WBJ">
@@ -58,7 +58,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="MSo-Dk-uC5" kind="show" id="CPE-e3-wZF"/>
+                                    <segue destination="MSo-Dk-uC5" kind="show" identifier="toJoinMulti" id="CPE-e3-wZF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa6-tb-n6R">
@@ -77,7 +77,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="mif-Mp-9Ha" kind="show" id="t2p-8G-2QJ"/>
+                                    <segue destination="mif-Mp-9Ha" kind="show" identifier="toRules" id="t2p-8G-2QJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpT-I0-3aC">
@@ -127,8 +127,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Balance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvQ-M9-THw">
-                                <rect key="frame" x="174" y="837" width="66" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvQ-M9-THw">
+                                <rect key="frame" x="137" y="837" width="141" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -138,13 +138,6 @@
                                 <rect key="frame" x="120" y="526" width="112" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bet:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2R-SH-T8U">
-                                <rect key="frame" x="188" y="477" width="39" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="kKM-zB-OcT">
                                 <rect key="frame" x="85" y="526" width="108" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -204,6 +197,9 @@
                                         <state key="normal" title="5">
                                             <color key="titleColor" red="0.63561178470000002" green="0.56013124609999998" blue="0.079650042810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addFive:" destination="JWX-HW-4tm" eventType="touchUpInside" id="6IA-Zu-j5T"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -224,6 +220,9 @@
                                         <state key="normal" title="100">
                                             <color key="titleColor" red="0.63561178470000002" green="0.56013124609999998" blue="0.079650042810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addHundred:" destination="JWX-HW-4tm" eventType="touchUpInside" id="z8m-uZ-fYJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -244,6 +243,9 @@
                                         <state key="normal" title="25">
                                             <color key="titleColor" red="0.63561178470000002" green="0.56013124609999998" blue="0.079650042810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addTwentyFive:" destination="JWX-HW-4tm" eventType="touchUpInside" id="M04-3x-YEx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -264,6 +266,9 @@
                                         <state key="normal" title="10">
                                             <color key="titleColor" red="0.63561178470000002" green="0.56013124609999998" blue="0.079650042810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addTen:" destination="JWX-HW-4tm" eventType="touchUpInside" id="dbA-p6-OKk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -284,6 +289,9 @@
                                         <state key="normal" title="1">
                                             <color key="titleColor" red="0.63561178473835622" green="0.56013124612876708" blue="0.079650042808219176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addOne:" destination="JWX-HW-4tm" eventType="touchUpInside" id="UGh-xH-NVD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -296,7 +304,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZZ-Zh-bMQ">
                                 <rect key="frame" x="176" y="701" width="63" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Deal"/>
+                                <state key="normal" title="Deal/Hit"/>
+                                <connections>
+                                    <action selector="dealOrHitAction:" destination="JWX-HW-4tm" eventType="touchUpInside" id="bsV-8V-I3j"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOS-xA-QD9" customClass="SuitGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                 <rect key="frame" x="85" y="280" width="25" height="25"/>
@@ -307,7 +318,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8vf-N7-QS6" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
-                                <rect key="frame" x="243" y="280" width="100" height="150"/>
+                                <rect key="frame" x="157" y="273" width="100" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -315,6 +326,45 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isBack" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLc-uR-xVp">
+                                <rect key="frame" x="63" y="701" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Double"/>
+                                <connections>
+                                    <action selector="doubleAction:" destination="JWX-HW-4tm" eventType="touchUpInside" id="arF-NJ-d1g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M7-rd-oZL">
+                                <rect key="frame" x="295" y="702" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stand"/>
+                                <connections>
+                                    <action selector="standAction:" destination="JWX-HW-4tm" eventType="touchUpInside" id="tg7-vc-waT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdE-k9-oQl">
+                                <rect key="frame" x="291" y="832" width="103" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Split/Insurance"/>
+                                <connections>
+                                    <action selector="splitOrInsuranceAction:" destination="JWX-HW-4tm" eventType="touchUpInside" id="qnm-Vi-yAV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxa-c1-LiP">
+                                <rect key="frame" x="317" y="477" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetBetAction:" destination="JWX-HW-4tm" eventType="touchUpInside" id="c6S-gI-miy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bet:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2R-SH-T8U">
+                                <rect key="frame" x="148" y="479" width="118" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="sjU-yp-Z5e"/>
@@ -322,6 +372,18 @@
                     <navigationItem key="navigationItem" id="g0E-gi-4xq"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="balance" destination="uvQ-M9-THw" id="ASd-be-cWd"/>
+                        <outlet property="dealAndHit" destination="jZZ-Zh-bMQ" id="eRh-Wh-ey6"/>
+                        <outlet property="doubleDown" destination="VLc-uR-xVp" id="zXC-yb-vA0"/>
+                        <outlet property="fiveBet" destination="8VW-0r-Pub" id="VRT-hw-ZiC"/>
+                        <outlet property="hundredBet" destination="hp4-xS-qDQ" id="HMO-No-HrC"/>
+                        <outlet property="oneBet" destination="jEP-v4-zWr" id="FwP-lg-E5y"/>
+                        <outlet property="resetBet" destination="pxa-c1-LiP" id="1Zx-rS-Y52"/>
+                        <outlet property="splitAndInsurance" destination="ZdE-k9-oQl" id="iYU-ve-647"/>
+                        <outlet property="stand" destination="3M7-rd-oZL" id="RvW-s8-PeA"/>
+                        <outlet property="tenBet" destination="ndl-cj-FgJ" id="Nt3-Hm-b6F"/>
+                        <outlet property="totalBet" destination="i2R-SH-T8U" id="i5F-gF-l17"/>
+                        <outlet property="twentyFiveBet" destination="HIh-rk-qxQ" id="JKx-G7-iDr"/>
                         <segue destination="nAP-Xt-cf1" kind="unwind" identifier="unwindEndGame" unwindAction="unwindEndGameWithSegue:" id="VXW-tw-RLg"/>
                     </connections>
                 </viewController>
@@ -378,7 +440,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="New Room"/>
                                 <connections>
-                                    <segue destination="fTZ-gQ-dT7" kind="show" id="ave-Hc-rBx"/>
+                                    <segue destination="fTZ-gQ-dT7" kind="show" identifier="toMulti" id="ave-Hc-rBx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Join Room:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4q-rN-V9E">
@@ -405,10 +467,10 @@
             </objects>
             <point key="canvasLocation" x="1721.7391304347827" y="455.35714285714283"/>
         </scene>
-        <!--Black Jack View Controller-->
+        <!--Multiplayer View Controller-->
         <scene sceneID="JCm-kn-5Wy">
             <objects>
-                <viewController id="fTZ-gQ-dT7" customClass="BlackJackViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fTZ-gQ-dT7" customClass="MultiplayerViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3M8-k2-LEd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -418,7 +480,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="End Game"/>
                                 <connections>
-                                    <action selector="MultiEndGame:" destination="fTZ-gQ-dT7" eventType="touchUpInside" id="knN-c1-LQ1"/>
+                                    <action selector="MultiEndGame:" destination="fTZ-gQ-dT7" eventType="touchUpInside" id="db0-EB-g9K"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -12,6 +12,9 @@
 		D599A53B245A5E5300AAA7FC /* SuitGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A53A245A5E5300AAA7FC /* SuitGraphics.swift */; };
 		D599A53D245A70AB00AAA7FC /* ChipGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A53C245A70AB00AAA7FC /* ChipGraphics.swift */; };
 		D599A53F245A8D6800AAA7FC /* CardGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A53E245A8D6800AAA7FC /* CardGraphics.swift */; };
+		D599A541245A9F7200AAA7FC /* MultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A540245A9F7200AAA7FC /* MultiplayerViewController.swift */; };
+		D599A543245AB21000AAA7FC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A542245AB21000AAA7FC /* User.swift */; };
+		D599A545245AB21D00AAA7FC /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A544245AB21D00AAA7FC /* Dealer.swift */; };
 		D9ECFE522457931E0029E57F /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECFE512457931E0029E57F /* RulesViewController.swift */; };
 		E20BA24624537E3C00E39FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA24524537E3C00E39FE3 /* AppDelegate.swift */; };
 		E20BA24824537E3C00E39FE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA24724537E3C00E39FE3 /* SceneDelegate.swift */; };
@@ -30,6 +33,9 @@
 		D599A53A245A5E5300AAA7FC /* SuitGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitGraphics.swift; sourceTree = "<group>"; };
 		D599A53C245A70AB00AAA7FC /* ChipGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipGraphics.swift; sourceTree = "<group>"; };
 		D599A53E245A8D6800AAA7FC /* CardGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGraphics.swift; sourceTree = "<group>"; };
+		D599A540245A9F7200AAA7FC /* MultiplayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerViewController.swift; sourceTree = "<group>"; };
+		D599A542245AB21000AAA7FC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D599A544245AB21D00AAA7FC /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
 		D9ECFE512457931E0029E57F /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		E20BA24224537E3C00E39FE3 /* LMCA_finalproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMCA_finalproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20BA24524537E3C00E39FE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,9 @@
 				E20BA24724537E3C00E39FE3 /* SceneDelegate.swift */,
 				E20BA24924537E3C00E39FE3 /* InitialViewController.swift */,
 				D599A50E2454C9E500AAA7FC /* BlackJackViewController.swift */,
+				D599A542245AB21000AAA7FC /* User.swift */,
+				D599A544245AB21D00AAA7FC /* Dealer.swift */,
+				D599A540245A9F7200AAA7FC /* MultiplayerViewController.swift */,
 				D599A50C2454C9CB00AAA7FC /* MultiStartViewController.swift */,
 				D9ECFE512457931E0029E57F /* RulesViewController.swift */,
 				E20BA25C2453889600E39FE3 /* Card.swift */,
@@ -171,10 +180,13 @@
 				E20BA24A24537E3C00E39FE3 /* InitialViewController.swift in Sources */,
 				D599A53F245A8D6800AAA7FC /* CardGraphics.swift in Sources */,
 				E20BA24624537E3C00E39FE3 /* AppDelegate.swift in Sources */,
+				D599A543245AB21000AAA7FC /* User.swift in Sources */,
 				D9ECFE522457931E0029E57F /* RulesViewController.swift in Sources */,
+				D599A545245AB21D00AAA7FC /* Dealer.swift in Sources */,
 				E20BA25D2453889600E39FE3 /* Card.swift in Sources */,
 				D599A53D245A70AB00AAA7FC /* ChipGraphics.swift in Sources */,
 				D599A50F2454C9E500AAA7FC /* BlackJackViewController.swift in Sources */,
+				D599A541245A9F7200AAA7FC /* MultiplayerViewController.swift in Sources */,
 				E20BA24824537E3C00E39FE3 /* SceneDelegate.swift in Sources */,
 				E20BA25024537E3C00E39FE3 /* LMCA_finalproject.xcdatamodeld in Sources */,
 			);

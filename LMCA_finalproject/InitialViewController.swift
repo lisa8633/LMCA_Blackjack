@@ -30,6 +30,14 @@ class InitialViewController: UIViewController {
     @IBAction func unwindEndGame(segue: UIStoryboardSegue) {
     }
 
-
+    /*
+    //Implement Core Data User Balance $$$ name the variable currentBalance
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSingle" {
+            let viewController = segue.destination as! BlackJackViewController
+            viewController.currentBalance = currentBalance
+        }
+    }
+    */
 }
 
