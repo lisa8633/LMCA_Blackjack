@@ -10,6 +10,8 @@ import UIKit
 
 class InitialViewController: UIViewController {
 
+    @IBOutlet weak var cashBalance: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
