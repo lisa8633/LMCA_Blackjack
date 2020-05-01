@@ -15,4 +15,33 @@ class User {
     var value = 0
     var blackjack = false
     var bust = false
+    init(){
+        
+    }
+    init(card1: Card, card2: Card){
+        cards.append(card1)
+        cards.append(card2)
+    }
+    func getValue() ->Int{
+        self.value = 0
+        for card in cards{
+            self.value += card.getValue()
+        }
+        if self.value == 21{
+            self.blackjack = true
+        }
+        else if self.value > 21{
+            self.bust = true
+        }
+        return self.value
+    }
+    func addCard(card: Card){
+        cards.append(card)
+    }
+    func isBJ() -> Bool{
+        return self.blackjack
+    }
+    func isBust() -> Bool{
+        return self.bust
+    }
 }

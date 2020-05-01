@@ -13,16 +13,14 @@ class BlackJackViewController: UIViewController {
     
     let deck = Deck()
     
-    let user = User()
+    var user = User()
     
-    let dealer = Dealer()
+    var dealer = Dealer()
     
     var userBet = 0 // initial user bet
     var currentBalance = 1000 //Set using Core Data
     var dealtAlready = false // Checks if user has been dealt initial cards
     var cardsDealt = 0
-    var userTotal = 0
-    var dealerTotal = 0
 
     @IBOutlet weak var oneBet: UIButton!
     @IBOutlet weak var fiveBet: UIButton!
@@ -154,12 +152,47 @@ class BlackJackViewController: UIViewController {
         if userBet > 0 && !dealtAlready{
             dealtAlready = true
             resetBet.isUserInteractionEnabled = false
-            
-            
+            user = User(card1: deck.deal(), card2: deck.deal())
+            dealer = Dealer(card1: deck.deal(), card2: deck.deal())
+            cardsDealt = 4
+            // begin game and deal cards
+            if dealer.isBJ(){
+                //go to insurance
+            }
+            if user.isBust(){
+                //lose coins
+            }else if user.isBJ(){
+                //wins coins
+            }
+        }else if userBet > 0 && dealtAlready{
+            user.addCard(card: deck.deal())
+            cardsDealt += 1
+            if user.isBust(){
+                //lose coins
+            }
+        }else{
+            //end game?
         }
     }
     
     @IBAction func standAction(_ sender: UIButton) {
+        //dealer's turn
+        if dealer.isBust(){
+            //player wins
+        }
+        while dealer.getValue() <= 16{
+            dealer.addCard(card: deck.deal())
+            cardsDealt += 1
+            if dealer.isBust(){
+                //player wins
+            }
+        }
+        //didnt bust and dealer and player still in
+        if dealer.getValue() >= user.getValue(){
+            //dealer wins
+        }else{
+            //player wins
+        }
     }
     
     @IBAction func doubleAction(_ sender: UIButton) {
