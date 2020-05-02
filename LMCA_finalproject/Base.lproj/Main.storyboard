@@ -123,7 +123,7 @@
         <scene sceneID="lgI-BE-Hfk">
             <objects>
                 <viewController id="JWX-HW-4tm" customClass="BlackJackViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wzH-XP-y8A">
+                    <view key="view" contentMode="scaleToFill" id="wzH-XP-y8A" customClass="SinglePlayerBoardView" customModule="LMCA_finalproject" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
