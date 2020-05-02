@@ -37,7 +37,11 @@ class Card{
         }
     }
     func getValue() -> Int{
-        return self.value
+        if self.value >= 10{
+            return 10
+        }else{
+            return self.value
+        }
     }
     func getSuit() -> String{
         return self.suit

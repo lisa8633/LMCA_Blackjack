@@ -25,7 +25,11 @@ class Dealer {
     func getValue() ->Int{
         self.value = 0
         for card in cards{
-            self.value += card.getValue()
+            if card.getSymbol() == "A" && self.value <= 10{
+                self.value += 11
+            }else{
+                self.value += card.getValue()
+            }
         }
         if self.value == 21{
             self.blackjack = true

@@ -25,12 +25,24 @@ class User {
     func getValue() ->Int{
         self.value = 0
         for card in cards{
-            self.value += card.getValue()
+            if card.getSymbol() == "A" && self.value <= 10{
+                self.value += 11
+            }else{
+                self.value += card.getValue()
+            }
+        }
+        if self.value > 21{
+            for card in cards{
+                if card.getSymbol() == "A"{
+                    self.value -= 10
+                }
+            }
         }
         if self.value == 21{
             self.blackjack = true
         }
         else if self.value > 21{
+            
             self.bust = true
         }
         return self.value
