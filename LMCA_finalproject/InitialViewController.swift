@@ -42,7 +42,7 @@ class InitialViewController: UIViewController {
             if !players.isEmpty {
                 let player = players[0]
                 self.username = player.value(forKey: "name") as? String
-                self.currentBalance = player.value(forKey: "balance") as? Int64
+                self.currentBalance = player.value(forKey: "coins") as? Int64
                 self.cashBalance.text = "Cash Balance: $\(self.currentBalance!)"
             }
         } catch let error as NSError {
@@ -77,7 +77,7 @@ class InitialViewController: UIViewController {
                   
                     // 3
                     player.setValue(name, forKeyPath: "name")
-                    player.setValue(3000, forKey: "balance")
+                    player.setValue(3000, forKey: "coins")
                     // 4
                     do {
                         try managedContext.save()

@@ -67,7 +67,7 @@ class BlackJackViewController: UIViewController {
             players = try managedContext.fetch(fetchRequest)
             let player = players[0]
             self.username = player.value(forKey: "name") as? String
-            self.currentBalance = player.value(forKey: "balance") as? Int64
+            self.currentBalance = player.value(forKey: "coins") as? Int64
             
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
@@ -290,7 +290,7 @@ class BlackJackViewController: UIViewController {
             
         //2
         let player = players[0]
-        player.setValue(updatedBalance, forKeyPath: "balance")
+        player.setValue(updatedBalance, forKeyPath: "coins")
         
         //3
         do {
