@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 
 class BlackJackViewController: UIViewController {
@@ -17,8 +18,12 @@ class BlackJackViewController: UIViewController {
     
     var dealer = Dealer()
     
-    var userBet = 0 // initial user bet
-    var currentBalance = 1000 //Set using Core Data
+    var userBet : Int64 = 0 // initial user bet
+    
+    var players = [NSManagedObject]()
+    var currentBalance : Int64! //Set using Core Data
+    var username : String!
+    
     var dealtAlready = false // Checks if user has been dealt initial cards
     var cardsDealt = 0
 
@@ -48,9 +53,29 @@ class BlackJackViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        //2
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Player")
+        
+        //3
+        do {
+            players = try managedContext.fetch(fetchRequest)
+            let player = players[0]
+            self.username = player.value(forKey: "name") as? String
+            self.currentBalance = player.value(forKey: "balance") as? Int64
+            
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+
         //Setting initial values in labels
         totalBet.text = "Bet: \(userBet)"
-        balance.text = "Balance: \(currentBalance)"
+        balance.text = "Balance: \(currentBalance!)"
         
         //setting initial button interaction
         dealAndHit.setTitle("Deal", for: .normal)
@@ -108,7 +133,7 @@ class BlackJackViewController: UIViewController {
             userBet += 1
             currentBalance -= 1
             totalBet.text = "Bet: \(userBet)"
-            balance.text = "Balance: \(currentBalance)"
+            balance.text = "Balance: \(currentBalance!)"
         }
     }
     
@@ -117,7 +142,7 @@ class BlackJackViewController: UIViewController {
             userBet += 5
             currentBalance -= 5
             totalBet.text = "Bet: \(userBet)"
-            balance.text = "Balance: \(currentBalance)"
+            balance.text = "Balance: \(currentBalance!)"
         }
     }
     
@@ -126,7 +151,7 @@ class BlackJackViewController: UIViewController {
             userBet += 10
             currentBalance -= 10
             totalBet.text = "Bet: \(userBet)"
-            balance.text = "Balance: \(currentBalance)"
+            balance.text = "Balance: \(currentBalance!)"
         }
     }
     
@@ -135,7 +160,7 @@ class BlackJackViewController: UIViewController {
             userBet += 25
             currentBalance -= 25
             totalBet.text = "Bet: \(userBet)"
-            balance.text = "Balance: \(currentBalance)"
+            balance.text = "Balance: \(currentBalance!)"
         }
     }
     
@@ -144,7 +169,7 @@ class BlackJackViewController: UIViewController {
             userBet += 100
             currentBalance -= 100
             totalBet.text = "Bet: \(userBet)"
-            balance.text = "Balance: \(currentBalance)"
+            balance.text = "Balance: \(currentBalance!)"
         }
     }
     func endRound(){
@@ -242,7 +267,7 @@ class BlackJackViewController: UIViewController {
         currentBalance += userBet
         userBet = 0
         totalBet.text = "Bet: \(userBet)"
-        balance.text = "Balance: \(currentBalance)"
+        balance.text = "Balance: \(currentBalance!)"
     }
     
     
@@ -256,4 +281,24 @@ class BlackJackViewController: UIViewController {
     }
     */
 
+    func updatePlayerBalance(updatedBalance: Int64) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+            
+        //2
+        let player = players[0]
+        player.setValue(updatedBalance, forKeyPath: "balance")
+        
+        //3
+        do {
+            try managedContext.save()
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Player")
+            players = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
 }
