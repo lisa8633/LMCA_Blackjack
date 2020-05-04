@@ -276,8 +276,8 @@ class BlackJackViewController: UIViewController {
                 userWinsRoundBJ()
             }
             if !user.blackjack && dealer.blackjack {
-                print("Dealer wins")
-                dealerWinsRound()
+                print("Dealer has blackjack, but not shown yet")
+                //dealerWinsRound()
             }
             
             if dealer.isFaceUpCardAce(){
