@@ -173,6 +173,38 @@ class BlackJackViewController: UIViewController {
             balance.text = "Balance: \(currentBalance!)"
         }
     }
+    func userWinsRound(){
+        dealtAlready = false
+        self.deck = Deck()
+        deck.shuffle()
+        dealAndHit.setTitle("Deal", for: .normal)
+        stand.setTitle("", for: .normal)
+        stand.isUserInteractionEnabled = false
+        resetBet.isUserInteractionEnabled = true
+        doubleDown.setTitle("", for: .normal)
+        doubleDown.isUserInteractionEnabled = false
+        currentBalance += userBet * 2
+        userBet = 0
+        totalBet.text = "Bet: \(userBet)"
+        balance.text = "Balance: \(currentBalance!)"
+        
+    }
+    func dealerWinsRound(){
+        dealtAlready = false
+        self.deck = Deck()
+        deck.shuffle()
+        dealAndHit.setTitle("Deal", for: .normal)
+        stand.setTitle("", for: .normal)
+        stand.isUserInteractionEnabled = false
+        resetBet.isUserInteractionEnabled = true
+        doubleDown.setTitle("", for: .normal)
+        doubleDown.isUserInteractionEnabled = false
+        userBet = 0
+        totalBet.text = "Bet: \(userBet)"
+        balance.text = "Balance: \(currentBalance!)"
+    }
+    
+    
     func endRound(){
         dealtAlready = false
         self.deck = Deck()
@@ -183,6 +215,10 @@ class BlackJackViewController: UIViewController {
         resetBet.isUserInteractionEnabled = true
         doubleDown.setTitle("", for: .normal)
         doubleDown.isUserInteractionEnabled = false
+        currentBalance += userBet
+        userBet = 0
+        totalBet.text = "Bet: \(userBet)"
+        balance.text = "Balance: \(currentBalance!)"
     }
     
     @IBAction func dealOrHitAction(_ sender: UIButton) {
@@ -210,11 +246,11 @@ class BlackJackViewController: UIViewController {
             }
             if user.blackjack && !dealer.blackjack {
                 print("Player wins")
-                endRound()
+                userWinsRound()
             }
             if !user.blackjack && dealer.blackjack {
                 print("Dealer wins")
-                endRound()
+                dealerWinsRound()
             }
             
             if dealer.isFaceUpCardAce(){
@@ -226,7 +262,7 @@ class BlackJackViewController: UIViewController {
             if user.isBust(){
                 //lose coins
                 print("player lose")
-                endRound()
+                dealerWinsRound()
             }else if user.isBJ(){
                 //Need to check dealer hand
                 print("player blackjack")
@@ -242,7 +278,7 @@ class BlackJackViewController: UIViewController {
             print("Player Hand Total \(user.getValue())")
             if user.isBust(){
                 print("Player lose")
-                endRound()
+                dealerWinsRound()
                 //lose coins
             }
         }else{
@@ -262,7 +298,7 @@ class BlackJackViewController: UIViewController {
         print("Player Hand Total \(user.getValue())")
         if user.isBust(){
             print("Player lose")
-            endRound()
+            dealerWinsRound()
             //lose coins
         }else{
             standFunction()
@@ -282,7 +318,7 @@ class BlackJackViewController: UIViewController {
         if dealer.isBust(){
             //player wins
             print("Player wins")
-            endRound()
+            userWinsRound()
         }
         while dealer.getValue() <= 16{
             dealer.addCard(card: deck.deal())
@@ -291,7 +327,7 @@ class BlackJackViewController: UIViewController {
             print("Dealer Hand Total \(dealer.getValue())")
             if dealer.isBust(){
                 print("Player wins")
-                endRound()
+                userWinsRound()
                 //player wins
             }
         }
@@ -299,7 +335,7 @@ class BlackJackViewController: UIViewController {
         if !dealer.isBust() && !user.isBust(){
             if dealer.getValue() > user.getValue(){
                 print("dealer wins")
-                endRound()
+                dealerWinsRound()
                 //dealer wins
             }else if dealer.getValue() == user.getValue(){
                 print("tie")
@@ -307,7 +343,7 @@ class BlackJackViewController: UIViewController {
                 // player ties
             }else{
                 print("player wins")
-                endRound()
+                userWinsRound()
             }
         }
     }
@@ -323,6 +359,7 @@ class BlackJackViewController: UIViewController {
             currentBalance -= userBet/2
             print("Dealer does not have blackjack so lose insurance")
         }
+        balance.text = "Balance: \(currentBalance!)"
     }
     
     @IBAction func resetBetAction(_ sender: UIButton) {

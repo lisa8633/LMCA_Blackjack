@@ -212,13 +212,6 @@
                                     <action selector="doubleDownAction:" destination="JWX-HW-4tm" eventType="touchUpInside" id="gW6-jS-hld"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdE-k9-oQl">
-                                <rect key="frame" x="291" y="832" width="103" height="30"/>
-                                <state key="normal" title="Split/Insurance"/>
-                                <connections>
-                                    <action selector="splitOrInsuranceAction:" destination="JWX-HW-4tm" eventType="touchUpInside" id="qnm-Vi-yAV"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxa-c1-LiP">
                                 <rect key="frame" x="317" y="477" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -371,12 +364,21 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdE-k9-oQl">
+                                <rect key="frame" x="292" y="371" width="103" height="30"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Split/Insurance">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="splitOrInsuranceAction:" destination="JWX-HW-4tm" eventType="touchUpInside" id="qnm-Vi-yAV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="uvQ-M9-THw" firstAttribute="centerX" secondItem="wzH-XP-y8A" secondAttribute="centerX" id="4qK-io-NYO"/>
                             <constraint firstItem="sjU-yp-Z5e" firstAttribute="bottom" secondItem="uvQ-M9-THw" secondAttribute="bottom" constant="4" id="CK3-Xf-faz"/>
-                            <constraint firstItem="ZdE-k9-oQl" firstAttribute="bottom" secondItem="sjU-yp-Z5e" secondAttribute="bottom" id="Iku-TI-rrt"/>
                             <constraint firstItem="FiI-UJ-Vl1" firstAttribute="bottom" secondItem="sjU-yp-Z5e" secondAttribute="bottom" id="aKN-aD-wfW"/>
                             <constraint firstItem="sjU-yp-Z5e" firstAttribute="trailing" secondItem="ZdE-k9-oQl" secondAttribute="trailing" constant="20" id="hHu-u2-EP5"/>
                             <constraint firstItem="FiI-UJ-Vl1" firstAttribute="leading" secondItem="sjU-yp-Z5e" secondAttribute="leading" constant="20" id="wVc-nJ-yIw"/>
