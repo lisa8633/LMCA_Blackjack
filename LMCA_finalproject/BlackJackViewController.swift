@@ -18,10 +18,10 @@ class BlackJackViewController: UIViewController {
     
     var dealer = Dealer()
     
-    var userBet : Int64 = 0 // initial user bet
+    var userBet : Double = 0 // initial user bet
     
     var players = [NSManagedObject]()
-    var currentBalance : Int64! //Set using Core Data
+    var currentBalance : Double! //Set using Core Data
     var username : String!
     
     var dealtAlready = false // Checks if user has been dealt initial cards
@@ -68,7 +68,7 @@ class BlackJackViewController: UIViewController {
             players = try managedContext.fetch(fetchRequest)
             let player = players[0]
             self.username = player.value(forKey: "name") as? String
-            self.currentBalance = player.value(forKey: "coins") as? Int64
+            self.currentBalance = player.value(forKey: "coins") as? Double
             
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
