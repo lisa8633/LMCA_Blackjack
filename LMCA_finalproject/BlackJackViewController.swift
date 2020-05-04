@@ -21,6 +21,7 @@ class BlackJackViewController: UIViewController {
     var currentBalance = 1000 //Set using Core Data
     var dealtAlready = false // Checks if user has been dealt initial cards
     var cardsDealt = 0
+    var insuranceBet = 0
 
     @IBOutlet weak var oneBet: UIButton!
     @IBOutlet weak var fiveBet: UIButton!
@@ -154,6 +155,9 @@ class BlackJackViewController: UIViewController {
         dealAndHit.setTitle("Deal", for: .normal)
         stand.setTitle("", for: .normal)
         stand.isUserInteractionEnabled = false
+        resetBet.isUserInteractionEnabled = true
+        doubleDown.setTitle("", for: .normal)
+        doubleDown.isUserInteractionEnabled = false
     }
     
     @IBAction func dealOrHitAction(_ sender: UIButton) {
@@ -163,6 +167,8 @@ class BlackJackViewController: UIViewController {
             stand.isUserInteractionEnabled = true
             dealtAlready = true
             resetBet.isUserInteractionEnabled = false
+            doubleDown.setTitle("Double Down", for: .normal)
+            doubleDown.isUserInteractionEnabled = true
             user = User(card1: deck.deal(), card2: deck.deal())
             print(user.cards[0].getSymbol())
             print(user.cards[1].getSymbol())
@@ -173,8 +179,23 @@ class BlackJackViewController: UIViewController {
             print("Dealer Hand Total \(dealer.getValue())")
             cardsDealt = 4
             // begin game and deal cards
+            if user.blackjack && dealer.blackjack {
+                print("tie")
+                endRound()
+            }
+            if user.blackjack && !dealer.blackjack {
+                print("Player wins")
+                endRound()
+            }
+            if !user.blackjack && dealer.blackjack {
+                print("Dealer wins")
+                endRound()
+            }
+            
             if dealer.isFaceUpCardAce(){
                 //go to insurance
+                splitAndInsurance.setTitle("Insurance", for: .normal)
+                splitAndInsurance.isUserInteractionEnabled = true
                 print("player option to insurance")
             }
             if user.isBust(){
@@ -182,10 +203,14 @@ class BlackJackViewController: UIViewController {
                 print("player lose")
                 endRound()
             }else if user.isBJ(){
-                //wins coins
+                //Need to check dealer hand
                 print("player blackjack")
             }
         }else if userBet > 0 && dealtAlready{
+            doubleDown.setTitle("", for: .normal)
+            doubleDown.isUserInteractionEnabled = false
+            splitAndInsurance.setTitle("", for: .normal)
+            splitAndInsurance.isUserInteractionEnabled = false
             user.addCard(card: deck.deal())
             cardsDealt += 1
             print(user.cards[2].getSymbol())
@@ -200,8 +225,34 @@ class BlackJackViewController: UIViewController {
             endRound()
         }
     }
+    @IBAction func doubleDownAction(_ sender: UIButton) {
+        // double bet
+        currentBalance = currentBalance - userBet
+        userBet = userBet * 2
+        totalBet.text = "Bet: \(userBet)"
+        balance.text = "Balance: \(currentBalance)"
+        user.addCard(card: deck.deal())
+        cardsDealt += 1
+        print(user.cards[2].getSymbol())
+        print("Player Hand Total \(user.getValue())")
+        if user.isBust(){
+            print("Player lose")
+            endRound()
+            //lose coins
+        }else{
+            standFunction()
+        }
+    }
     
     @IBAction func standAction(_ sender: UIButton) {
+        standFunction()
+    }
+    
+    func standFunction() {
+        doubleDown.setTitle("", for: .normal)
+        doubleDown.isUserInteractionEnabled = false
+        splitAndInsurance.setTitle("", for: .normal)
+        splitAndInsurance.isUserInteractionEnabled = false
         //dealer's turn
         if dealer.isBust(){
             //player wins
@@ -236,10 +287,17 @@ class BlackJackViewController: UIViewController {
         }
     }
     
-    @IBAction func doubleAction(_ sender: UIButton) {
-    }
-    
     @IBAction func splitOrInsuranceAction(_ sender: UIButton) {
+        splitAndInsurance.setTitle("", for: .normal)
+        splitAndInsurance.isUserInteractionEnabled = false
+        if (dealer.blackjack) {
+            // Pay insurnce if dealer has blackjack
+            currentBalance += userBet
+            print("Dealer has blackjack so pay insurance")
+        } else {
+            currentBalance -= userBet/2
+            print("Dealer does not have blackjack so lose insurance")
+        }
     }
     
     @IBAction func resetBetAction(_ sender: UIButton) {

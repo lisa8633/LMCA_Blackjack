@@ -14,7 +14,7 @@ class RulesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.rulesText.text = "PLACEHOLDER: \n6-Decks, Stand on Soft 17 and higher, Split Pairs, Insurance, Blackjack 3:2 payout"
+        self.rulesText.text = "PLACEHOLDER: \n6-Decks, Stand on 17 and higher, Split Pairs, Insurance, Blackjack 3:2 payout"
         // Do any additional setup after loading the view.
     }
     
