@@ -12,7 +12,7 @@ import CoreData
 
 class BlackJackViewController: UIViewController {
     
-    var deck = Deck()
+    var deck = Deck(numofDeck: 6)
     
     var user = User()
     
@@ -82,13 +82,13 @@ class BlackJackViewController: UIViewController {
         dealAndHit.setTitle("Deal", for: .normal)
         dealAndHit.isUserInteractionEnabled = true
         
-        stand.setTitle("", for: .normal)
+        stand.setTitle("Stand", for: .normal)
         stand.isUserInteractionEnabled = false
         
-        doubleDown.setTitle("", for: .normal)
+        doubleDown.setTitle("Double Down", for: .normal)
         doubleDown.isUserInteractionEnabled = false
         
-        splitAndInsurance.setTitle("", for: .normal)
+        splitAndInsurance.setTitle("Split/Insurance", for: .normal)
         splitAndInsurance.isUserInteractionEnabled = false
         
         resetBet.setTitle("Reset", for: .normal)
@@ -175,7 +175,7 @@ class BlackJackViewController: UIViewController {
     }
     func userWinsRound(){
         dealtAlready = false
-        self.deck = Deck()
+        self.deck = Deck(numofDeck: 6)
         deck.shuffle()
         // Reset button text and interaction
         dealAndHit.setTitle("Deal", for: .normal)
@@ -193,7 +193,7 @@ class BlackJackViewController: UIViewController {
     }
     func userWinsRoundBJ(){
         dealtAlready = false
-        self.deck = Deck()
+        self.deck = Deck(numofDeck: 6)
         deck.shuffle()
         // Reset button text and interaction
         dealAndHit.setTitle("Deal", for: .normal)
@@ -212,7 +212,7 @@ class BlackJackViewController: UIViewController {
     
     func dealerWinsRound(){
         dealtAlready = false
-        self.deck = Deck()
+        self.deck = Deck(numofDeck: 6)
         deck.shuffle()
         // Reset button text and interaction
         dealAndHit.setTitle("Deal", for: .normal)
@@ -230,7 +230,7 @@ class BlackJackViewController: UIViewController {
     
     func endRound(){
         dealtAlready = false
-        self.deck = Deck()
+        self.deck = Deck(numofDeck: 6)
         deck.shuffle()
         // Reset button text and interaction
         dealAndHit.setTitle("Deal", for: .normal)
@@ -284,7 +284,7 @@ class BlackJackViewController: UIViewController {
                 //go to insurance
                 splitAndInsurance.setTitle("Insurance", for: .normal)
                 splitAndInsurance.isUserInteractionEnabled = true
-                print("player option to insurance")
+                print("player option to insurance") 
             }
             if user.isBust(){
                 //lose coins

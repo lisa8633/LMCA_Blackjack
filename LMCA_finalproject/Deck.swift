@@ -9,12 +9,14 @@
 import Foundation
 class Deck{
     var deck = [Card]()
-    init(){
-        let x = Card(value: 0, suit: "")
-        for num in x.getRanks(){
-            for suit in x.getSuits(){
-                let card = Card(value: num, suit: suit)
-                self.deck.append(card)
+    init(numofDeck : Int){
+        for n in 1...numofDeck{
+            let x = Card(value: 0, suit: "")
+            for num in x.getRanks(){
+                for suit in x.getSuits(){
+                    let card = Card(value: num, suit: suit)
+                    self.deck.append(card)
+                }
             }
         }
     }
