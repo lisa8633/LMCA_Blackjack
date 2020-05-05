@@ -1,0 +1,6 @@
+framework module Pods_LMCA_finalproject {
+  umbrella header "Pods-LMCA_finalproject-umbrella.h"
+
+  export *
+  module * { export * }
+}

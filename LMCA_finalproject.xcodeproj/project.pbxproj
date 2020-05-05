@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		572FC77C460A08F41BB5DE38 /* Pods_LMCA_finalproject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EB5E6DBF5EFFA010552545 /* Pods_LMCA_finalproject.framework */; };
 		8E10D26E245E0A040054B29D /* SinglePlayerBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E10D26D245E0A040054B29D /* SinglePlayerBoardView.swift */; };
 		D599A50D2454C9CB00AAA7FC /* MultiStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A50C2454C9CB00AAA7FC /* MultiStartViewController.swift */; };
 		D599A50F2454C9E500AAA7FC /* BlackJackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A50E2454C9E500AAA7FC /* BlackJackViewController.swift */; };
@@ -26,9 +27,13 @@
 		E20BA25524537E3D00E39FE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20BA25324537E3D00E39FE3 /* LaunchScreen.storyboard */; };
 		E20BA25D2453889600E39FE3 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA25C2453889600E39FE3 /* Card.swift */; };
 		E20BA25F245388A300E39FE3 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA25E245388A300E39FE3 /* Deck.swift */; };
+		E2CB7D152461D15E00D7510A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2CB7D142461D15D00D7510A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B3A829AC1855DE9B0521F69 /* Pods-LMCA_finalproject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMCA_finalproject.debug.xcconfig"; path = "Target Support Files/Pods-LMCA_finalproject/Pods-LMCA_finalproject.debug.xcconfig"; sourceTree = "<group>"; };
+		20EB5E6DBF5EFFA010552545 /* Pods_LMCA_finalproject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LMCA_finalproject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		494A0F5981AE7DFCD6F142A9 /* Pods-LMCA_finalproject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMCA_finalproject.release.xcconfig"; path = "Target Support Files/Pods-LMCA_finalproject/Pods-LMCA_finalproject.release.xcconfig"; sourceTree = "<group>"; };
 		8E10D26D245E0A040054B29D /* SinglePlayerBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerBoardView.swift; sourceTree = "<group>"; };
 		D599A50C2454C9CB00AAA7FC /* MultiStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiStartViewController.swift; sourceTree = "<group>"; };
 		D599A50E2454C9E500AAA7FC /* BlackJackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +55,7 @@
 		E20BA25624537E3D00E39FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E20BA25C2453889600E39FE3 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E20BA25E245388A300E39FE3 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		E2CB7D142461D15D00D7510A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,17 +63,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				572FC77C460A08F41BB5DE38 /* Pods_LMCA_finalproject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6CEA818C8FB0E225AFA06DBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B3A829AC1855DE9B0521F69 /* Pods-LMCA_finalproject.debug.xcconfig */,
+				494A0F5981AE7DFCD6F142A9 /* Pods-LMCA_finalproject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E20BA23924537E3C00E39FE3 = {
 			isa = PBXGroup;
 			children = (
 				E20BA24424537E3C00E39FE3 /* LMCA_finalproject */,
 				E20BA24324537E3C00E39FE3 /* Products */,
+				6CEA818C8FB0E225AFA06DBF /* Pods */,
+				E7D9F307C4B6244B6141C62F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,8 +120,17 @@
 				E20BA25324537E3D00E39FE3 /* LaunchScreen.storyboard */,
 				E20BA25624537E3D00E39FE3 /* Info.plist */,
 				E20BA24E24537E3C00E39FE3 /* LMCA_finalproject.xcdatamodeld */,
+				E2CB7D142461D15D00D7510A /* GoogleService-Info.plist */,
 			);
 			path = LMCA_finalproject;
+			sourceTree = "<group>";
+		};
+		E7D9F307C4B6244B6141C62F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20EB5E6DBF5EFFA010552545 /* Pods_LMCA_finalproject.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E20BA25924537E3D00E39FE3 /* Build configuration list for PBXNativeTarget "LMCA_finalproject" */;
 			buildPhases = (
+				132073F1D97044196A050272 /* [CP] Check Pods Manifest.lock */,
 				E20BA23E24537E3C00E39FE3 /* Sources */,
 				E20BA23F24537E3C00E39FE3 /* Frameworks */,
 				E20BA24024537E3C00E39FE3 /* Resources */,
+				6152C762A088EDB2D9D91316 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,12 +194,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				E20BA25524537E3D00E39FE3 /* LaunchScreen.storyboard in Resources */,
+				E2CB7D152461D15E00D7510A /* GoogleService-Info.plist in Resources */,
 				E20BA25224537E3D00E39FE3 /* Assets.xcassets in Resources */,
 				E20BA24D24537E3C00E39FE3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		132073F1D97044196A050272 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LMCA_finalproject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6152C762A088EDB2D9D91316 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LMCA_finalproject/Pods-LMCA_finalproject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LMCA_finalproject/Pods-LMCA_finalproject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LMCA_finalproject/Pods-LMCA_finalproject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E20BA23E24537E3C00E39FE3 /* Sources */ = {
@@ -334,6 +406,7 @@
 		};
 		E20BA25A24537E3D00E39FE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B3A829AC1855DE9B0521F69 /* Pods-LMCA_finalproject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -353,6 +426,7 @@
 		};
 		E20BA25B24537E3D00E39FE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 494A0F5981AE7DFCD6F142A9 /* Pods-LMCA_finalproject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class MultiplayerViewController: UIViewController {
 
@@ -14,6 +15,12 @@ class MultiplayerViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let ref = Database.database().reference()
+        ref.child("one").setValue(["name": "Mike", "coins": 1000, "cards": "none"])
+        ref.child("one/name").observeSingleEvent(of: .value, with: {(snapshot)in
+            let name = snapshot.value as? [String:Any]
+            print(name)
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
