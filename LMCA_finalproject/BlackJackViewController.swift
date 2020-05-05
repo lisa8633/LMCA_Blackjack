@@ -189,6 +189,7 @@ class BlackJackViewController: UIViewController {
         userBet = 0
         totalBet.text = "Bet: \(userBet)"
         balance.text = "Balance: \(currentBalance!)"
+        updatePlayerBalance(updatedBalance: currentBalance)
         
     }
     func userWinsRoundBJ(){
@@ -207,6 +208,7 @@ class BlackJackViewController: UIViewController {
         userBet = 0
         totalBet.text = "Bet: \(userBet)"
         balance.text = "Balance: \(currentBalance!)"
+        updatePlayerBalance(updatedBalance: currentBalance)
         
     }
     
@@ -225,6 +227,7 @@ class BlackJackViewController: UIViewController {
         userBet = 0
         totalBet.text = "Bet: \(userBet)"
         balance.text = "Balance: \(currentBalance!)"
+        updatePlayerBalance(updatedBalance: currentBalance)
     }
     
     
@@ -244,6 +247,7 @@ class BlackJackViewController: UIViewController {
         userBet = 0
         totalBet.text = "Bet: \(userBet)"
         balance.text = "Balance: \(currentBalance!)"
+        updatePlayerBalance(updatedBalance: currentBalance)
     }
     
     @IBAction func dealOrHitAction(_ sender: UIButton) {
@@ -284,7 +288,7 @@ class BlackJackViewController: UIViewController {
                 //go to insurance
                 splitAndInsurance.setTitle("Insurance", for: .normal)
                 splitAndInsurance.isUserInteractionEnabled = true
-                print("player option to insurance") 
+                print("player option to insurance")
             }
             if user.isBust(){
                 //lose coins
@@ -321,7 +325,7 @@ class BlackJackViewController: UIViewController {
         currentBalance = currentBalance - userBet
         userBet = userBet * 2
         totalBet.text = "Bet: \(userBet)"
-        balance.text = "Balance: \(currentBalance)"
+        balance.text = "Balance: \(currentBalance!)"
         user.addCard(card: deck.deal())
         cardsDealt += 1
         print(user.cards[2].getSymbol())
@@ -414,7 +418,7 @@ class BlackJackViewController: UIViewController {
     }
     */
 
-    func updatePlayerBalance(updatedBalance: Int64) {
+    func updatePlayerBalance(updatedBalance: Double) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
