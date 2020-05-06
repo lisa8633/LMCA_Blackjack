@@ -12,10 +12,10 @@ import UIKit
 
     @IBInspectable var suit: String = "Spade" {
       didSet {
-        if suit != "Spade" {
+        //if suit != "Spade" {
           //the view needs to be refreshed
           setNeedsDisplay()
-        }
+        //}
       }
     }
     
@@ -87,7 +87,7 @@ import UIKit
             fillColor2.setFill()
             clubPath.fill()
         }
-        else { //Diamond
+        else if suit == "Diamond" {
             let fillColor = UIColor(red: 0.749, green: 0.000, blue: 0.000, alpha: 1.000)
 
             let diamondPath = UIBezierPath()
@@ -107,6 +107,9 @@ import UIKit
             diamondPath.close()
             fillColor.setFill()
             diamondPath.fill()
+        }
+        else {
+            
         }
     }
 }
