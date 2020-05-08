@@ -1871,6 +1871,14 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isBack" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMu-xl-K8P">
+                                <rect key="frame" x="153" y="348" width="108.5" height="50"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="3" height="2"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -1880,6 +1888,7 @@
                             <constraint firstItem="sjU-yp-Z5e" firstAttribute="trailing" secondItem="9WQ-kc-Z2e" secondAttribute="trailing" constant="20" id="2zU-Cn-Ljc"/>
                             <constraint firstItem="pxa-c1-LiP" firstAttribute="height" secondItem="i2R-SH-T8U" secondAttribute="height" multiplier="1.13208" id="38v-QZ-xhy"/>
                             <constraint firstItem="ZqU-QI-Kzu" firstAttribute="width" secondItem="ZqU-QI-Kzu" secondAttribute="height" multiplier="2:3" id="3bt-TD-zru"/>
+                            <constraint firstItem="tMu-xl-K8P" firstAttribute="centerY" secondItem="wzH-XP-y8A" secondAttribute="centerY" constant="-75" id="3cd-fN-xfi"/>
                             <constraint firstItem="sR6-kb-sts" firstAttribute="centerX" secondItem="wzH-XP-y8A" secondAttribute="centerX" id="3f4-va-E3q"/>
                             <constraint firstItem="VPe-C2-tEG" firstAttribute="width" secondItem="VPe-C2-tEG" secondAttribute="height" multiplier="2:3" id="3oM-Ct-8D3"/>
                             <constraint firstItem="g41-qG-66e" firstAttribute="centerX" secondItem="wzH-XP-y8A" secondAttribute="centerX" id="43D-gc-XfU"/>
@@ -1948,6 +1957,7 @@
                             <constraint firstItem="sR6-kb-sts" firstAttribute="centerY" secondItem="wzH-XP-y8A" secondAttribute="centerY" constant="-75" id="ywe-U6-Dgo"/>
                             <constraint firstItem="Obo-8h-7cZ" firstAttribute="centerY" secondItem="wzH-XP-y8A" secondAttribute="centerY" constant="-75" id="zh1-Je-A1w"/>
                             <constraint firstItem="vOs-qZ-aNy" firstAttribute="width" secondItem="vOs-qZ-aNy" secondAttribute="height" multiplier="2:3" id="zq4-4C-mwv"/>
+                            <constraint firstItem="tMu-xl-K8P" firstAttribute="centerX" secondItem="wzH-XP-y8A" secondAttribute="centerX" id="zuP-yJ-PPJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sjU-yp-Z5e"/>
                     </view>
@@ -1958,6 +1968,13 @@
                         <outlet property="bigSuitHeight" destination="oVa-BY-FZM" id="DNz-HT-2RZ"/>
                         <outlet property="bigSuitHeight10" destination="edE-g4-x8S" id="gDl-4v-iOS"/>
                         <outlet property="bigSuitHeight11" destination="blU-Zb-gDI" id="pDP-tj-Mmz"/>
+                        <outlet property="bigSuitHeight12" destination="2Qx-T0-0GD" id="JSx-jp-Cg7"/>
+                        <outlet property="bigSuitHeight13" destination="0wX-lR-4TP" id="piV-QM-Hy9"/>
+                        <outlet property="bigSuitHeight14" destination="J4B-xc-sPM" id="y9E-5i-lLM"/>
+                        <outlet property="bigSuitHeight15" destination="cx7-gi-jSe" id="3j1-Dr-SPB"/>
+                        <outlet property="bigSuitHeight16" destination="B1z-rM-fkd" id="ahK-e4-Twf"/>
+                        <outlet property="bigSuitHeight17" destination="c3a-AV-wQX" id="3Gb-0P-LYI"/>
+                        <outlet property="bigSuitHeight18" destination="cbS-LT-7qZ" id="gXg-Zm-6Sb"/>
                         <outlet property="bigSuitHeight2" destination="gh7-ch-E3s" id="aiN-UU-7NM"/>
                         <outlet property="bigSuitHeight3" destination="qwv-U0-nuK" id="A1V-IY-LCA"/>
                         <outlet property="bigSuitHeight4" destination="x2P-WQ-TnP" id="kvm-qq-S4N"/>
@@ -1980,6 +1997,55 @@
                         <outlet property="card11Label" destination="x5j-tq-0zb" id="d0u-8u-v9Q"/>
                         <outlet property="card11Suit" destination="LTK-bf-Smv" id="RVl-Uz-yld"/>
                         <outlet property="card11Vertical" destination="lsv-gn-KsP" id="giM-O2-yY1"/>
+                        <outlet property="card12BackHeight" destination="CIv-It-D9c" id="VIb-1P-4YP"/>
+                        <outlet property="card12BigSuit" destination="jEh-l1-4KV" id="E6X-N4-VLI"/>
+                        <outlet property="card12Height" destination="oyh-Wi-HAx" id="Bcu-dl-NOr"/>
+                        <outlet property="card12Horizontal" destination="I29-5a-QMX" id="F9H-4a-Uvn"/>
+                        <outlet property="card12Label" destination="Biu-gm-S2d" id="ivE-Js-5np"/>
+                        <outlet property="card12Suit" destination="gOZ-Jk-UoD" id="u0Q-nB-kEu"/>
+                        <outlet property="card12Vertical" destination="Dou-qf-6FV" id="tA1-Kj-leO"/>
+                        <outlet property="card13BackHeight" destination="JAK-fe-Orc" id="WPD-Hl-tip"/>
+                        <outlet property="card13BigSuit" destination="YSG-aa-vut" id="xqt-rj-RBq"/>
+                        <outlet property="card13Height" destination="G6J-bA-IKr" id="r00-1M-dKM"/>
+                        <outlet property="card13Horizontal" destination="OZX-iz-Izf" id="1SV-vc-MoZ"/>
+                        <outlet property="card13Label" destination="9Ww-BH-9Gf" id="M8Y-DX-kPN"/>
+                        <outlet property="card13Suit" destination="EBs-rx-XlK" id="NZi-4Q-Uk1"/>
+                        <outlet property="card13Vertical" destination="VQP-D6-Uiw" id="ul3-Zw-Jx1"/>
+                        <outlet property="card14BackHeight" destination="d4j-9h-7Vx" id="Cks-LF-3Tj"/>
+                        <outlet property="card14BigSuit" destination="MEC-T9-Qj0" id="tE4-b4-0yh"/>
+                        <outlet property="card14Height" destination="yBZ-Nm-S92" id="87Z-zg-PoH"/>
+                        <outlet property="card14Horizontal" destination="Lp3-Ci-iEp" id="YUL-5d-U86"/>
+                        <outlet property="card14Label" destination="Wbz-HH-226" id="Ioi-e2-q7k"/>
+                        <outlet property="card14Suit" destination="Aw6-Bh-AZF" id="4Uc-n8-o4b"/>
+                        <outlet property="card14Vertical" destination="oAr-AE-7YA" id="qEH-De-aXQ"/>
+                        <outlet property="card15BackHeight" destination="XyQ-Cw-3Xz" id="TT3-wy-zSv"/>
+                        <outlet property="card15BigSuit" destination="1pY-yB-HfU" id="NxL-7z-nwe"/>
+                        <outlet property="card15Height" destination="JcJ-aV-8kS" id="KlW-1r-dse"/>
+                        <outlet property="card15Horizontal" destination="3f4-va-E3q" id="8V9-tJ-iyh"/>
+                        <outlet property="card15Label" destination="iBh-JF-Fz5" id="hY8-dM-XGM"/>
+                        <outlet property="card15Suit" destination="5gX-cJ-aTw" id="WkD-ZU-pJJ"/>
+                        <outlet property="card15Vertical" destination="ywe-U6-Dgo" id="RvW-hD-vPZ"/>
+                        <outlet property="card16BackHeight" destination="TRu-VT-LdM" id="Vfj-31-LCM"/>
+                        <outlet property="card16BigSuit" destination="Xz4-55-Cq8" id="9T6-FN-bFj"/>
+                        <outlet property="card16Height" destination="FGn-Nb-RcD" id="t3M-ZV-Tgm"/>
+                        <outlet property="card16Horizontal" destination="onJ-I5-57t" id="RqT-4Y-qZs"/>
+                        <outlet property="card16Label" destination="Bbh-Me-gtJ" id="YE4-ec-jyZ"/>
+                        <outlet property="card16Suit" destination="524-pB-xEI" id="Wml-UP-20D"/>
+                        <outlet property="card16Vertical" destination="eSc-tR-uqg" id="Ff0-x7-zoG"/>
+                        <outlet property="card17BackHeight" destination="6sS-dv-Xgo" id="Jil-l2-N8Y"/>
+                        <outlet property="card17BigSuit" destination="Z7J-YG-iQn" id="9lw-pO-NG9"/>
+                        <outlet property="card17Height" destination="GZ9-rk-nnx" id="B6c-E1-kBI"/>
+                        <outlet property="card17Horizontal" destination="43D-gc-XfU" id="EIE-DH-3Fc"/>
+                        <outlet property="card17Label" destination="1Hr-y9-PFw" id="QnP-Bg-q7C"/>
+                        <outlet property="card17Suit" destination="i4Z-82-X8g" id="Sml-Wt-Dhz"/>
+                        <outlet property="card17Vertical" destination="CZi-OE-RNt" id="qy8-7C-lZS"/>
+                        <outlet property="card18BackHeight" destination="c20-r7-WSU" id="DRR-go-aRz"/>
+                        <outlet property="card18BigSuit" destination="nBe-go-deB" id="HnX-zl-Pql"/>
+                        <outlet property="card18Height" destination="5Xh-IT-uOU" id="nB7-bl-CyS"/>
+                        <outlet property="card18Horizontal" destination="C4p-ZS-CIk" id="fZd-CW-p83"/>
+                        <outlet property="card18Label" destination="t6p-mk-gVT" id="fD8-vG-ILj"/>
+                        <outlet property="card18Suit" destination="WRl-Hq-j1p" id="pb7-2e-bPz"/>
+                        <outlet property="card18Vertical" destination="zh1-Je-A1w" id="uFE-Ob-9kq"/>
                         <outlet property="card1BigSuit" destination="UK1-ta-SnC" id="W6w-CK-3xG"/>
                         <outlet property="card1Label" destination="VeZ-7i-GCA" id="9sO-5H-N5O"/>
                         <outlet property="card1Suit" destination="ZPd-ik-ps8" id="Jwr-25-2ol"/>
@@ -2042,6 +2108,13 @@
                         <outlet property="cardBack" destination="QsM-ng-Mkj" id="Lid-go-YVz"/>
                         <outlet property="cardBack10" destination="CdJ-t3-KZF" id="sWM-AD-yTD"/>
                         <outlet property="cardBack11" destination="yPD-bD-URL" id="Y0n-pz-Rue"/>
+                        <outlet property="cardBack12" destination="L34-ok-oEa" id="9GL-mg-ViO"/>
+                        <outlet property="cardBack13" destination="JJU-cT-3si" id="jhU-we-ZuT"/>
+                        <outlet property="cardBack14" destination="gAn-eg-RGG" id="IVL-BL-bE8"/>
+                        <outlet property="cardBack15" destination="MbD-bK-nPr" id="QIa-hc-AlQ"/>
+                        <outlet property="cardBack16" destination="hGI-4L-h7y" id="nFx-P5-WEy"/>
+                        <outlet property="cardBack17" destination="Ykl-4O-oOv" id="gxG-p6-qho"/>
+                        <outlet property="cardBack18" destination="T0b-os-qN7" id="4Bk-ie-XCd"/>
                         <outlet property="cardBack2" destination="a9i-wZ-s32" id="cWi-SN-DRA"/>
                         <outlet property="cardBack3" destination="T0T-BQ-TcQ" id="TyQ-oa-nLO"/>
                         <outlet property="cardBack4" destination="uqy-6h-vur" id="AdR-fB-AWd"/>
@@ -2054,6 +2127,13 @@
                         <outlet property="cardGraphics" destination="8vf-N7-QS6" id="WVf-Ve-96T"/>
                         <outlet property="cardGraphics10" destination="OWH-5j-USs" id="Mdj-NT-zmt"/>
                         <outlet property="cardGraphics11" destination="RAK-Ut-M8v" id="4GF-dg-IEc"/>
+                        <outlet property="cardGraphics12" destination="kXU-Un-hHS" id="ZZx-e7-Fxy"/>
+                        <outlet property="cardGraphics13" destination="eUe-8c-0mh" id="qNQ-5L-9NW"/>
+                        <outlet property="cardGraphics14" destination="KOM-8v-bpi" id="C8N-FZ-8jn"/>
+                        <outlet property="cardGraphics15" destination="Kg9-bb-bDB" id="Ih8-Vz-cWZ"/>
+                        <outlet property="cardGraphics16" destination="yn4-ah-ujS" id="a9k-nm-NAE"/>
+                        <outlet property="cardGraphics17" destination="CD0-ib-ZJP" id="W2F-ZC-mX6"/>
+                        <outlet property="cardGraphics18" destination="GOG-Wn-5sY" id="7E0-8y-fR3"/>
                         <outlet property="cardGraphics2" destination="jSz-gZ-Tp9" id="VPS-cu-1Mc"/>
                         <outlet property="cardGraphics3" destination="LEk-1r-dkb" id="CSN-fd-8aq"/>
                         <outlet property="cardGraphics4" destination="ZMi-cn-9fj" id="ASK-YA-bEn"/>
@@ -2070,12 +2150,19 @@
                         <outlet property="containerView11" destination="Fz3-TE-SY2" id="xdk-3H-Op9"/>
                         <outlet property="containerView11Height" destination="ecU-g8-kpg" id="ujA-Dr-diZ"/>
                         <outlet property="containerView12" destination="ZqU-QI-Kzu" id="Orp-4j-jUs"/>
+                        <outlet property="containerView12Height" destination="iPg-f3-uLl" id="z5A-TW-yA0"/>
                         <outlet property="containerView13" destination="q8s-xa-gw8" id="Sqq-o6-JYu"/>
+                        <outlet property="containerView13Height" destination="pja-c9-rzX" id="M09-Th-5tC"/>
                         <outlet property="containerView14" destination="3fN-bw-pnP" id="Kob-jc-DAe"/>
+                        <outlet property="containerView14Height" destination="WiZ-2N-CqL" id="Fyv-XT-SBB"/>
                         <outlet property="containerView15" destination="sR6-kb-sts" id="rPp-Bx-WAN"/>
+                        <outlet property="containerView15Height" destination="tJs-Tz-2wb" id="uPm-Rt-GrR"/>
                         <outlet property="containerView16" destination="q8m-pz-34e" id="GNF-Aw-24b"/>
+                        <outlet property="containerView16Height" destination="RMJ-hu-v4z" id="0qG-c4-f3s"/>
                         <outlet property="containerView17" destination="g41-qG-66e" id="AEI-a9-JQ0"/>
+                        <outlet property="containerView17Height" destination="8AN-nS-24K" id="RJJ-Sc-3i2"/>
                         <outlet property="containerView18" destination="Obo-8h-7cZ" id="I3T-OD-WB2"/>
+                        <outlet property="containerView18Height" destination="kVI-TS-7DB" id="HHG-50-rgY"/>
                         <outlet property="containerView2" destination="Ye5-pT-euK" id="Q7G-dT-JmI"/>
                         <outlet property="containerView2Height" destination="LoT-5W-jVq" id="G3O-p4-tyb"/>
                         <outlet property="containerView3" destination="MQA-OD-0bi" id="yNX-qF-bWE"/>
@@ -2106,6 +2193,13 @@
                         <outlet property="splitAndInsurance" destination="ZdE-k9-oQl" id="iYU-ve-647"/>
                         <outlet property="stack10SuitValueHeight" destination="SUG-TY-Rd6" id="2j3-PS-ktY"/>
                         <outlet property="stack11SuitValueHeight" destination="9LG-Ud-O02" id="X8R-81-AWG"/>
+                        <outlet property="stack12SuitValueHeight" destination="17E-VO-6IF" id="5xP-p7-IxZ"/>
+                        <outlet property="stack13SuitValueHeight" destination="B4j-j2-Ism" id="Qxq-ID-CTc"/>
+                        <outlet property="stack14SuitValueHeight" destination="yEM-zf-yFf" id="ir8-qd-ORB"/>
+                        <outlet property="stack15SuitValueHeight" destination="Lbl-u1-baP" id="QNj-Lx-si2"/>
+                        <outlet property="stack16SuitValueHeight" destination="wq8-RZ-8Iz" id="zR1-kl-AEu"/>
+                        <outlet property="stack17SuitValueHeight" destination="zIL-dJ-SKu" id="fdw-xw-QlB"/>
+                        <outlet property="stack18SuitValueHeight" destination="1Ly-iz-IAi" id="e5G-Yi-wXX"/>
                         <outlet property="stack2SuitValueHeight" destination="d1X-jM-bTu" id="b61-ok-EoX"/>
                         <outlet property="stack3SuitValueHeight" destination="v8u-3Y-KsS" id="Qui-Sb-Zzd"/>
                         <outlet property="stack4SuitValueHeight" destination="fMq-Is-ABV" id="45o-WZ-bP8"/>
@@ -2121,6 +2215,9 @@
                         <outlet property="testVertical" destination="F5k-hg-Ut2" id="uY9-qM-9pW"/>
                         <outlet property="totalBet" destination="i2R-SH-T8U" id="i5F-gF-l17"/>
                         <outlet property="twentyFiveBet" destination="HIh-rk-qxQ" id="JKx-G7-iDr"/>
+                        <outlet property="winnerLabel" destination="tMu-xl-K8P" id="byP-Po-lhA"/>
+                        <outlet property="winnerLabelX" destination="zuP-yJ-PPJ" id="2RN-DJ-Ehw"/>
+                        <outlet property="winnerLabelY" destination="3cd-fN-xfi" id="VYz-lb-pdg"/>
                         <segue destination="nAP-Xt-cf1" kind="unwind" identifier="unwindEndGame" unwindAction="unwindEndGameWithSegue:" id="VXW-tw-RLg"/>
                     </connections>
                 </viewController>

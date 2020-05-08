@@ -92,18 +92,53 @@ class BlackJackViewController: UIViewController {
     @IBOutlet weak var containerView11: UIView!
     //12
     @IBOutlet weak var containerView12: UIView!
+    @IBOutlet weak var card12Label: UILabel!
+    @IBOutlet weak var card12Suit: SuitGraphics!
+    @IBOutlet weak var card12BigSuit: SuitGraphics!
+    @IBOutlet weak var cardGraphics12: CardGraphics!
+    @IBOutlet weak var cardBack12: CardGraphics!
     //13
     @IBOutlet weak var containerView13: UIView!
+    @IBOutlet weak var card13Label: UILabel!
+    @IBOutlet weak var card13Suit: SuitGraphics!
+    @IBOutlet weak var card13BigSuit: SuitGraphics!
+    @IBOutlet weak var cardGraphics13: CardGraphics!
+    @IBOutlet weak var cardBack13: CardGraphics!
     //14
     @IBOutlet weak var containerView14: UIView!
+    @IBOutlet weak var card14Label: UILabel!
+    @IBOutlet weak var card14Suit: SuitGraphics!
+    @IBOutlet weak var card14BigSuit: SuitGraphics!
+    @IBOutlet weak var cardGraphics14: CardGraphics!
+    @IBOutlet weak var cardBack14: CardGraphics!
     //15
     @IBOutlet weak var containerView15: UIView!
+    @IBOutlet weak var card15Label: UILabel!
+    @IBOutlet weak var card15Suit: SuitGraphics!
+    @IBOutlet weak var card15BigSuit: SuitGraphics!
+    @IBOutlet weak var cardGraphics15: CardGraphics!
+    @IBOutlet weak var cardBack15: CardGraphics!
     //16
     @IBOutlet weak var containerView16: UIView!
+    @IBOutlet weak var card16Label: UILabel!
+    @IBOutlet weak var card16Suit: SuitGraphics!
+    @IBOutlet weak var card16BigSuit: SuitGraphics!
+    @IBOutlet weak var cardGraphics16: CardGraphics!
+    @IBOutlet weak var cardBack16: CardGraphics!
     //17
     @IBOutlet weak var containerView17: UIView!
+    @IBOutlet weak var card17Label: UILabel!
+    @IBOutlet weak var card17Suit: SuitGraphics!
+    @IBOutlet weak var card17BigSuit: SuitGraphics!
+    @IBOutlet weak var cardGraphics17: CardGraphics!
+    @IBOutlet weak var cardBack17: CardGraphics!
     //18
     @IBOutlet weak var containerView18: UIView!
+    @IBOutlet weak var card18Label: UILabel!
+    @IBOutlet weak var card18Suit: SuitGraphics!
+    @IBOutlet weak var card18BigSuit: SuitGraphics!
+    @IBOutlet weak var cardGraphics18: CardGraphics!
+    @IBOutlet weak var cardBack18: CardGraphics!
     
     
     //MARK: Layout Constraints
@@ -201,12 +236,62 @@ class BlackJackViewController: UIViewController {
     @IBOutlet weak var card11BackHeight: NSLayoutConstraint!
     @IBOutlet weak var containerView11Height: NSLayoutConstraint!
     //12
+    @IBOutlet weak var card12Height: NSLayoutConstraint!
+    @IBOutlet weak var stack12SuitValueHeight: NSLayoutConstraint!
+    @IBOutlet weak var bigSuitHeight12: NSLayoutConstraint!
+    @IBOutlet weak var card12Horizontal: NSLayoutConstraint!
+    @IBOutlet weak var card12Vertical: NSLayoutConstraint!
+    @IBOutlet weak var card12BackHeight: NSLayoutConstraint!
+    @IBOutlet weak var containerView12Height: NSLayoutConstraint!
     //13
+    @IBOutlet weak var card13Height: NSLayoutConstraint!
+    @IBOutlet weak var stack13SuitValueHeight: NSLayoutConstraint!
+    @IBOutlet weak var bigSuitHeight13: NSLayoutConstraint!
+    @IBOutlet weak var card13Horizontal: NSLayoutConstraint!
+    @IBOutlet weak var card13Vertical: NSLayoutConstraint!
+    @IBOutlet weak var card13BackHeight: NSLayoutConstraint!
+    @IBOutlet weak var containerView13Height: NSLayoutConstraint!
     //14
+    @IBOutlet weak var card14Height: NSLayoutConstraint!
+    @IBOutlet weak var stack14SuitValueHeight: NSLayoutConstraint!
+    @IBOutlet weak var bigSuitHeight14: NSLayoutConstraint!
+    @IBOutlet weak var card14Horizontal: NSLayoutConstraint!
+    @IBOutlet weak var card14Vertical: NSLayoutConstraint!
+    @IBOutlet weak var card14BackHeight: NSLayoutConstraint!
+    @IBOutlet weak var containerView14Height: NSLayoutConstraint!
     //15
+    @IBOutlet weak var card15Height: NSLayoutConstraint!
+    @IBOutlet weak var stack15SuitValueHeight: NSLayoutConstraint!
+    @IBOutlet weak var bigSuitHeight15: NSLayoutConstraint!
+    @IBOutlet weak var card15BackHeight: NSLayoutConstraint!
+    @IBOutlet weak var containerView15Height: NSLayoutConstraint!
+    @IBOutlet weak var card15Horizontal: NSLayoutConstraint!
+    @IBOutlet weak var card15Vertical: NSLayoutConstraint!
     //16
+    @IBOutlet weak var card16Height: NSLayoutConstraint!
+    @IBOutlet weak var stack16SuitValueHeight: NSLayoutConstraint!
+    @IBOutlet weak var bigSuitHeight16: NSLayoutConstraint!
+    @IBOutlet weak var card16BackHeight: NSLayoutConstraint!
+    @IBOutlet weak var containerView16Height: NSLayoutConstraint!
+    @IBOutlet weak var card16Horizontal: NSLayoutConstraint!
+    @IBOutlet weak var card16Vertical: NSLayoutConstraint!
     //17
+    @IBOutlet weak var card17Height: NSLayoutConstraint!
+    @IBOutlet weak var stack17SuitValueHeight: NSLayoutConstraint!
+    @IBOutlet weak var bigSuitHeight17: NSLayoutConstraint!
+    @IBOutlet weak var card17BackHeight: NSLayoutConstraint!
+    @IBOutlet weak var containerView17Height: NSLayoutConstraint!
+    @IBOutlet weak var card17Horizontal: NSLayoutConstraint!
+    @IBOutlet weak var card17Vertical: NSLayoutConstraint!
     //18
+    @IBOutlet weak var card18Height: NSLayoutConstraint!
+    @IBOutlet weak var stack18SuitValueHeight: NSLayoutConstraint!
+    @IBOutlet weak var bigSuitHeight18: NSLayoutConstraint!
+    @IBOutlet weak var card18BackHeight: NSLayoutConstraint!
+    @IBOutlet weak var containerView18Height: NSLayoutConstraint!
+    @IBOutlet weak var card18Horizontal: NSLayoutConstraint!
+    @IBOutlet weak var card18Vertical: NSLayoutConstraint!
+    
     
     
     var deck = Deck(numofDeck: 6)
@@ -239,6 +324,10 @@ class BlackJackViewController: UIViewController {
     @IBOutlet weak var splitAndInsurance: UIButton!
     @IBOutlet weak var resetBet: UIButton!
     
+    
+    @IBOutlet weak var winnerLabel: UILabel!
+    @IBOutlet weak var winnerLabelX: NSLayoutConstraint!
+    @IBOutlet weak var winnerLabelY: NSLayoutConstraint!
     
     @IBOutlet weak var totalBet: UILabel!
     @IBOutlet weak var balance: UILabel!
@@ -354,7 +443,7 @@ class BlackJackViewController: UIViewController {
         bigSuitHeight11.constant = self.view.bounds.height * 0.07 + 3
         card11Label.font = UIFont.systemFont(ofSize: self.view.bounds.height * 0.04 + 0.16, weight: .heavy)
         //12
-        /*card12Height.constant = self.view.bounds.height * 0.15 + 16
+        card12Height.constant = self.view.bounds.height * 0.15 + 16
         card12BackHeight.constant = self.view.bounds.height * 0.15 + 16
         containerView12Height.constant = self.view.bounds.height * 0.15 + 16
         card12Vertical.constant = -self.view.bounds.height * 0.07 - 13
@@ -416,7 +505,7 @@ class BlackJackViewController: UIViewController {
         stack18SuitValueHeight.constant = self.view.bounds.height * 0.035 - 1
         bigSuitHeight18.constant = self.view.bounds.height * 0.07 + 3
         card18Label.font = UIFont.systemFont(ofSize: self.view.bounds.height * 0.04 + 0.16, weight: .heavy)
-        */
+        
     }
     
     
@@ -457,12 +546,15 @@ class BlackJackViewController: UIViewController {
         
         stand.setTitle("Stand", for: .normal)
         stand.isUserInteractionEnabled = false
+        stand.alpha = 0
         
         doubleDown.setTitle("Double Down", for: .normal)
         doubleDown.isUserInteractionEnabled = false
+        doubleDown.alpha = 0
         
         splitAndInsurance.setTitle("Split/Insurance", for: .normal)
         splitAndInsurance.isUserInteractionEnabled = false
+        splitAndInsurance.alpha = 0
         
         resetBet.setTitle("Reset", for: .normal)
         resetBet.isUserInteractionEnabled = true
@@ -474,6 +566,8 @@ class BlackJackViewController: UIViewController {
         tenBet.isUserInteractionEnabled = true
         twentyFiveBet.isUserInteractionEnabled = true
         hundredBet.isUserInteractionEnabled = true
+        
+        winnerLabel.text = ""
         
         deck.shuffle()
     }
@@ -546,99 +640,132 @@ class BlackJackViewController: UIViewController {
             balance.text = "Balance: $\(currentBalance!)"
         }
     }
-    func userWinsRound(){
-        dealtAlready = false
-        self.deck = Deck(numofDeck: 6)
-        deck.shuffle()
-        // Reset button text and interaction
-        dealAndHit.setTitle("Deal", for: .normal)
-        stand.setTitle("", for: .normal)
-        stand.isUserInteractionEnabled = false
-        resetBet.isUserInteractionEnabled = true
-        doubleDown.setTitle("", for: .normal)
-        doubleDown.isUserInteractionEnabled = false
-        
-        currentBalance += userBet * 2
-        userBet = 0
-        totalBet.text = "Bet: \(userBet)"
-        balance.text = "Balance: \(currentBalance!)"
-        updatePlayerBalance(updatedBalance: currentBalance)
-        flipAllCardBack()
-        returnCards()
+    func userWinsRound(delay: Int){
+        DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay-2)) {
+            self.animateWinnerDisplay(winner: "Player Wins!")
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(2)) {
+                self.dealtAlready = false
+                self.deck = Deck(numofDeck: 6)
+                self.deck.shuffle()
+                // Reset button text and interaction
+                self.dealAndHit.setTitle("Deal", for: .normal)
+                self.stand.setTitle("", for: .normal)
+                self.stand.isUserInteractionEnabled = false
+                self.resetBet.isUserInteractionEnabled = true
+                self.doubleDown.setTitle("", for: .normal)
+                self.doubleDown.isUserInteractionEnabled = false
+                self.stand.alpha = 0
+                self.doubleDown.alpha = 0
+                self.splitAndInsurance.alpha = 0
+                
+                self.currentBalance += self.userBet * 2
+                self.userBet = 0
+                self.totalBet.text = "Bet: \(self.userBet)"
+                self.balance.text = "Balance: \(self.currentBalance!)"
+                self.updatePlayerBalance(updatedBalance: self.currentBalance)
+                self.flipAllCardBack()
+                self.returnCards()
+            }
+        }
+    }
+    func userWinsRoundBJ(delay: Int){
+        DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay-2)) {
+            self.animateWinnerDisplay(winner: "Player Blackjack!")
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(2)) {
+                self.dealtAlready = false
+                self.deck = Deck(numofDeck: 6)
+                self.deck.shuffle()
+                // Reset button text and interaction
+                self.dealAndHit.setTitle("Deal", for: .normal)
+                self.stand.setTitle("", for: .normal)
+                self.stand.isUserInteractionEnabled = false
+                self.resetBet.isUserInteractionEnabled = true
+                self.doubleDown.setTitle("", for: .normal)
+                self.doubleDown.isUserInteractionEnabled = false
+                self.stand.alpha = 0
+                self.doubleDown.alpha = 0
+                self.splitAndInsurance.alpha = 0
+                
+                self.currentBalance += self.userBet * 2 + self.userBet / 2
+                self.userBet = 0
+                self.totalBet.text = "Bet: \(self.userBet)"
+                self.balance.text = "Balance: \(self.currentBalance!)"
+                self.updatePlayerBalance(updatedBalance: self.currentBalance)
+                self.flipAllCardBack()
+                self.returnCards()
+            }
+        }
         
     }
-    func userWinsRoundBJ(){
-        dealtAlready = false
-        self.deck = Deck(numofDeck: 6)
-        deck.shuffle()
-        // Reset button text and interaction
-        dealAndHit.setTitle("Deal", for: .normal)
-        stand.setTitle("", for: .normal)
-        stand.isUserInteractionEnabled = false
-        resetBet.isUserInteractionEnabled = true
-        doubleDown.setTitle("", for: .normal)
-        doubleDown.isUserInteractionEnabled = false
-        
-        currentBalance += userBet * 2 + userBet / 2
-        userBet = 0
-        totalBet.text = "Bet: \(userBet)"
-        balance.text = "Balance: \(currentBalance!)"
-        updatePlayerBalance(updatedBalance: currentBalance)
-        flipAllCardBack()
-        returnCards()
-        
-    }
     
-    func dealerWinsRound(){
-        dealtAlready = false
-        self.deck = Deck(numofDeck: 6)
-        deck.shuffle()
-        // Reset button text and interaction
-        dealAndHit.setTitle("Deal", for: .normal)
-        stand.setTitle("", for: .normal)
-        stand.isUserInteractionEnabled = false
-        resetBet.isUserInteractionEnabled = true
-        doubleDown.setTitle("", for: .normal)
-        doubleDown.isUserInteractionEnabled = false
-        
-        userBet = 0
-        totalBet.text = "Bet: \(userBet)"
-        balance.text = "Balance: \(currentBalance!)"
-        updatePlayerBalance(updatedBalance: currentBalance)
-        flipAllCardBack()
-        returnCards()
+    func dealerWinsRound(delay: Int){
+        DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay-2)) {
+            self.animateWinnerDisplay(winner: "Dealer Wins")
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(2)) {
+                self.dealtAlready = false
+                self.deck = Deck(numofDeck: 6)
+                self.deck.shuffle()
+                // Reset button text and interaction
+                self.dealAndHit.setTitle("Deal", for: .normal)
+                self.stand.setTitle("", for: .normal)
+                self.stand.isUserInteractionEnabled = false
+                self.resetBet.isUserInteractionEnabled = true
+                self.doubleDown.setTitle("", for: .normal)
+                self.doubleDown.isUserInteractionEnabled = false
+                self.stand.alpha = 0
+                self.doubleDown.alpha = 0
+                self.splitAndInsurance.alpha = 0
+                
+                self.userBet = 0
+                self.totalBet.text = "Bet: \(self.userBet)"
+                self.balance.text = "Balance: \(self.currentBalance!)"
+                self.updatePlayerBalance(updatedBalance: self.currentBalance)
+                self.flipAllCardBack()
+                self.returnCards()
+            }
+        }
     }
     
     
-    func endRound(){
-        dealtAlready = false
-        self.deck = Deck(numofDeck: 6)
-        deck.shuffle()
-        // Reset button text and interaction
-        dealAndHit.setTitle("Deal", for: .normal)
-        stand.setTitle("", for: .normal)
-        stand.isUserInteractionEnabled = false
-        resetBet.isUserInteractionEnabled = true
-        doubleDown.setTitle("", for: .normal)
-        doubleDown.isUserInteractionEnabled = false
-        
-        currentBalance += userBet
-        userBet = 0
-        totalBet.text = "Bet: \(userBet)"
-        balance.text = "Balance: \(currentBalance!)"
-        updatePlayerBalance(updatedBalance: currentBalance)
-        flipAllCardBack()
-        returnCards()
+    func endRound(delay: Int){
+        DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay-2)) {
+            self.animateWinnerDisplay(winner: "Tie!")
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(2)) {
+                self.dealtAlready = false
+                self.deck = Deck(numofDeck: 6)
+                self.deck.shuffle()
+                // Reset button text and interaction
+                self.dealAndHit.setTitle("Deal", for: .normal)
+                self.stand.setTitle("", for: .normal)
+                self.stand.isUserInteractionEnabled = false
+                self.resetBet.isUserInteractionEnabled = true
+                self.doubleDown.setTitle("", for: .normal)
+                self.doubleDown.isUserInteractionEnabled = false
+                self.stand.alpha = 0
+                self.doubleDown.alpha = 0
+                self.splitAndInsurance.alpha = 0
+                
+                self.currentBalance += self.userBet
+                self.userBet = 0
+                self.totalBet.text = "Bet: \(self.userBet)"
+                self.balance.text = "Balance: \(self.currentBalance!)"
+                self.updatePlayerBalance(updatedBalance: self.currentBalance)
+                self.flipAllCardBack()
+                self.returnCards()
+            }
+        }
     }
     
     @IBAction func dealOrHitAction(_ sender: UIButton) {
         if userBet > 0 && !dealtAlready{
             // Set button text and interaction
             dealAndHit.setTitle("Hit", for: .normal)
+            self.stand.alpha = 1.0
             stand.setTitle("Stand", for: .normal)
             stand.isUserInteractionEnabled = true
             dealtAlready = true
             resetBet.isUserInteractionEnabled = false
+            self.doubleDown.alpha = 1.0
             doubleDown.setTitle("Double Down", for: .normal)
             doubleDown.isUserInteractionEnabled = true
             // Deal Cards
@@ -667,19 +794,22 @@ class BlackJackViewController: UIViewController {
             // begin game and deal cards
             if user.blackjack && dealer.blackjack {
                 print("tie")
-                endRound()
+                flipCard(cardNum : 10)
+                endRound(delay: dealerCardsDealt + 1)
             }
             if user.blackjack && !dealer.blackjack {
                 print("Player wins")
-                userWinsRoundBJ()
+                flipCard(cardNum : 10)
+                userWinsRoundBJ(delay: dealerCardsDealt + 1)
             }
             if !user.blackjack && dealer.blackjack {
                 print("Dealer has blackjack, but not shown yet")
-                //dealerWinsRound()
+                //dealerWinsRound(delay: dealerCardsDealt + 1)
             }
             
             if dealer.isFaceUpCardAce(){
                 //go to insurance
+                splitAndInsurance.alpha = 1.0
                 splitAndInsurance.setTitle("Insurance", for: .normal)
                 splitAndInsurance.isUserInteractionEnabled = true
                 print("player option to insurance")
@@ -687,7 +817,8 @@ class BlackJackViewController: UIViewController {
             if user.isBust(){
                 //lose coins
                 print("player lose")
-                dealerWinsRound()
+                flipCard(cardNum : 10)
+                dealerWinsRound(delay: dealerCardsDealt + 1)
             }else if user.isBJ(){
                 //Need to check dealer hand
                 print("player blackjack")
@@ -695,6 +826,8 @@ class BlackJackViewController: UIViewController {
         }else if userBet > 0 && dealtAlready{
             
             // Set button text and interaction
+            self.doubleDown.alpha = 0
+            self.splitAndInsurance.alpha = 0
             doubleDown.setTitle("", for: .normal)
             doubleDown.isUserInteractionEnabled = false
             splitAndInsurance.setTitle("", for: .normal)
@@ -710,12 +843,13 @@ class BlackJackViewController: UIViewController {
             
             if user.isBust(){
                 print("Player lose")
-                dealerWinsRound()
+                flipCard(cardNum : 10)
+                dealerWinsRound(delay: dealerCardsDealt + 1)
                 //lose coins
             }
         }else{
             //end game?
-            endRound()
+            endRound(delay: dealerCardsDealt + 1)
         }
     }
     @IBAction func doubleDownAction(_ sender: UIButton) {
@@ -734,7 +868,8 @@ class BlackJackViewController: UIViewController {
         print("Player Hand Total \(user.getValue())")
         if user.isBust(){
             print("Player lose")
-            dealerWinsRound()
+            flipCard(cardNum : 10)
+            dealerWinsRound(delay: dealerCardsDealt + 1)
             //lose coins
         }else{
             standFunction()
@@ -747,16 +882,24 @@ class BlackJackViewController: UIViewController {
     
     func standFunction() {
         // Set button text and interaction
+        self.stand.alpha = 0
+        self.doubleDown.alpha = 0
+        self.splitAndInsurance.alpha = 0
         doubleDown.setTitle("", for: .normal)
         doubleDown.isUserInteractionEnabled = false
         splitAndInsurance.setTitle("", for: .normal)
         splitAndInsurance.isUserInteractionEnabled = false
         
+        if dealerCardsDealt == 2 {
+            flipCard(cardNum : 10)
+        }
+        
         //dealer's turn
         if dealer.isBust(){
             //player wins
             print("Player wins")
-            userWinsRound()
+            //flipCard(cardNum : 10)
+            userWinsRound(delay: dealerCardsDealt + 1)
         }
         while dealer.getValue() <= 16{
             dealer.addCard(card: deck.deal())
@@ -769,7 +912,7 @@ class BlackJackViewController: UIViewController {
             print("Dealer Hand Total \(dealer.getValue())")
             if dealer.isBust(){
                 print("Player wins")
-                userWinsRound()
+                userWinsRound(delay: dealerCardsDealt + 1)
                 //player wins
             }
         }
@@ -777,21 +920,22 @@ class BlackJackViewController: UIViewController {
         if !dealer.isBust() && !user.isBust(){
             if dealer.getValue() > user.getValue(){
                 print("dealer wins")
-                dealerWinsRound()
+                dealerWinsRound(delay: dealerCardsDealt + 1)
                 //dealer wins
             }else if dealer.getValue() == user.getValue(){
                 print("tie")
-                endRound()
+                endRound(delay: dealerCardsDealt + 1)
                 // player ties
             }else{
                 print("player wins")
-                userWinsRound()
+                userWinsRound(delay: dealerCardsDealt + 1)
             }
         }
     }
     
     @IBAction func splitOrInsuranceAction(_ sender: UIButton) {
         // Set button text and interaction
+        self.splitAndInsurance.alpha = 0
         splitAndInsurance.setTitle("", for: .normal)
         splitAndInsurance.isUserInteractionEnabled = false
         
@@ -922,7 +1066,7 @@ class BlackJackViewController: UIViewController {
             card2Label.text = user.cards[num].getSymbol()
             card2Suit.suit = user.cards[num].getSuit()
             card2BigSuit.suit = user.cards[num].getSuit()
-            UIView.animate(withDuration: 1.0, delay: 3.0, options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 1.0, delay: 2.0, options: .curveEaseInOut, animations: {
                 self.card2Vertical.constant += self.view.bounds.height * 0.25 + 39
                 self.card2Horizontal.constant += self.view.bounds.height * 0.07 - 3
                 self.view.layoutIfNeeded()
@@ -1028,9 +1172,9 @@ class BlackJackViewController: UIViewController {
             })
         }
         else if cardNum  == 9 {
-            card8Label.text = user.cards[num].getSymbol()
-            card8Suit.suit = user.cards[num].getSuit()
-            card8BigSuit.suit = user.cards[num].getSuit()
+            card9Label.text = user.cards[num].getSymbol()
+            card9Suit.suit = user.cards[num].getSuit()
+            card9BigSuit.suit = user.cards[num].getSuit()
             UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseInOut, animations: {
                 self.testHorizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
                 self.card2Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
@@ -1059,7 +1203,27 @@ class BlackJackViewController: UIViewController {
             else if cardNum == 2 {
                 card11Label.textColor = UIColor(red: 0.749, green: 0.000, blue: 0.000, alpha: 1.000)
             }
-            
+            else if cardNum == 3 {
+                card12Label.textColor = UIColor(red: 0.749, green: 0.000, blue: 0.000, alpha: 1.000)
+            }
+            else if cardNum == 4 {
+                card13Label.textColor = UIColor(red: 0.749, green: 0.000, blue: 0.000, alpha: 1.000)
+            }
+            else if cardNum == 5 {
+                card14Label.textColor = UIColor(red: 0.749, green: 0.000, blue: 0.000, alpha: 1.000)
+            }
+            else if cardNum == 6 {
+                card15Label.textColor = UIColor(red: 0.749, green: 0.000, blue: 0.000, alpha: 1.000)
+            }
+            else if cardNum == 7 {
+                card16Label.textColor = UIColor(red: 0.749, green: 0.000, blue: 0.000, alpha: 1.000)
+            }
+            else if cardNum == 8 {
+                card17Label.textColor = UIColor(red: 0.749, green: 0.000, blue: 0.000, alpha: 1.000)
+            }
+            else if cardNum == 9 {
+                card18Label.textColor = UIColor(red: 0.749, green: 0.000, blue: 0.000, alpha: 1.000)
+            }
         }
         else {
             if cardNum == 1 {
@@ -1068,12 +1232,33 @@ class BlackJackViewController: UIViewController {
             else if cardNum == 2 {
                 card11Label.textColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
             }
+            else if cardNum == 3 {
+                card12Label.textColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
+            }
+            else if cardNum == 4 {
+                card13Label.textColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
+            }
+            else if cardNum == 5 {
+                card14Label.textColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
+            }
+            else if cardNum == 6 {
+                card15Label.textColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
+            }
+            else if cardNum == 7 {
+                card16Label.textColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
+            }
+            else if cardNum == 8 {
+                card17Label.textColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
+            }
+            else if cardNum == 9 {
+                card18Label.textColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
+            }
         }
         if cardNum == 1 {
             card10Label.text = dealer.cards[num].getSymbol()
             card10Suit.suit = dealer.cards[num].getSuit()
             card10BigSuit.suit = dealer.cards[num].getSuit()
-            UIView.animate(withDuration: 1.0, delay: 1.5, options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
                 self.card10Vertical.constant += -self.view.bounds.height * 0.25 - 20
                 self.card10Horizontal.constant -= self.view.bounds.height * 0.07 - 3
                 self.view.layoutIfNeeded()
@@ -1083,9 +1268,126 @@ class BlackJackViewController: UIViewController {
             card11Label.text = dealer.cards[num].getSymbol()
             card11Suit.suit = dealer.cards[num].getSuit()
             card11BigSuit.suit = dealer.cards[num].getSuit()
-            UIView.animate(withDuration: 1.0, delay: 4.5, options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 1.0, delay: 3.0, options: .curveEaseInOut, animations: {
                 self.card11Vertical.constant += -self.view.bounds.height * 0.25 - 20
                 self.card11Horizontal.constant += self.view.bounds.height * 0.07 - 3
+                self.view.layoutIfNeeded()
+            }, completion: {finished in
+                if finished { self.flipCard(cardNum: cardNum + 9) }
+            })
+        }
+        else if cardNum  == 3 {
+            card12Label.text = dealer.cards[num].getSymbol()
+            card12Suit.suit = dealer.cards[num].getSuit()
+            card12BigSuit.suit = dealer.cards[num].getSuit()
+            UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseInOut, animations: {
+                self.card11Horizontal.constant = 0
+                self.card12Vertical.constant += -self.view.bounds.height * 0.25 - 20
+                self.card12Horizontal.constant += self.view.bounds.height * 0.07 - 3
+                self.view.layoutIfNeeded()
+            }, completion: {finished in
+                if finished { self.flipCard(cardNum: cardNum + 9) }
+            })
+        }
+        else if cardNum  == 4 {
+            card13Label.text = dealer.cards[num].getSymbol()
+            card13Suit.suit = dealer.cards[num].getSuit()
+            card13BigSuit.suit = dealer.cards[num].getSuit()
+            UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
+                self.card11Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card12Horizontal.constant -= 2 * (self.view.bounds.height * 0.07 - 3) / 3
+                self.card13Vertical.constant += -self.view.bounds.height * 0.25 - 20
+                self.card13Horizontal.constant += self.view.bounds.height * 0.07 - 3
+                self.view.layoutIfNeeded()
+            }, completion: {finished in
+                if finished { self.flipCard(cardNum: cardNum + 9) }
+            })
+        }
+        else if cardNum  == 5 {
+            card14Label.text = dealer.cards[num].getSymbol()
+            card14Suit.suit = dealer.cards[num].getSuit()
+            card14BigSuit.suit = dealer.cards[num].getSuit()
+            UIView.animate(withDuration: 1.0, delay: 2.0, options: .curveEaseInOut, animations: {
+                self.card10Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card11Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card12Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card13Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card14Vertical.constant += -self.view.bounds.height * 0.25 - 20
+                self.card14Horizontal.constant += 4 * (self.view.bounds.height * 0.07 - 3) / 3
+                self.view.layoutIfNeeded()
+            }, completion: {finished in
+                if finished { self.flipCard(cardNum: cardNum + 9) }
+            })
+        }
+        else if cardNum  == 6 {
+            card15Label.text = dealer.cards[num].getSymbol()
+            card15Suit.suit = dealer.cards[num].getSuit()
+            card15BigSuit.suit = dealer.cards[num].getSuit()
+            UIView.animate(withDuration: 1.0, delay: 3.0, options: .curveEaseInOut, animations: {
+                self.card10Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card11Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card12Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card13Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card14Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card15Vertical.constant += -self.view.bounds.height * 0.25 - 20
+                self.card15Horizontal.constant += 5 * (self.view.bounds.height * 0.07 - 3) / 3
+                self.view.layoutIfNeeded()
+            }, completion: {finished in
+                if finished { self.flipCard(cardNum: cardNum + 9) }
+            })
+        }
+        else if cardNum  == 7 {
+            card16Label.text = dealer.cards[num].getSymbol()
+            card16Suit.suit = dealer.cards[num].getSuit()
+            card16BigSuit.suit = dealer.cards[num].getSuit()
+            UIView.animate(withDuration: 1.0, delay: 4.0, options: .curveEaseInOut, animations: {
+                self.card10Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card11Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card12Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card13Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card14Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card15Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card16Vertical.constant += -self.view.bounds.height * 0.25 - 20
+                self.card16Horizontal.constant += 6 * (self.view.bounds.height * 0.07 - 3) / 3
+                self.view.layoutIfNeeded()
+            }, completion: {finished in
+                if finished { self.flipCard(cardNum: cardNum + 9) }
+            })
+        }
+        else if cardNum  == 8 {
+            card17Label.text = dealer.cards[num].getSymbol()
+            card17Suit.suit = dealer.cards[num].getSuit()
+            card17BigSuit.suit = dealer.cards[num].getSuit()
+            UIView.animate(withDuration: 1.0, delay: 5.0, options: .curveEaseInOut, animations: {
+                self.card10Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card11Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card12Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card13Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card14Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card15Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card16Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card17Vertical.constant += -self.view.bounds.height * 0.25 - 20
+                self.card17Horizontal.constant += 7 * (self.view.bounds.height * 0.07 - 3) / 3
+                self.view.layoutIfNeeded()
+            }, completion: {finished in
+                if finished { self.flipCard(cardNum: cardNum + 9) }
+            })
+        }
+        else if cardNum  == 9 {
+            card18Label.text = dealer.cards[num].getSymbol()
+            card18Suit.suit = dealer.cards[num].getSuit()
+            card18BigSuit.suit = dealer.cards[num].getSuit()
+            UIView.animate(withDuration: 1.0, delay: 6.0, options: .curveEaseInOut, animations: {
+                self.card10Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card11Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card12Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card13Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card14Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card15Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card16Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card17Horizontal.constant -= (self.view.bounds.height * 0.07 - 3) / 3
+                self.card18Vertical.constant += -self.view.bounds.height * 0.25 - 20
+                self.card18Horizontal.constant += 8 * (self.view.bounds.height * 0.07 - 3) / 3
                 self.view.layoutIfNeeded()
             }, completion: {finished in
                 if finished { self.flipCard(cardNum: cardNum + 9) }
@@ -1127,7 +1429,7 @@ class BlackJackViewController: UIViewController {
         else if cardNum == 11 {
             UIView.transition(from: cardBack11, to: cardGraphics11, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
         }
-        /*else if cardNum == 12 {
+        else if cardNum == 12 {
             UIView.transition(from: cardBack12, to: cardGraphics12, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
         }
         else if cardNum == 13 {
@@ -1147,7 +1449,7 @@ class BlackJackViewController: UIViewController {
         }
         else if cardNum == 18 {
             UIView.transition(from: cardBack18, to: cardGraphics18, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
-        }*/
+        }
         
     }
     
@@ -1163,18 +1465,19 @@ class BlackJackViewController: UIViewController {
         UIView.transition(from: cardGraphics9, to: cardBack9, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
         UIView.transition(from: cardGraphics10, to: cardBack10, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
         UIView.transition(from: cardGraphics11, to: cardBack11, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
-        /*UIView.transition(from: cardGraphics12, to: cardBack12, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
+        UIView.transition(from: cardGraphics12, to: cardBack12, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
         UIView.transition(from: cardGraphics13, to: cardBack13, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
         UIView.transition(from: cardGraphics14, to: cardBack14, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
         UIView.transition(from: cardGraphics15, to: cardBack15, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
         UIView.transition(from: cardGraphics16, to: cardBack16, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
         UIView.transition(from: cardGraphics17, to: cardBack17, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
-        UIView.transition(from: cardGraphics18, to: cardBack18, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)*/
+        UIView.transition(from: cardGraphics18, to: cardBack18, duration: 0.5, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
 
         
     }
     
     func returnCards() {
+        
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
             self.testVertical.constant = -75
             self.testHorizontal.constant = 0
@@ -1230,7 +1533,7 @@ class BlackJackViewController: UIViewController {
             self.card11Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
-        /*UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
             self.card12Vertical.constant = -75
             self.card12Horizontal.constant = 0
             self.view.layoutIfNeeded()
@@ -1264,9 +1567,23 @@ class BlackJackViewController: UIViewController {
             self.card18Vertical.constant = -75
             self.card18Horizontal.constant = 0
             self.view.layoutIfNeeded()
-        }, completion: nil)*/
+        }, completion: nil)
         
         userCardsDealt = 0
         dealerCardsDealt = 0
     }
+    
+    func animateWinnerDisplay(winner: String) {
+        self.winnerLabel.text = winner
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+            self.winnerLabel.alpha = 1.0
+            self.view.layoutIfNeeded()
+        }, completion: {finished in
+            if finished { UIView.animate(withDuration: 0.3, delay: 1.4, options: .curveEaseOut, animations: {
+                self.winnerLabel.alpha = 0.0
+                self.view.layoutIfNeeded()
+            }, completion: nil) }
+        })
+    }
+    
 }
