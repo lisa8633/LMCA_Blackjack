@@ -12,41 +12,19 @@ import CoreData
 
 class MultiplayerViewController: UIViewController {
     var userName = ""
-    var userCoins = 0.0
+    var playerdData: Dictionary<String, Any> = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        //core data
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Player")
-        //3
-        do {
-            let players = try managedContext.fetch(fetchRequest)
-            let player = players[0]
-            userName = (player.value(forKey: "name") as? String)!
-            userCoins = (player.value(forKey: "coins") as? Double)!
-            
-            
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-        }
-
+        userName = RoomCode.name
+       
         // Database
         let ref = Database.database().reference()
-        ref.child("one").setValue(["name": userName, "coins" : userCoins, "cards": "none"])
-        ref.child("one/name").observeSingleEvent(of: .value, with: {(snapshot)in
-            let name = snapshot.value as? String
-            print(name)
+        ref.child("\(RoomCode.code)").observeSingleEvent(of: .value, with: {(snapshot)in
+            let playerData = snapshot.value!
+            print(playerData)
         })
-        ref.child("one/coins").observeSingleEvent(of: .value, with: {(snapshot)in
-            let coins = snapshot.value as? Double
-            print(coins)
-        })
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
