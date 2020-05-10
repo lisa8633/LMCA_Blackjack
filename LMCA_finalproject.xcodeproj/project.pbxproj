@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		572FC77C460A08F41BB5DE38 /* Pods_LMCA_finalproject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EB5E6DBF5EFFA010552545 /* Pods_LMCA_finalproject.framework */; };
 		8E10D26E245E0A040054B29D /* SinglePlayerBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E10D26D245E0A040054B29D /* SinglePlayerBoardView.swift */; };
+		8E535B63246888320015A596 /* MultiPlayerBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E535B62246888320015A596 /* MultiPlayerBoardView.swift */; };
 		D599A50D2454C9CB00AAA7FC /* MultiStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A50C2454C9CB00AAA7FC /* MultiStartViewController.swift */; };
 		D599A50F2454C9E500AAA7FC /* BlackJackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A50E2454C9E500AAA7FC /* BlackJackViewController.swift */; };
 		D599A53B245A5E5300AAA7FC /* SuitGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A53A245A5E5300AAA7FC /* SuitGraphics.swift */; };
@@ -35,6 +36,7 @@
 		20EB5E6DBF5EFFA010552545 /* Pods_LMCA_finalproject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LMCA_finalproject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		494A0F5981AE7DFCD6F142A9 /* Pods-LMCA_finalproject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMCA_finalproject.release.xcconfig"; path = "Target Support Files/Pods-LMCA_finalproject/Pods-LMCA_finalproject.release.xcconfig"; sourceTree = "<group>"; };
 		8E10D26D245E0A040054B29D /* SinglePlayerBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerBoardView.swift; sourceTree = "<group>"; };
+		8E535B62246888320015A596 /* MultiPlayerBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPlayerBoardView.swift; sourceTree = "<group>"; };
 		D599A50C2454C9CB00AAA7FC /* MultiStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiStartViewController.swift; sourceTree = "<group>"; };
 		D599A50E2454C9E500AAA7FC /* BlackJackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackViewController.swift; sourceTree = "<group>"; };
 		D599A53A245A5E5300AAA7FC /* SuitGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitGraphics.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				D599A53E245A8D6800AAA7FC /* CardGraphics.swift */,
 				E20BA24B24537E3C00E39FE3 /* Main.storyboard */,
 				8E10D26D245E0A040054B29D /* SinglePlayerBoardView.swift */,
+				8E535B62246888320015A596 /* MultiPlayerBoardView.swift */,
 				E20BA25124537E3D00E39FE3 /* Assets.xcassets */,
 				E20BA25324537E3D00E39FE3 /* LaunchScreen.storyboard */,
 				E20BA25624537E3D00E39FE3 /* Info.plist */,
@@ -262,6 +265,7 @@
 				E20BA25D2453889600E39FE3 /* Card.swift in Sources */,
 				D599A53D245A70AB00AAA7FC /* ChipGraphics.swift in Sources */,
 				D599A50F2454C9E500AAA7FC /* BlackJackViewController.swift in Sources */,
+				8E535B63246888320015A596 /* MultiPlayerBoardView.swift in Sources */,
 				D599A541245A9F7200AAA7FC /* MultiplayerViewController.swift in Sources */,
 				E20BA24824537E3C00E39FE3 /* SceneDelegate.swift in Sources */,
 				E20BA25024537E3C00E39FE3 /* LMCA_finalproject.xcdatamodeld in Sources */,
