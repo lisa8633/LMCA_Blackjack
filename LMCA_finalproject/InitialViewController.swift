@@ -22,14 +22,13 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        pictureWidth.constant = self.view.bounds.width * 2.4 - 620
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        
-        pictureWidth.constant = self.view.bounds.width * 2.4 - 620
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return

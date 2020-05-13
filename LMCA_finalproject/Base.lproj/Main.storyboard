@@ -2252,41 +2252,166 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9w-ub-9nC">
-                                <rect key="frame" x="20" y="156.5" width="374" height="655.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blackjack Guide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AL-jN-U0w">
+                                <rect key="frame" x="25" y="108" width="364" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzk-Tf-orB">
+                                <rect key="frame" x="25" y="157" width="364" height="41"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="What is Blackjack?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6Fd-OY-38w" kind="show" id="cmW-xe-MeE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32z-gE-Aq1">
+                                <rect key="frame" x="25" y="203" width="364" height="41"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Bets/Chips">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6u-bH-c2h">
+                                <rect key="frame" x="25" y="249" width="364" height="41"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Dealing">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7o-yN-Rem">
+                                <rect key="frame" x="25" y="295" width="364" height="41"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Hit/Stand">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ko-F5-Cia">
+                                <rect key="frame" x="25" y="341" width="364" height="41"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Card Value">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDZ-dX-spI">
+                                <rect key="frame" x="25" y="387" width="364" height="41"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Winning">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfu-Tk-6L2">
+                                <rect key="frame" x="25" y="433" width="364" height="41"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Insurance">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qr-5m-3bT">
+                                <rect key="frame" x="25" y="479" width="364" height="41"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Gestures">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackjackRulesImage" translatesAutoresizingMaskIntoConstraints="NO" id="eNW-HC-u8u">
+                                <rect key="frame" x="25" y="560" width="364" height="322"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="322" id="F9t-n0-Je3"/>
+                                    <constraint firstAttribute="width" constant="364" id="Id2-ba-OKF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="D7o-yN-Rem" firstAttribute="leading" secondItem="y9y-Ys-sVW" secondAttribute="leading" constant="25" id="3VJ-3Z-UL4"/>
+                            <constraint firstItem="y9y-Ys-sVW" firstAttribute="trailing" secondItem="eNW-HC-u8u" secondAttribute="trailing" constant="25" id="4t9-wE-KsK"/>
+                            <constraint firstItem="0AL-jN-U0w" firstAttribute="leading" secondItem="y9y-Ys-sVW" secondAttribute="leading" constant="25" id="59A-IY-4oe"/>
+                            <constraint firstItem="Z6u-bH-c2h" firstAttribute="leading" secondItem="y9y-Ys-sVW" secondAttribute="leading" constant="25" id="8dY-WH-sZS"/>
+                            <constraint firstItem="y9y-Ys-sVW" firstAttribute="trailing" secondItem="0AL-jN-U0w" secondAttribute="trailing" constant="25" id="DOj-Bn-qdY"/>
+                            <constraint firstItem="y9y-Ys-sVW" firstAttribute="trailing" secondItem="Z6u-bH-c2h" secondAttribute="trailing" constant="25" id="Dis-CL-sI0"/>
+                            <constraint firstItem="32z-gE-Aq1" firstAttribute="leading" secondItem="y9y-Ys-sVW" secondAttribute="leading" constant="25" id="ION-MW-vX0"/>
+                            <constraint firstItem="Z6u-bH-c2h" firstAttribute="top" secondItem="32z-gE-Aq1" secondAttribute="bottom" constant="5" id="JsK-EL-THD"/>
+                            <constraint firstItem="eNW-HC-u8u" firstAttribute="leading" secondItem="y9y-Ys-sVW" secondAttribute="leading" constant="25" id="LAM-lP-G5U"/>
+                            <constraint firstItem="y9y-Ys-sVW" firstAttribute="trailing" secondItem="YDZ-dX-spI" secondAttribute="trailing" constant="25" id="LWt-Ap-seN"/>
+                            <constraint firstItem="Rzk-Tf-orB" firstAttribute="leading" secondItem="y9y-Ys-sVW" secondAttribute="leading" constant="25" id="NQI-XS-Cty"/>
+                            <constraint firstItem="y9y-Ys-sVW" firstAttribute="trailing" secondItem="32z-gE-Aq1" secondAttribute="trailing" constant="25" id="Rqu-wk-XNg"/>
+                            <constraint firstItem="0AL-jN-U0w" firstAttribute="top" secondItem="y9y-Ys-sVW" secondAttribute="top" constant="20" id="RsT-63-jYr"/>
+                            <constraint firstItem="y9y-Ys-sVW" firstAttribute="trailing" secondItem="Rzk-Tf-orB" secondAttribute="trailing" constant="25" id="TqK-p0-0SO"/>
+                            <constraint firstItem="7Qr-5m-3bT" firstAttribute="top" secondItem="Mfu-Tk-6L2" secondAttribute="bottom" constant="5" id="UCG-pA-3y0"/>
+                            <constraint firstItem="Mfu-Tk-6L2" firstAttribute="top" secondItem="YDZ-dX-spI" secondAttribute="bottom" constant="5" id="YP1-vZ-Qet"/>
+                            <constraint firstItem="0ko-F5-Cia" firstAttribute="top" secondItem="D7o-yN-Rem" secondAttribute="bottom" constant="5" id="YYH-Hv-wQM"/>
+                            <constraint firstItem="7Qr-5m-3bT" firstAttribute="leading" secondItem="y9y-Ys-sVW" secondAttribute="leading" constant="25" id="a5B-Db-oOC"/>
+                            <constraint firstItem="eNW-HC-u8u" firstAttribute="bottom" secondItem="y9y-Ys-sVW" secondAttribute="bottom" constant="20" id="bDq-Vl-1gi"/>
+                            <constraint firstItem="Mfu-Tk-6L2" firstAttribute="leading" secondItem="y9y-Ys-sVW" secondAttribute="leading" constant="25" id="bQS-yR-Aev"/>
+                            <constraint firstItem="YDZ-dX-spI" firstAttribute="top" secondItem="0ko-F5-Cia" secondAttribute="bottom" constant="5" id="bkR-r1-fnc"/>
+                            <constraint firstItem="YDZ-dX-spI" firstAttribute="leading" secondItem="y9y-Ys-sVW" secondAttribute="leading" constant="25" id="e5T-xq-gkN"/>
+                            <constraint firstItem="y9y-Ys-sVW" firstAttribute="trailing" secondItem="0ko-F5-Cia" secondAttribute="trailing" constant="25" id="gGt-2J-isV"/>
+                            <constraint firstItem="0ko-F5-Cia" firstAttribute="leading" secondItem="y9y-Ys-sVW" secondAttribute="leading" constant="25" id="hB3-Yz-pph"/>
+                            <constraint firstItem="32z-gE-Aq1" firstAttribute="top" secondItem="Rzk-Tf-orB" secondAttribute="bottom" constant="5" id="hJf-wV-SeN"/>
+                            <constraint firstItem="D7o-yN-Rem" firstAttribute="top" secondItem="Z6u-bH-c2h" secondAttribute="bottom" constant="5" id="o9R-V4-tyC"/>
+                            <constraint firstItem="Rzk-Tf-orB" firstAttribute="top" secondItem="0AL-jN-U0w" secondAttribute="bottom" constant="10" id="pwF-fb-Csh"/>
+                            <constraint firstItem="y9y-Ys-sVW" firstAttribute="trailing" secondItem="7Qr-5m-3bT" secondAttribute="trailing" constant="25" id="qGa-Jn-6TZ"/>
+                            <constraint firstItem="y9y-Ys-sVW" firstAttribute="trailing" secondItem="D7o-yN-Rem" secondAttribute="trailing" constant="25" id="wwW-Ri-zbc"/>
+                            <constraint firstItem="y9y-Ys-sVW" firstAttribute="trailing" secondItem="Mfu-Tk-6L2" secondAttribute="trailing" constant="25" id="zVG-0n-jYy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y9y-Ys-sVW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N7b-uI-rZF"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jy1-sA-wOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850.72463768115949" y="1123.6607142857142"/>
+        </scene>
+        <!--What is Blackjack Viewcontroller-->
+        <scene sceneID="3D3-Ia-8SD">
+            <objects>
+                <viewController title="What is Blackjack Viewcontroller" id="6Fd-OY-38w" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iqq-fh-Qls">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ViX-20-q3O">
+                                <rect key="frame" x="25" y="161" width="364" height="701"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Blackjack is one of the most popular played casino banking game. The objective of Blackjack is to play against the dealer or house. You want to win the most money from the dealer using luck and strategy.      </string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blackjack Rules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AL-jN-U0w">
-                                <rect key="frame" x="25" y="108" width="364" height="38.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is Blackjack?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ro9-0v-FWX">
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="0AL-jN-U0w" firstAttribute="leading" secondItem="y9y-Ys-sVW" secondAttribute="leading" constant="25" id="59A-IY-4oe"/>
-                            <constraint firstItem="y9y-Ys-sVW" firstAttribute="trailing" secondItem="0AL-jN-U0w" secondAttribute="trailing" constant="25" id="DOj-Bn-qdY"/>
-                            <constraint firstItem="0AL-jN-U0w" firstAttribute="top" secondItem="y9y-Ys-sVW" secondAttribute="top" constant="20" id="RsT-63-jYr"/>
-                            <constraint firstItem="y9y-Ys-sVW" firstAttribute="bottom" secondItem="r9w-ub-9nC" secondAttribute="bottom" constant="50" id="ZIf-Mi-fxv"/>
-                            <constraint firstItem="y9y-Ys-sVW" firstAttribute="trailing" secondItem="r9w-ub-9nC" secondAttribute="trailing" constant="20" id="esD-dR-yxJ"/>
-                            <constraint firstItem="r9w-ub-9nC" firstAttribute="leading" secondItem="y9y-Ys-sVW" secondAttribute="leading" constant="20" id="wor-lD-Lz5"/>
-                            <constraint firstItem="r9w-ub-9nC" firstAttribute="top" secondItem="0AL-jN-U0w" secondAttribute="bottom" constant="10" id="zvX-oA-nLM"/>
+                            <constraint firstItem="9VD-n7-C0B" firstAttribute="trailing" secondItem="Ro9-0v-FWX" secondAttribute="trailing" constant="25" id="iPs-io-Jmy"/>
+                            <constraint firstItem="Ro9-0v-FWX" firstAttribute="top" secondItem="9VD-n7-C0B" secondAttribute="top" constant="20" id="sAg-of-PKx"/>
+                            <constraint firstItem="Ro9-0v-FWX" firstAttribute="leading" secondItem="9VD-n7-C0B" secondAttribute="leading" constant="25" id="w62-lu-jPr"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="y9y-Ys-sVW"/>
+                        <viewLayoutGuide key="safeArea" id="9VD-n7-C0B"/>
                     </view>
-                    <navigationItem key="navigationItem" id="N7b-uI-rZF"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <connections>
-                        <outlet property="rulesText" destination="r9w-ub-9nC" id="lei-io-aY8"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="0PQ-hc-x1O"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jy1-sA-wOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Uj-Zk-A91" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1063.768115942029" y="928.79464285714278"/>
+            <point key="canvasLocation" x="1731.8840579710147" y="1125.6696428571429"/>
         </scene>
         <!--Multi Start View Controller-->
         <scene sceneID="LZy-0D-KrA">
@@ -2491,5 +2616,6 @@
     </scenes>
     <resources>
         <image name="blackjackIcon" width="512" height="512"/>
+        <image name="blackjackRulesImage" width="1200" height="805"/>
     </resources>
 </document>

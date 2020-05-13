@@ -780,7 +780,7 @@ class BlackJackViewController: UIViewController {
     
     func endRound(delay: Int){
         DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay-2)) {
-            self.animateWinnerDisplay(winner: "Tie!")
+            self.animateWinnerDisplay(winner: "Push!")
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(2)) {
                 self.dealtAlready = false
                 self.deck = Deck(numofDeck: 6)
@@ -856,7 +856,7 @@ class BlackJackViewController: UIViewController {
                 cardsDealt = 4
                 // begin game and deal cards
                 if user.blackjack && dealer.blackjack {
-                    print("tie")
+                    print("push")
                     flipCard(cardNum : 10)
                     endRound(delay: dealerCardsDealt + 1)
                 }
@@ -997,7 +997,7 @@ class BlackJackViewController: UIViewController {
                 dealerWinsRound(delay: dealerCardsDealt + 1)
                 //dealer wins
             }else if dealer.getValue() == user.getValue(){
-                print("tie")
+                print("push")
                 endRound(delay: dealerCardsDealt + 1)
                 // player ties
             }else{
