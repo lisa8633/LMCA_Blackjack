@@ -333,6 +333,12 @@ class BlackJackViewController: UIViewController {
     @IBOutlet weak var totalBet: UILabel!
     @IBOutlet weak var balance: UILabel!
     
+    
+    @IBOutlet var tapGestureHit: UITapGestureRecognizer!
+    @IBOutlet var swipeGestureStand: UISwipeGestureRecognizer!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //balance.adjustsFontSizeToFitWidth=true;
@@ -692,22 +698,26 @@ class BlackJackViewController: UIViewController {
         }
     }
     func userWinsRound(delay: Int){
+        // Reset button text and interaction
+        self.dealAndHit.setTitle("Deal", for: .normal)
+        self.dealAndHit.isUserInteractionEnabled = false
+        self.tapGestureHit.isEnabled = false
+        self.stand.setTitle("", for: .normal)
+        self.stand.isUserInteractionEnabled = false
+        self.resetBet.isUserInteractionEnabled = true
+        self.doubleDown.setTitle("", for: .normal)
+        self.doubleDown.isUserInteractionEnabled = false
+        self.stand.alpha = 0
+        self.doubleDown.alpha = 0
+        self.splitAndInsurance.alpha = 0
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay-2)) {
             self.animateWinnerDisplay(winner: "Player Wins!")
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(2)) {
                 self.dealtAlready = false
                 self.deck = Deck(numofDeck: 6)
                 self.deck.shuffle()
-                // Reset button text and interaction
-                self.dealAndHit.setTitle("Deal", for: .normal)
-                self.stand.setTitle("", for: .normal)
-                self.stand.isUserInteractionEnabled = false
-                self.resetBet.isUserInteractionEnabled = true
-                self.doubleDown.setTitle("", for: .normal)
-                self.doubleDown.isUserInteractionEnabled = false
-                self.stand.alpha = 0
-                self.doubleDown.alpha = 0
-                self.splitAndInsurance.alpha = 0
+
                 
                 self.currentBalance += self.userBet * 2
                 self.userBet = 0
@@ -716,26 +726,33 @@ class BlackJackViewController: UIViewController {
                 self.updatePlayerBalance(updatedBalance: self.currentBalance)
                 self.flipAllCardBack()
                 self.returnCards()
+                
+                self.dealAndHit.isUserInteractionEnabled = true
+                self.tapGestureHit.isEnabled = true
             }
         }
     }
     func userWinsRoundBJ(delay: Int){
+        // Reset button text and interaction
+        self.dealAndHit.setTitle("Deal", for: .normal)
+        self.dealAndHit.isUserInteractionEnabled = false
+        self.tapGestureHit.isEnabled = false
+        self.stand.setTitle("", for: .normal)
+        self.stand.isUserInteractionEnabled = false
+        self.resetBet.isUserInteractionEnabled = true
+        self.doubleDown.setTitle("", for: .normal)
+        self.doubleDown.isUserInteractionEnabled = false
+        self.stand.alpha = 0
+        self.doubleDown.alpha = 0
+        self.splitAndInsurance.alpha = 0
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + Double(3)) {
             self.animateWinnerDisplay(winner: "Player Blackjack!")
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(2)) {
                 self.dealtAlready = false
                 self.deck = Deck(numofDeck: 6)
                 self.deck.shuffle()
-                // Reset button text and interaction
-                self.dealAndHit.setTitle("Deal", for: .normal)
-                self.stand.setTitle("", for: .normal)
-                self.stand.isUserInteractionEnabled = false
-                self.resetBet.isUserInteractionEnabled = true
-                self.doubleDown.setTitle("", for: .normal)
-                self.doubleDown.isUserInteractionEnabled = false
-                self.stand.alpha = 0
-                self.doubleDown.alpha = 0
-                self.splitAndInsurance.alpha = 0
+
                 
                 self.currentBalance += self.userBet * 2 + self.userBet / 2
                 self.userBet = 0
@@ -744,28 +761,35 @@ class BlackJackViewController: UIViewController {
                 self.updatePlayerBalance(updatedBalance: self.currentBalance)
                 self.flipAllCardBack()
                 self.returnCards()
+                
+                self.dealAndHit.isUserInteractionEnabled = true
+                self.tapGestureHit.isEnabled = true
             }
         }
         
     }
     
     func dealerWinsRound(delay: Int){
+        // Reset button text and interaction
+        self.dealAndHit.setTitle("Deal", for: .normal)
+        self.dealAndHit.isUserInteractionEnabled = false
+        self.tapGestureHit.isEnabled = false
+        self.stand.setTitle("", for: .normal)
+        self.stand.isUserInteractionEnabled = false
+        self.resetBet.isUserInteractionEnabled = true
+        self.doubleDown.setTitle("", for: .normal)
+        self.doubleDown.isUserInteractionEnabled = false
+        self.stand.alpha = 0
+        self.doubleDown.alpha = 0
+        self.splitAndInsurance.alpha = 0
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay-2)) {
             self.animateWinnerDisplay(winner: "Dealer Wins")
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(2)) {
                 self.dealtAlready = false
                 self.deck = Deck(numofDeck: 6)
                 self.deck.shuffle()
-                // Reset button text and interaction
-                self.dealAndHit.setTitle("Deal", for: .normal)
-                self.stand.setTitle("", for: .normal)
-                self.stand.isUserInteractionEnabled = false
-                self.resetBet.isUserInteractionEnabled = true
-                self.doubleDown.setTitle("", for: .normal)
-                self.doubleDown.isUserInteractionEnabled = false
-                self.stand.alpha = 0
-                self.doubleDown.alpha = 0
-                self.splitAndInsurance.alpha = 0
+
                 
                 self.userBet = 0
                 self.totalBet.text = "Bet: \(self.userBet)"
@@ -773,28 +797,37 @@ class BlackJackViewController: UIViewController {
                 self.updatePlayerBalance(updatedBalance: self.currentBalance)
                 self.flipAllCardBack()
                 self.returnCards()
+                
+                self.dealAndHit.isUserInteractionEnabled = true
+                self.tapGestureHit.isEnabled = true
             }
         }
     }
     
     
     func endRound(delay: Int){
+        // Reset button text and interaction
+        self.dealAndHit.setTitle("Deal", for: .normal)
+        self.dealAndHit.isUserInteractionEnabled = false
+        self.tapGestureHit.isEnabled = false
+        self.stand.setTitle("", for: .normal)
+        self.stand.isUserInteractionEnabled = false
+        self.resetBet.isUserInteractionEnabled = true
+        self.doubleDown.setTitle("", for: .normal)
+        self.doubleDown.isUserInteractionEnabled = false
+        self.stand.alpha = 0
+        self.doubleDown.alpha = 0
+        self.splitAndInsurance.alpha = 0
+        
+        
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay-2)) {
             self.animateWinnerDisplay(winner: "Push!")
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(2)) {
                 self.dealtAlready = false
                 self.deck = Deck(numofDeck: 6)
                 self.deck.shuffle()
-                // Reset button text and interaction
-                self.dealAndHit.setTitle("Deal", for: .normal)
-                self.stand.setTitle("", for: .normal)
-                self.stand.isUserInteractionEnabled = false
-                self.resetBet.isUserInteractionEnabled = true
-                self.doubleDown.setTitle("", for: .normal)
-                self.doubleDown.isUserInteractionEnabled = false
-                self.stand.alpha = 0
-                self.doubleDown.alpha = 0
-                self.splitAndInsurance.alpha = 0
+
                 
                 self.currentBalance += self.userBet
                 self.userBet = 0
@@ -803,6 +836,8 @@ class BlackJackViewController: UIViewController {
                 self.updatePlayerBalance(updatedBalance: self.currentBalance)
                 self.flipAllCardBack()
                 self.returnCards()
+                self.dealAndHit.isUserInteractionEnabled = true
+                self.tapGestureHit.isEnabled = true
             }
         }
     }

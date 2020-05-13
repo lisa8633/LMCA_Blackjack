@@ -2218,6 +2218,8 @@
                         <outlet property="stack9SuitValueHeight" destination="9dQ-je-WeC" id="fA7-dD-pqf"/>
                         <outlet property="stackSuitValueHeight" destination="Cw6-Hq-vdN" id="uYa-rd-8Aa"/>
                         <outlet property="stand" destination="3M7-rd-oZL" id="RvW-s8-PeA"/>
+                        <outlet property="swipeGestureStand" destination="Qqr-T7-ti6" id="MIW-2o-4oI"/>
+                        <outlet property="tapGestureHit" destination="M6p-6f-E6U" id="1cO-5t-gjA"/>
                         <outlet property="tenBet" destination="ndl-cj-FgJ" id="Nt3-Hm-b6F"/>
                         <outlet property="testHorizontal" destination="5Wa-o9-GYr" id="29w-gG-jZ2"/>
                         <outlet property="testVertical" destination="F5k-hg-Ut2" id="uY9-qM-9pW"/>
