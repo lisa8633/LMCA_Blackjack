@@ -54,7 +54,7 @@ class Dealer {
         return self.blackjack
     }
     func isFaceUpCardAce() -> Bool{
-        return self.cards[0].getSymbol() == "A"
+        return self.cards[1].getSymbol() == "A"
     }
 
     func isBust() -> Bool{
