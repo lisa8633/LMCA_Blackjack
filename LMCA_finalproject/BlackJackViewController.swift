@@ -624,8 +624,18 @@ class BlackJackViewController: UIViewController {
     }
 
     @IBAction func helpAction(_ sender: Any) {
-        let refreshAlert = UIAlertController(title: "Need Help?", message: "To use gestures.....", preferredStyle: UIAlertController.Style.alert)
+        let refreshAlert = UIAlertController(title: "", message: "", preferredStyle: UIAlertController.Style.alert)
 
+        let titleFont = [NSAttributedString.Key.font: UIFont(name: "Avenir-Roman", size: 20.0)!]
+        let messageFont = [NSAttributedString.Key.font: UIFont(name: "Avenir-Roman", size: 16.0)!]
+
+        let titleAttrString = NSMutableAttributedString(string: "Need Help?", attributes: titleFont)
+        let messageAttrString = NSMutableAttributedString(string: "Hit: Tap the screen\nStand: Swipe Right", attributes: messageFont)
+
+        refreshAlert.setValue(messageAttrString, forKey: "attributedMessage")
+        refreshAlert.setValue(titleAttrString, forKey: "attributedTitle")
+        
+        
         let okAction = UIAlertAction(title: "Okay", style: .default) {
             (UIAlertAction) -> Void in
             NotificationCenter.default.removeObserver(self)
@@ -797,109 +807,120 @@ class BlackJackViewController: UIViewController {
         }
     }
     
+    
+    
     @IBAction func dealOrHitAction(_ sender: UIButton) {
-        if userBet > 0 && !dealtAlready{
-            // Set button text and interaction
-            dealAndHit.setTitle("Hit", for: .normal)
-            self.stand.alpha = 1.0
-            stand.setTitle("Stand", for: .normal)
-            stand.isUserInteractionEnabled = true
-            dealtAlready = true
-            resetBet.isUserInteractionEnabled = false
-            if (currentBalance - userBet) > 0 {
-                self.doubleDown.alpha = 1.0
-                doubleDown.setTitle("Double", for: .normal)
-                doubleDown.isUserInteractionEnabled = true
-            }
-            // Deal Cards
-            user = User(card1: deck.deal(), card2: deck.deal())
-            print(user.cards[0].getSymbol())
-            print(user.cards[1].getSymbol())
-            print("Player Hand Total \(user.getValue())")
-            dealer = Dealer(card1: deck.deal(), card2: deck.deal())
-            print(dealer.cards[0].getSymbol())
-            print(dealer.cards[1].getSymbol())
-            
-            userCardsDealt += 1
-            animateCardUser(user: user, cardNum: userCardsDealt)
-            
-            dealerCardsDealt += 1
-            animateCardDealer(dealer: dealer, cardNum: dealerCardsDealt)
-            
-            userCardsDealt += 1
-            animateCardUser(user: user, cardNum: userCardsDealt)
-            
-            dealerCardsDealt += 1
-            animateCardDealer(dealer: dealer, cardNum: dealerCardsDealt)
-            
-            print("Dealer Hand Total \(dealer.getValue())")
-            cardsDealt = 4
-            // begin game and deal cards
-            if user.blackjack && dealer.blackjack {
-                print("tie")
-                flipCard(cardNum : 10)
+        dealOrHitFunction()
+    }
+    
+    @IBAction func tapGestureDealOrHitAction(_ sender: Any) {
+        print("Tap gesture recognized")
+        dealOrHitFunction()
+    }
+    func dealOrHitFunction (){
+            if userBet > 0 && !dealtAlready{
+                // Set button text and interaction
+                dealAndHit.setTitle("Hit", for: .normal)
+                self.stand.alpha = 1.0
+                stand.setTitle("Stand", for: .normal)
+                stand.isUserInteractionEnabled = true
+                dealtAlready = true
+                resetBet.isUserInteractionEnabled = false
+                if (currentBalance - userBet) > 0 {
+                    self.doubleDown.alpha = 1.0
+                    doubleDown.setTitle("Double", for: .normal)
+                    doubleDown.isUserInteractionEnabled = true
+                }
+                // Deal Cards
+                user = User(card1: deck.deal(), card2: deck.deal())
+                print(user.cards[0].getSymbol())
+                print(user.cards[1].getSymbol())
+                print("Player Hand Total \(user.getValue())")
+                dealer = Dealer(card1: deck.deal(), card2: deck.deal())
+                print(dealer.cards[0].getSymbol())
+                print(dealer.cards[1].getSymbol())
+                
+                userCardsDealt += 1
+                animateCardUser(user: user, cardNum: userCardsDealt)
+                
+                dealerCardsDealt += 1
+                animateCardDealer(dealer: dealer, cardNum: dealerCardsDealt)
+                
+                userCardsDealt += 1
+                animateCardUser(user: user, cardNum: userCardsDealt)
+                
+                dealerCardsDealt += 1
+                animateCardDealer(dealer: dealer, cardNum: dealerCardsDealt)
+                
+                print("Dealer Hand Total \(dealer.getValue())")
+                cardsDealt = 4
+                // begin game and deal cards
+                if user.blackjack && dealer.blackjack {
+                    print("tie")
+                    flipCard(cardNum : 10)
+                    endRound(delay: dealerCardsDealt + 1)
+                }
+                if user.blackjack && !dealer.blackjack {
+                    print("Player wins")
+                    flipCard(cardNum : 10)
+                    userWinsRoundBJ(delay: dealerCardsDealt + 1)
+                }
+                if !user.blackjack && dealer.blackjack {
+                    print("Dealer has blackjack, but not shown yet")
+                    //dealerWinsRound(delay: dealerCardsDealt + 1)
+                }
+                
+                if dealer.isFaceUpCardAce(){
+                    //go to insurance
+                    splitAndInsurance.alpha = 1.0
+                    splitAndInsurance.setTitle("Insurance", for: .normal)
+                    splitAndInsurance.isUserInteractionEnabled = true
+                    print("player option to insurance")
+                }
+                if user.isBust(){
+                    //lose coins
+                    print("player lose")
+                    flipCard(cardNum : 10)
+                    dealerWinsRound(delay: dealerCardsDealt + 1)
+                }else if user.isBJ(){
+                    //Need to check dealer hand
+                    print("player blackjack")
+                }
+            }else if userBet > 0 && dealtAlready{
+                
+                // Set button text and interaction
+                self.doubleDown.alpha = 0
+                self.splitAndInsurance.alpha = 0
+                doubleDown.setTitle("", for: .normal)
+                doubleDown.isUserInteractionEnabled = false
+                splitAndInsurance.setTitle("", for: .normal)
+                splitAndInsurance.isUserInteractionEnabled = false
+                
+                user.addCard(card: deck.deal())
+                cardsDealt += 1
+                print(user.cards[2].getSymbol())
+                print("Player Hand Total \(user.getValue())")
+                
+                userCardsDealt += 1
+                animateCardUser(user: user, cardNum: userCardsDealt)
+                
+                if user.isBust(){
+                    print("Player lose")
+                    flipCard(cardNum : 10)
+                    dealerWinsRound(delay: dealerCardsDealt + 1)
+                    //lose coins
+                }
+                else if user.isBJ(){
+                    standFunction()
+                }
+            }else if userBet == 0 && !dealtAlready{
+                //do nothing
+            }else{
+                //end game?
                 endRound(delay: dealerCardsDealt + 1)
             }
-            if user.blackjack && !dealer.blackjack {
-                print("Player wins")
-                flipCard(cardNum : 10)
-                userWinsRoundBJ(delay: dealerCardsDealt + 1)
-            }
-            if !user.blackjack && dealer.blackjack {
-                print("Dealer has blackjack, but not shown yet")
-                //dealerWinsRound(delay: dealerCardsDealt + 1)
-            }
-            
-            if dealer.isFaceUpCardAce(){
-                //go to insurance
-                splitAndInsurance.alpha = 1.0
-                splitAndInsurance.setTitle("Insurance", for: .normal)
-                splitAndInsurance.isUserInteractionEnabled = true
-                print("player option to insurance")
-            }
-            if user.isBust(){
-                //lose coins
-                print("player lose")
-                flipCard(cardNum : 10)
-                dealerWinsRound(delay: dealerCardsDealt + 1)
-            }else if user.isBJ(){
-                //Need to check dealer hand
-                print("player blackjack")
-            }
-        }else if userBet > 0 && dealtAlready{
-            
-            // Set button text and interaction
-            self.doubleDown.alpha = 0
-            self.splitAndInsurance.alpha = 0
-            doubleDown.setTitle("", for: .normal)
-            doubleDown.isUserInteractionEnabled = false
-            splitAndInsurance.setTitle("", for: .normal)
-            splitAndInsurance.isUserInteractionEnabled = false
-            
-            user.addCard(card: deck.deal())
-            cardsDealt += 1
-            print(user.cards[2].getSymbol())
-            print("Player Hand Total \(user.getValue())")
-            
-            userCardsDealt += 1
-            animateCardUser(user: user, cardNum: userCardsDealt)
-            
-            if user.isBust(){
-                print("Player lose")
-                flipCard(cardNum : 10)
-                dealerWinsRound(delay: dealerCardsDealt + 1)
-                //lose coins
-            }
-            else if user.isBJ(){
-                standFunction()
-            }
-        }else if userBet == 0 && !dealtAlready{
-            //do nothing
-        }else{
-            //end game?
-            endRound(delay: dealerCardsDealt + 1)
         }
-    }
+    
     @IBAction func doubleDownAction(_ sender: UIButton) {
         // double bet
         currentBalance = currentBalance - userBet
@@ -922,6 +943,11 @@ class BlackJackViewController: UIViewController {
         }else{
             standFunction()
         }
+    }
+    
+    @IBAction func swipeGestureStandAction(_ sender: Any) {
+        print("Swipe gesture recognized")
+        standFunction()
     }
     
     @IBAction func standAction(_ sender: UIButton) {

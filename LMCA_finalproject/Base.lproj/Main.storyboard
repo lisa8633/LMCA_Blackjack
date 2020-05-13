@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bS4-Lw-KoE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bS4-Lw-KoE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1883,6 +1883,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="MQA-OD-0bi" firstAttribute="width" secondItem="MQA-OD-0bi" secondAttribute="height" multiplier="2:3" id="09r-QO-ZZF"/>
                             <constraint firstItem="pxa-c1-LiP" firstAttribute="top" secondItem="mi8-m7-0YJ" secondAttribute="bottom" constant="3" id="0Bb-T9-5eG"/>
@@ -1962,6 +1963,10 @@
                             <constraint firstItem="tMu-xl-K8P" firstAttribute="centerX" secondItem="wzH-XP-y8A" secondAttribute="centerX" id="zuP-yJ-PPJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sjU-yp-Z5e"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="M6p-6f-E6U" appends="YES" id="8tJ-Mo-UHx"/>
+                            <outletCollection property="gestureRecognizers" destination="Qqr-T7-ti6" appends="YES" id="7MI-uI-cw5"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="g0E-gi-4xq"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -2226,6 +2231,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yt-En-elF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="nAP-Xt-cf1" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="M6p-6f-E6U">
+                    <connections>
+                        <action selector="tapGestureDealOrHitAction:" destination="JWX-HW-4tm" id="6Bc-Lf-3yM"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Qqr-T7-ti6">
+                    <connections>
+                        <action selector="swipeGestureStandAction:" destination="JWX-HW-4tm" id="MSB-38-8q0"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1721.7391304347827" y="-308.03571428571428"/>
         </scene>
@@ -2238,19 +2253,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9w-ub-9nC">
-                                <rect key="frame" x="20" y="113" width="374" height="699"/>
+                                <rect key="frame" x="20" y="156.5" width="374" height="655.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blackjack Rules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AL-jN-U0w">
+                                <rect key="frame" x="25" y="108" width="364" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="0AL-jN-U0w" firstAttribute="leading" secondItem="y9y-Ys-sVW" secondAttribute="leading" constant="25" id="59A-IY-4oe"/>
+                            <constraint firstItem="y9y-Ys-sVW" firstAttribute="trailing" secondItem="0AL-jN-U0w" secondAttribute="trailing" constant="25" id="DOj-Bn-qdY"/>
+                            <constraint firstItem="0AL-jN-U0w" firstAttribute="top" secondItem="y9y-Ys-sVW" secondAttribute="top" constant="20" id="RsT-63-jYr"/>
                             <constraint firstItem="y9y-Ys-sVW" firstAttribute="bottom" secondItem="r9w-ub-9nC" secondAttribute="bottom" constant="50" id="ZIf-Mi-fxv"/>
                             <constraint firstItem="y9y-Ys-sVW" firstAttribute="trailing" secondItem="r9w-ub-9nC" secondAttribute="trailing" constant="20" id="esD-dR-yxJ"/>
-                            <constraint firstItem="r9w-ub-9nC" firstAttribute="top" secondItem="y9y-Ys-sVW" secondAttribute="top" constant="25" id="jdN-0g-dbt"/>
                             <constraint firstItem="r9w-ub-9nC" firstAttribute="leading" secondItem="y9y-Ys-sVW" secondAttribute="leading" constant="20" id="wor-lD-Lz5"/>
+                            <constraint firstItem="r9w-ub-9nC" firstAttribute="top" secondItem="0AL-jN-U0w" secondAttribute="bottom" constant="10" id="zvX-oA-nLM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y9y-Ys-sVW"/>
                     </view>
