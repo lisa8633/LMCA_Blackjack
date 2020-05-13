@@ -50,18 +50,22 @@ class MultiStartViewController: UIViewController, UITextFieldDelegate{
         let ref = Database.database().reference()
         let room = ref.childByAutoId()
         RoomCode.code = (room.key)!
-        ref.child("\(RoomCode.code)/\(userName)").setValue(["coins" : userCoins, "cards": "none"])
+        ref.child("\(RoomCode.code)/\(userName)").setValue(["coins" : userCoins, "cards": "none", "num": 2])
         print("Room code is \(RoomCode.code)")
+        userName = "Dealer"
+        ref.child("\(RoomCode.code)/\(userName)").setValue(["coins" : 0, "cards": "none", "num": 1])
+        ref.child("\(RoomCode.code)/turn").setValue(1)
     }
     @IBAction func joinRoom(_ sender: Any) {
         RoomCode.code = (roomCode.text)!
         userName = "Bob"
+        //edit out later
         if RoomCode.code == ""{
             print("Please provide room code")
         }else{
             var ref = Database.database().reference()
             ref = ref.child("\(RoomCode.code)")
-            ref.child("\(userName)").setValue(["coins" : userCoins, "cards": "none"])
+            ref.child("\(userName)").setValue(["coins" : userCoins, "cards": "none", "num": 3])
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "MultiplayerViewController")
                     self.present(newViewController, animated: true, completion: nil)
