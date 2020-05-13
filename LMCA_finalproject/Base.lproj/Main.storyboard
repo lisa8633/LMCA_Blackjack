@@ -2276,6 +2276,9 @@
                                 <state key="normal" title="Bets/Chips">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Npy-qb-T10" kind="show" id="eJ7-AD-hrJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6u-bH-c2h">
                                 <rect key="frame" x="25" y="249" width="364" height="41"/>
@@ -2284,6 +2287,9 @@
                                 <state key="normal" title="Dealing">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Pn7-ga-MvM" kind="show" id="kCV-Fn-lN9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7o-yN-Rem">
                                 <rect key="frame" x="25" y="295" width="364" height="41"/>
@@ -2292,6 +2298,9 @@
                                 <state key="normal" title="Hit/Stand">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="AVx-GU-Ff3" kind="show" id="FUD-Tm-p73"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ko-F5-Cia">
                                 <rect key="frame" x="25" y="341" width="364" height="41"/>
@@ -2300,6 +2309,9 @@
                                 <state key="normal" title="Card Value">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Q4q-xC-TAd" kind="show" id="IP4-Fu-tbe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDZ-dX-spI">
                                 <rect key="frame" x="25" y="387" width="364" height="41"/>
@@ -2308,6 +2320,9 @@
                                 <state key="normal" title="Winning">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="GbR-01-0cC" kind="show" id="Suk-fj-avc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfu-Tk-6L2">
                                 <rect key="frame" x="25" y="433" width="364" height="41"/>
@@ -2316,14 +2331,20 @@
                                 <state key="normal" title="Insurance">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="q5Q-x7-FUB" kind="show" id="fBU-yJ-v47"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qr-5m-3bT">
                                 <rect key="frame" x="25" y="479" width="364" height="41"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Gestures">
+                                <state key="normal" title="General Tips">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="fK3-5Q-xxS" kind="show" id="Lan-fR-Lpu"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackjackRulesImage" translatesAutoresizingMaskIntoConstraints="NO" id="eNW-HC-u8u">
                                 <rect key="frame" x="25" y="560" width="364" height="322"/>
@@ -2383,13 +2404,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ViX-20-q3O">
-                                <rect key="frame" x="25" y="161" width="364" height="701"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ViX-20-q3O">
+                                <rect key="frame" x="25" y="161" width="364" height="718"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Blackjack is one of the most popular played casino banking game. The objective of Blackjack is to play against the dealer or house. You want to win the most money from the dealer using luck and strategy.      </string>
+                                <mutableString key="text">Blackjack is one of the most popular played casino banking game. The objective of Blackjack is to play against the dealer or house. You want to win the most money from the dealer using luck and strategy.   Who ever has the closest card total to 21 wins the game. If the player and dealer tie, that is called a push. If you reach a value over 21, that is a bust. If you bust, you will automatically lose your hand.    </mutableString>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is Blackjack?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ro9-0v-FWX">
@@ -2411,7 +2432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Uj-Zk-A91" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1731.8840579710147" y="1125.6696428571429"/>
+            <point key="canvasLocation" x="1722" y="1124"/>
         </scene>
         <!--Multi Start View Controller-->
         <scene sceneID="LZy-0D-KrA">
@@ -2612,6 +2633,274 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdG-NK-dM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="111.83035714285714"/>
+        </scene>
+        <!--Bets/Chips View Controller-->
+        <scene sceneID="b5g-3q-hfz">
+            <objects>
+                <viewController title="Bets/Chips View Controller" id="Npy-qb-T10" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J74-lf-CJa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lvh-h3-lpr">
+                                <rect key="frame" x="25" y="161" width="364" height="718"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">In order to play Blackjack, you must start off with an initial bet. To make a bet, click the chips shown on the table.   Once the cards are dealt, the initial bet cannot be changed.     </string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bets/Chips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEl-PX-K8X">
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cEl-PX-K8X" firstAttribute="leading" secondItem="yQy-WL-JWv" secondAttribute="leading" constant="25" id="BM1-Vc-Rfr"/>
+                            <constraint firstItem="yQy-WL-JWv" firstAttribute="trailing" secondItem="cEl-PX-K8X" secondAttribute="trailing" constant="25" id="gay-Gg-iGx"/>
+                            <constraint firstItem="cEl-PX-K8X" firstAttribute="top" secondItem="yQy-WL-JWv" secondAttribute="top" constant="20" id="pIn-FT-L72"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yQy-WL-JWv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dTs-tv-pp0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tY0-H4-Y7d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="1809"/>
+        </scene>
+        <!--Dealing View Controller-->
+        <scene sceneID="foS-RR-Pfz">
+            <objects>
+                <viewController title="Dealing View Controller" id="Pn7-ga-MvM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7e0-VO-URX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ebd-Wf-5zx">
+                                <rect key="frame" x="25" y="161" width="364" height="718"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">Once the initial bet has been made, click deal or tap the screen to deal cards.   The player will be dealt two face up cards. However, one of the dealer's cards will be hidden.   The objective next is to decide to hit or stand to reach a value higher than the dealer's, but not bust.     </mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShJ-0u-uux">
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ShJ-0u-uux" firstAttribute="leading" secondItem="3Li-We-7Hs" secondAttribute="leading" constant="25" id="Bdm-L5-WfI"/>
+                            <constraint firstItem="3Li-We-7Hs" firstAttribute="trailing" secondItem="ShJ-0u-uux" secondAttribute="trailing" constant="25" id="ewd-Wu-j88"/>
+                            <constraint firstItem="ShJ-0u-uux" firstAttribute="top" secondItem="3Li-We-7Hs" secondAttribute="top" constant="20" id="zlM-lE-jOq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Li-We-7Hs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="St3-AJ-hv7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9A-Cw-zVR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="2476"/>
+        </scene>
+        <!--Hit/Stand View Controller-->
+        <scene sceneID="w3E-5I-jnJ">
+            <objects>
+                <viewController title="Hit/Stand View Controller" id="AVx-GU-Ff3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0PV-Im-maA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BTI-zX-BGm">
+                                <rect key="frame" x="25" y="161" width="364" height="718"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">In order to get a high total than the dealer, you can decide to hit and add one card. 
+
+However, if your card total reaches above 21, you will lose automatically.   Once you are satisfied with your hand, swipe right or press stand to play your hand. The dealer will then reveal their hidden card and hit until they have a 17 or higher.     </mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hit/Stand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfh-m1-aIu">
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ky3-rl-h5T" firstAttribute="trailing" secondItem="Bfh-m1-aIu" secondAttribute="trailing" constant="25" id="Lox-zd-NaW"/>
+                            <constraint firstItem="Bfh-m1-aIu" firstAttribute="top" secondItem="ky3-rl-h5T" secondAttribute="top" constant="20" id="aph-ea-3KI"/>
+                            <constraint firstItem="Bfh-m1-aIu" firstAttribute="leading" secondItem="ky3-rl-h5T" secondAttribute="leading" constant="25" id="cuU-kH-ZJc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ky3-rl-h5T"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="W0n-FQ-m9M"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEr-gA-pK3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2472" y="1124"/>
+        </scene>
+        <!--Card Value View Controller-->
+        <scene sceneID="kwc-2J-TJo">
+            <objects>
+                <viewController title="Card Value View Controller" id="Q4q-xC-TAd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tnU-ah-EVc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="29v-ku-msi">
+                                <rect key="frame" x="25" y="161" width="364" height="718"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">An ace is worth 11 or 1. The card total will automatically pick the best value for your total.  Face cards (King, Queen, and Jack) are all worth 10.  Other cards are worth their respective nominal value.   </string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N06-15-tn4">
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="N06-15-tn4" firstAttribute="top" secondItem="6xH-an-6cU" secondAttribute="top" constant="20" id="BB2-1m-qix"/>
+                            <constraint firstItem="6xH-an-6cU" firstAttribute="trailing" secondItem="N06-15-tn4" secondAttribute="trailing" constant="25" id="BLd-DM-KCi"/>
+                            <constraint firstItem="N06-15-tn4" firstAttribute="leading" secondItem="6xH-an-6cU" secondAttribute="leading" constant="25" id="Uwc-1z-W4g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6xH-an-6cU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YyY-h0-A3I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1F7-Jp-GfO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2471" y="1809"/>
+        </scene>
+        <!--Winning View Controller-->
+        <scene sceneID="4OZ-En-AWK">
+            <objects>
+                <viewController title="Winning View Controller" id="GbR-01-0cC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Cz-AA-kgO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cza-p7-hB5">
+                                <rect key="frame" x="25" y="161" width="364" height="718"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">Whoever has the highest score between the dealer and player wins. If there is a tie (push), then the player will take their bet back.  If the dealer goes above 21 and you have not, then the player will win. Blackjack, a natural 21, beats any combination except another Blackjack. It will also beat a non-Blackjack 21.   Winning will double your bet. For example, a $1000 bet will award you an earnings of $1000. A Blackjack has a payout of 3 to 2. Therefore a $1000 bet will ward you an earnings of $1500.  </mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7u-oT-cu6">
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Y7u-oT-cu6" firstAttribute="leading" secondItem="Ss7-J7-vU3" secondAttribute="leading" constant="25" id="6dC-A4-ZIM"/>
+                            <constraint firstItem="Ss7-J7-vU3" firstAttribute="trailing" secondItem="Y7u-oT-cu6" secondAttribute="trailing" constant="25" id="gCQ-3L-CTH"/>
+                            <constraint firstItem="Y7u-oT-cu6" firstAttribute="top" secondItem="Ss7-J7-vU3" secondAttribute="top" constant="20" id="zSc-ad-FDb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ss7-J7-vU3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="W0t-cy-ae7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s91-TA-U6M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2470" y="2476"/>
+        </scene>
+        <!--Insurance View Controller-->
+        <scene sceneID="ewU-gJ-6d9">
+            <objects>
+                <viewController title="Insurance View Controller" id="q5Q-x7-FUB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zzu-FN-uN4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CVo-D8-QoB">
+                                <rect key="frame" x="25" y="161" width="364" height="718"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">If the dealer's revealed card is an ace, you can decide to  place another bet on whether or not their hand is a Blackjack. This must be done right after initial cards are dealed, but before any actions after.   The bet is half of the initial bet. If the dealer does not have Blackjack, the insurance is lost and the game continues. If they do have Blackjack, you will win double of your insurance. However, you will still lose your initial bet. The end result is that you breakeven.</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insurance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZc-uh-XIi">
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HUT-lE-g18" firstAttribute="trailing" secondItem="zZc-uh-XIi" secondAttribute="trailing" constant="25" id="UcY-8u-j92"/>
+                            <constraint firstItem="zZc-uh-XIi" firstAttribute="top" secondItem="HUT-lE-g18" secondAttribute="top" constant="20" id="mcg-mO-JVf"/>
+                            <constraint firstItem="zZc-uh-XIi" firstAttribute="leading" secondItem="HUT-lE-g18" secondAttribute="leading" constant="25" id="yS7-vI-9M0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HUT-lE-g18"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bVC-mk-wEg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Dy-pc-ELN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3191" y="1124"/>
+        </scene>
+        <!--General Tips View Controller-->
+        <scene sceneID="Jca-UU-oTk">
+            <objects>
+                <viewController title="General Tips View Controller" id="fK3-5Q-xxS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VhG-ZQ-pD4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l8o-pf-fyj">
+                                <rect key="frame" x="25" y="161" width="364" height="718"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">Here are some general guidelines to have better odds to win:  - Never take insurance - Note that most cards in deck are face cards. Dealers with face cards or ace have high odds of getting 20+ - Think about the odds of the dealer busting. Dealers with revealed card of 6 have a high likelihood of busting  - To minimize house edge, use blackjack tables to decide strategy</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Tips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4c-C8-ebK">
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e4c-C8-ebK" firstAttribute="top" secondItem="ItN-23-nfz" secondAttribute="top" constant="20" id="DvX-a4-EyS"/>
+                            <constraint firstItem="e4c-C8-ebK" firstAttribute="leading" secondItem="ItN-23-nfz" secondAttribute="leading" constant="25" id="YFA-rc-Dpg"/>
+                            <constraint firstItem="ItN-23-nfz" firstAttribute="trailing" secondItem="e4c-C8-ebK" secondAttribute="trailing" constant="25" id="jYM-Ov-DhQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ItN-23-nfz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="O4n-ZE-7xS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m05-1e-uFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3190" y="1809"/>
         </scene>
     </scenes>
     <resources>
