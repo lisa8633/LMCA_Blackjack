@@ -15,6 +15,8 @@ class InitialViewController: UIViewController {
     var username : String!
     var currentBalance : Int64!
     
+    @IBOutlet weak var pictureWidth: NSLayoutConstraint!
+    
     @IBOutlet weak var cashBalance: UILabel!
     
     override func viewDidLoad() {
@@ -26,6 +28,8 @@ class InitialViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        pictureWidth.constant = self.view.bounds.width * 2.4 - 620
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return

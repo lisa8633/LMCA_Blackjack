@@ -46,8 +46,8 @@
             filePath = "LMCA_finalproject/BlackJackViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "826"
-            endingLineNumber = "826"
+            startingLineNumber = "869"
+            endingLineNumber = "869"
             landmarkName = "dealOrHitAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "LMCA_finalproject/BlackJackViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "701"
-            endingLineNumber = "701"
+            startingLineNumber = "742"
+            endingLineNumber = "742"
             landmarkName = "dealerWinsRound(delay:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "LMCA_finalproject/BlackJackViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "671"
-            endingLineNumber = "671"
+            startingLineNumber = "712"
+            endingLineNumber = "712"
             landmarkName = "userWinsRoundBJ(delay:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "LMCA_finalproject/BlackJackViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "643"
-            endingLineNumber = "643"
+            startingLineNumber = "684"
+            endingLineNumber = "684"
             landmarkName = "userWinsRound(delay:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "LMCA_finalproject/BlackJackViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1573"
-            endingLineNumber = "1573"
+            startingLineNumber = "1621"
+            endingLineNumber = "1621"
             landmarkName = "returnCards()"
             landmarkType = "7">
          </BreakpointContent>

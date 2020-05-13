@@ -323,6 +323,7 @@ class BlackJackViewController: UIViewController {
     @IBOutlet weak var doubleDown: UIButton!
     @IBOutlet weak var splitAndInsurance: UIButton!
     @IBOutlet weak var resetBet: UIButton!
+    @IBOutlet weak var helpButton: UIButton!
     
     
     @IBOutlet weak var winnerLabel: UILabel!
@@ -343,6 +344,28 @@ class BlackJackViewController: UIViewController {
         //Card Back
         deckTopHeight.constant = self.view.bounds.height * 0.15 + 16
         deckTopVertical.constant = -self.view.bounds.height * 0.07 - 13
+        /*
+        deckTop.alpha = 0
+        containerView.alpha = 0
+        containerView2.alpha = 0
+        containerView3.alpha = 0
+        containerView4.alpha = 0
+        containerView5.alpha = 0
+        containerView6.alpha = 0
+        containerView7.alpha = 0
+        containerView8.alpha = 0
+        containerView9.alpha = 0
+        containerView10.alpha = 0
+        containerView11.alpha = 0
+        containerView12.alpha = 0
+        containerView13.alpha = 0
+        containerView14.alpha = 0
+        containerView15.alpha = 0
+        containerView16.alpha = 0
+        containerView17.alpha = 0
+        containerView18.alpha = 0
+ */
+        
         //1
         cardHeight.constant = self.view.bounds.height * 0.15 + 16
         cardBackHeight.constant = self.view.bounds.height * 0.15 + 16
@@ -491,7 +514,7 @@ class BlackJackViewController: UIViewController {
         card17Height.constant = self.view.bounds.height * 0.15 + 16
         card17BackHeight.constant = self.view.bounds.height * 0.15 + 16
         containerView17Height.constant = self.view.bounds.height * 0.15 + 16
-        card2Vertical.constant = -self.view.bounds.height * 0.07 - 13
+        card17Vertical.constant = -self.view.bounds.height * 0.07 - 13
         
         stack17SuitValueHeight.constant = self.view.bounds.height * 0.035 - 1
         bigSuitHeight17.constant = self.view.bounds.height * 0.07 + 3
@@ -548,7 +571,7 @@ class BlackJackViewController: UIViewController {
         stand.isUserInteractionEnabled = false
         stand.alpha = 0
         
-        doubleDown.setTitle("Double Down", for: .normal)
+        doubleDown.setTitle("Double", for: .normal)
         doubleDown.isUserInteractionEnabled = false
         doubleDown.alpha = 0
         
@@ -582,6 +605,10 @@ class BlackJackViewController: UIViewController {
 
         let okAction = UIAlertAction(title: "Yes", style: .default) {
             (UIAlertAction) -> Void in
+            if self.currentBalance == 0 {
+                self.currentBalance = 100
+                self.updatePlayerBalance(updatedBalance: self.currentBalance)
+            }
             self.performSegue(withIdentifier: "unwindEndGame", sender: self)
             NotificationCenter.default.removeObserver(self)
 
@@ -596,6 +623,20 @@ class BlackJackViewController: UIViewController {
         present(refreshAlert, animated: true)
     }
 
+    @IBAction func helpAction(_ sender: Any) {
+        let refreshAlert = UIAlertController(title: "Need Help?", message: "To use gestures.....", preferredStyle: UIAlertController.Style.alert)
+
+        let okAction = UIAlertAction(title: "Okay", style: .default) {
+            (UIAlertAction) -> Void in
+            NotificationCenter.default.removeObserver(self)
+
+        }
+        
+        refreshAlert.addAction(okAction)
+        
+        present(refreshAlert, animated: true)
+    }
+    
     @IBAction func addOne(_ sender: UIButton) {
         if currentBalance > 0 {
             userBet += 1
@@ -669,7 +710,7 @@ class BlackJackViewController: UIViewController {
         }
     }
     func userWinsRoundBJ(delay: Int){
-        DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay-2)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + Double(3)) {
             self.animateWinnerDisplay(winner: "Player Blackjack!")
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(2)) {
                 self.dealtAlready = false
@@ -765,9 +806,11 @@ class BlackJackViewController: UIViewController {
             stand.isUserInteractionEnabled = true
             dealtAlready = true
             resetBet.isUserInteractionEnabled = false
-            self.doubleDown.alpha = 1.0
-            doubleDown.setTitle("Double Down", for: .normal)
-            doubleDown.isUserInteractionEnabled = true
+            if (currentBalance - userBet) > 0 {
+                self.doubleDown.alpha = 1.0
+                doubleDown.setTitle("Double", for: .normal)
+                doubleDown.isUserInteractionEnabled = true
+            }
             // Deal Cards
             user = User(card1: deck.deal(), card2: deck.deal())
             print(user.cards[0].getSymbol())
@@ -847,6 +890,11 @@ class BlackJackViewController: UIViewController {
                 dealerWinsRound(delay: dealerCardsDealt + 1)
                 //lose coins
             }
+            else if user.isBJ(){
+                standFunction()
+            }
+        }else if userBet == 0 && !dealtAlready{
+            //do nothing
         }else{
             //end game?
             endRound(delay: dealerCardsDealt + 1)
@@ -1479,92 +1527,92 @@ class BlackJackViewController: UIViewController {
     func returnCards() {
         
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.testVertical.constant = -75
+            self.testVertical.constant = -self.view.bounds.height * 0.07 - 13
             self.testHorizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card2Vertical.constant = -75
+            self.card2Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card2Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card3Vertical.constant = -75
+            self.card3Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card3Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card4Vertical.constant = -75
+            self.card4Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card4Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card5Vertical.constant = -75
+            self.card5Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card5Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card6Vertical.constant = -75
+            self.card6Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card6Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card7Vertical.constant = -75
+            self.card7Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card7Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card8Vertical.constant = -75
+            self.card8Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card8Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card9Vertical.constant = -75
+            self.card9Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card9Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card10Vertical.constant = -75
+            self.card10Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card10Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card11Vertical.constant = -75
+            self.card11Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card11Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card12Vertical.constant = -75
+            self.card12Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card12Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card13Vertical.constant = -75
+            self.card13Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card13Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card14Vertical.constant = -75
+            self.card14Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card14Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card15Vertical.constant = -75
+            self.card15Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card15Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card16Vertical.constant = -75
+            self.card16Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card16Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card17Vertical.constant = -75
+            self.card17Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card17Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
         UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseInOut, animations: {
-            self.card18Vertical.constant = -75
+            self.card18Vertical.constant = -self.view.bounds.height * 0.07 - 13
             self.card18Horizontal.constant = 0
             self.view.layoutIfNeeded()
         }, completion: nil)
