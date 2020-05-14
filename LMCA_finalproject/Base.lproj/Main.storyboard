@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bS4-Lw-KoE">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bS4-Lw-KoE">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,24 +12,24 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online Blackjack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GW-st-T7T">
-                                <rect key="frame" x="20" y="64" width="374" height="36"/>
+                                <rect key="frame" x="64" y="20" width="768" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackjackIcon" translatesAutoresizingMaskIntoConstraints="NO" id="llo-1H-uxI">
-                                <rect key="frame" x="20" y="120" width="374" height="449"/>
+                                <rect key="frame" x="261" y="76" width="374" height="449"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="llo-1H-uxI" secondAttribute="height" multiplier="1:1.2" id="IzH-9y-Dcq"/>
                                     <constraint firstAttribute="width" constant="374" id="wL8-li-IgQ"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cr9-kR-QvQ">
-                                <rect key="frame" x="20" y="630" width="374" height="50"/>
+                                <rect key="frame" x="64" y="586" width="768" height="50"/>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="CL1-8h-4n7"/>
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZL-TW-WBJ">
-                                <rect key="frame" x="20" y="705" width="374" height="50"/>
+                                <rect key="frame" x="64" y="661" width="768" height="50"/>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Kl2-za-Vfv"/>
@@ -63,7 +63,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa6-tb-n6R">
-                                <rect key="frame" x="20" y="780" width="374" height="50"/>
+                                <rect key="frame" x="64" y="736" width="768" height="50"/>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="oCG-al-PSZ"/>
@@ -82,7 +82,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpT-I0-3aC">
-                                <rect key="frame" x="152.5" y="589" width="109" height="21"/>
+                                <rect key="frame" x="393.5" y="545" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -125,23 +125,23 @@
             <objects>
                 <viewController id="JWX-HW-4tm" customClass="BlackJackViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wzH-XP-y8A" customClass="SinglePlayerBoardView" customModule="LMCA_finalproject" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvQ-M9-THw">
-                                <rect key="frame" x="174.5" y="836.5" width="65.5" height="20.5"/>
+                                <rect key="frame" x="415.5" y="367.5" width="65.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiI-UJ-Vl1">
-                                <rect key="frame" x="20" y="832" width="30" height="30"/>
+                                <rect key="frame" x="64" y="363" width="30" height="30"/>
                                 <state key="normal" title="End"/>
                                 <connections>
                                     <action selector="SingleEndGame:" destination="JWX-HW-4tm" eventType="touchUpInside" id="b2t-9M-DP7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLc-uR-xVp">
-                                <rect key="frame" x="92" y="484.5" width="70" height="30"/>
+                                <rect key="frame" x="333" y="243.5" width="70" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.3533283390410959" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="NGZ-OS-7AT"/>
@@ -160,7 +160,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bet:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2R-SH-T8U">
-                                <rect key="frame" x="107" y="453" width="200" height="26.5"/>
+                                <rect key="frame" x="348" y="212" width="200" height="26.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="qVy-OI-Cv4"/>
                                 </constraints>
@@ -168,7 +168,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M7-rd-oZL">
-                                <rect key="frame" x="252" y="484.5" width="70" height="30"/>
+                                <rect key="frame" x="493" y="243.5" width="70" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.35332833899999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="OCW-0I-HbZ"/>
@@ -187,7 +187,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZZ-Zh-bMQ">
-                                <rect key="frame" x="172" y="484.5" width="70" height="30"/>
+                                <rect key="frame" x="413" y="243.5" width="70" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.35332833899999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="XOl-mt-5jK"/>
@@ -206,7 +206,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gtr-Eo-94P">
-                                <rect key="frame" x="41" y="752" width="332" height="60"/>
+                                <rect key="frame" x="282" y="283" width="332" height="60"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nA-1w-fC4" customClass="ChipGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -354,7 +354,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdE-k9-oQl">
-                                <rect key="frame" x="277" y="361" width="80" height="30"/>
+                                <rect key="frame" x="518" y="120" width="80" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.35332833899999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="GLQ-LN-1fD"/>
@@ -373,21 +373,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WQ-kc-Z2e">
-                                <rect key="frame" x="362" y="832" width="32" height="30"/>
+                                <rect key="frame" x="800" y="363" width="32" height="30"/>
                                 <state key="normal" title="Help"/>
                                 <connections>
                                     <action selector="helpAction:" destination="JWX-HW-4tm" eventType="touchUpInside" id="TAr-Nx-hND"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxa-c1-LiP">
-                                <rect key="frame" x="315" y="451" width="39" height="30"/>
+                                <rect key="frame" x="556" y="210" width="39" height="30"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="resetBetAction:" destination="JWX-HW-4tm" eventType="touchUpInside" id="c6S-gI-miy"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVw-ak-bs6">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vf-N7-QS6" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -469,7 +469,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ye5-pT-euK">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSz-gZ-Tp9" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -551,7 +551,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQA-OD-0bi">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEk-1r-dkb" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -633,7 +633,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOs-qZ-aNy">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMi-cn-9fj" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -715,7 +715,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K70-fR-UZr">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwd-VG-UuK" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -797,7 +797,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qee-4x-oBO">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGd-Vi-dN1" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -879,7 +879,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPe-C2-tEG">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWe-bQ-bTx" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -961,7 +961,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zll-0Q-385">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJq-hK-OKV" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1043,7 +1043,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3j-Us-CD3">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="If7-c1-iw2" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1125,7 +1125,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZh-gO-6nn">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWH-5j-USs" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1207,7 +1207,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fz3-TE-SY2">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAK-Ut-M8v" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1289,7 +1289,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZqU-QI-Kzu">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXU-Un-hHS" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1371,7 +1371,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8s-xa-gw8">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eUe-8c-0mh" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1453,7 +1453,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fN-bw-pnP">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOM-8v-bpi" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1535,7 +1535,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sR6-kb-sts">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kg9-bb-bDB" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1617,7 +1617,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8m-pz-34e">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yn4-ah-ujS" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1699,7 +1699,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g41-qG-66e">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CD0-ib-ZJP" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1781,7 +1781,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Obo-8h-7cZ">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOG-Wn-5sY" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1863,7 +1863,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mi8-m7-0YJ" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
-                                <rect key="frame" x="157" y="298" width="100" height="150"/>
+                                <rect key="frame" x="398" y="57" width="100" height="150"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="LEL-bN-OVP"/>
@@ -1874,7 +1874,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMu-xl-K8P">
-                                <rect key="frame" x="153" y="348" width="108.5" height="50"/>
+                                <rect key="frame" x="394" y="107" width="108.5" height="50"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2251,17 +2251,17 @@
             <objects>
                 <viewController id="mif-Mp-9Ha" customClass="RulesViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4ar-yb-ylx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blackjack Guide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AL-jN-U0w">
-                                <rect key="frame" x="25" y="108" width="364" height="39"/>
+                                <rect key="frame" x="69" y="64" width="758" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzk-Tf-orB">
-                                <rect key="frame" x="25" y="157" width="364" height="41"/>
+                                <rect key="frame" x="69" y="113" width="758" height="41"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="What is Blackjack?">
@@ -2272,7 +2272,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32z-gE-Aq1">
-                                <rect key="frame" x="25" y="203" width="364" height="41"/>
+                                <rect key="frame" x="69" y="159" width="758" height="41"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Bets/Chips">
@@ -2283,7 +2283,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6u-bH-c2h">
-                                <rect key="frame" x="25" y="249" width="364" height="41"/>
+                                <rect key="frame" x="69" y="205" width="758" height="41"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Dealing">
@@ -2294,7 +2294,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7o-yN-Rem">
-                                <rect key="frame" x="25" y="295" width="364" height="41"/>
+                                <rect key="frame" x="69" y="251" width="758" height="41"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Hit/Stand">
@@ -2305,7 +2305,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ko-F5-Cia">
-                                <rect key="frame" x="25" y="341" width="364" height="41"/>
+                                <rect key="frame" x="69" y="297" width="758" height="41"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Card Value">
@@ -2316,7 +2316,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDZ-dX-spI">
-                                <rect key="frame" x="25" y="387" width="364" height="41"/>
+                                <rect key="frame" x="69" y="343" width="758" height="41"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Winning">
@@ -2327,7 +2327,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfu-Tk-6L2">
-                                <rect key="frame" x="25" y="433" width="364" height="41"/>
+                                <rect key="frame" x="69" y="389" width="758" height="41"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Insurance">
@@ -2338,7 +2338,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qr-5m-3bT">
-                                <rect key="frame" x="25" y="479" width="364" height="41"/>
+                                <rect key="frame" x="69" y="435" width="758" height="41"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="General Tips">
@@ -2349,7 +2349,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackjackRulesImage" translatesAutoresizingMaskIntoConstraints="NO" id="eNW-HC-u8u">
-                                <rect key="frame" x="25" y="560" width="364" height="322"/>
+                                <rect key="frame" x="69" y="91" width="758" height="322"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="322" id="F9t-n0-Je3"/>
                                     <constraint firstAttribute="width" constant="364" id="Id2-ba-OKF"/>
@@ -2403,20 +2403,20 @@
             <objects>
                 <viewController title="What is Blackjack Viewcontroller" id="6Fd-OY-38w" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iqq-fh-Qls">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ViX-20-q3O">
                                 <rect key="frame" x="25" y="161" width="364" height="718"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">Blackjack is one of the most popular played casino banking game. The objective of Blackjack is to play against the dealer or house. You want to win the most money from the dealer using luck and strategy.   Who ever has the closest card total to 21 wins the game. If the player and dealer tie, that is called a push. If you reach a value over 21, that is a bust. If you bust, you will automatically lose your hand.    </mutableString>
+                                <string key="text">Blackjack is one of the most popular played casino banking game. The objective of Blackjack is to play against the dealer or house. You want to win the most money from the dealer using luck and strategy.   Who ever has the closest card total to 21 wins the game. If the player and dealer tie, that is called a push. If you reach a value over 21, that is a bust. If you bust, you will automatically lose your hand.    </string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is Blackjack?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ro9-0v-FWX">
-                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <rect key="frame" x="69" y="64" width="758" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2441,7 +2441,7 @@
             <objects>
                 <viewController id="MSo-Dk-uC5" customClass="MultiStartViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YhQ-Bs-VGL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3U-Vr-Vuo">
@@ -2486,124 +2486,397 @@
             <objects>
                 <viewController restorationIdentifier="MultiplayerViewController" storyboardIdentifier="MultiplayerViewController" id="fTZ-gQ-dT7" customClass="MultiplayerViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3M8-k2-LEd" customClass="MultiPlayerBoardView" customModule="LMCA_finalproject" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyp-7N-ebH">
-                                <rect key="frame" x="20" y="832" width="71" height="30"/>
+                                <rect key="frame" x="64" y="363" width="71" height="30"/>
                                 <state key="normal" title="End Game"/>
                                 <connections>
                                     <action selector="MultiEndGame:" destination="fTZ-gQ-dT7" eventType="touchUpInside" id="db0-EB-g9K"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Chips go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZM4-c6-70d">
-                                <rect key="frame" x="554" y="322" width="161" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1T-yH-kLG">
+                                <rect key="frame" x="656" y="182.5" width="200" height="120"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Player 3's cards go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fAf-89-al0">
+                                        <rect key="frame" x="40" y="0.0" width="121" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Balance goes here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YWt-vI-hQA">
-                                <rect key="frame" x="185" y="322" width="161" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Cards go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Unf-Lm-o3t">
-                                <rect key="frame" x="388" y="268" width="121" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Player 2's cards and stuff go here. Can we slant them?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n0A-4N-Zh6">
-                                <rect key="frame" x="60" y="120" width="117" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Player 3's cards and stuff go here. Can we slant them?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DKq-1H-t9u">
-                                <rect key="frame" x="735" y="120" width="117" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Your name" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mTe-ps-0bj">
-                                <rect key="frame" x="382" y="182" width="127" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Player 2 Name" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9HY-Zn-TsE">
-                                <rect key="frame" x="185" y="75" width="61" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Player 3 Name" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3AE-5n-j8N">
-                                <rect key="frame" x="654" y="75" width="61" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Dealer's cards go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rAy-VD-ueH">
-                                <rect key="frame" x="388" y="53" width="121" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dealer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPV-89-99j">
-                                <rect key="frame" x="424" y="20" width="50" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="5A3-L8-FZS"/>
+                                    <constraint firstAttribute="width" constant="200" id="kvd-Q2-wfB"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ma8-Mg-UAg">
+                                <rect key="frame" x="348" y="197" width="200" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYS-Hy-876">
-                                <rect key="frame" x="430" y="223" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Deal"/>
-                                <connections>
-                                    <action selector="deal:" destination="fTZ-gQ-dT7" eventType="touchUpInside" id="ZQ4-QR-tIE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAb-vC-3fN">
-                                <rect key="frame" x="363" y="223" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Double"/>
-                                <connections>
-                                    <action selector="doubleUp:" destination="fTZ-gQ-dT7" eventType="touchUpInside" id="BBa-dB-iw3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yry-SE-GJi">
-                                <rect key="frame" x="487" y="223" width="41" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Stand"/>
-                                <connections>
-                                    <action selector="stand:" destination="fTZ-gQ-dT7" eventType="touchUpInside" id="Wdi-KB-9h3"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2 Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8y6-Vp-Kpy">
+                                <rect key="frame" x="60" y="125.5" width="200" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rm9-xV-4hf">
+                                <rect key="frame" x="348" y="235" width="200" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTa-Fx-EBw">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.35332833899999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="8bn-g1-rUD"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Kag-33-o5w"/>
+                                        </constraints>
+                                        <state key="normal" title="Double">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1D-70-OjQ">
+                                        <rect key="frame" x="70" y="0.0" width="60" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.35332833899999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3f7-oD-QsF"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="zan-X8-JAc"/>
+                                        </constraints>
+                                        <state key="normal" title="Deal/Hit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgN-j9-PhI">
+                                        <rect key="frame" x="140" y="0.0" width="60" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.35332833899999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="4rW-nS-tZW"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Vnk-9q-jND"/>
+                                        </constraints>
+                                        <state key="normal" title="Stand">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Zag-2h-8ke"/>
+                                    <constraint firstAttribute="height" constant="30" id="hhY-AB-9hi"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoY-UY-KsV">
+                                <rect key="frame" x="240" y="372.5" width="100" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="LHb-VS-k2w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 3 Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIX-kI-kwb">
+                                <rect key="frame" x="656" y="125.5" width="200" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71K-7t-YSS">
+                                <rect key="frame" x="348" y="273" width="200" height="120"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Player 1's cards go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QIU-TH-WaY">
+                                        <rect key="frame" x="40" y="0.0" width="120" height="120"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="5ee-hO-9mY"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="QIU-TH-WaY" firstAttribute="top" secondItem="71K-7t-YSS" secondAttribute="top" id="M9K-d6-WJ9"/>
+                                    <constraint firstAttribute="height" constant="120" id="Tjr-k1-F1g"/>
+                                    <constraint firstAttribute="bottom" secondItem="QIU-TH-WaY" secondAttribute="bottom" id="Ygh-F5-mX8"/>
+                                    <constraint firstAttribute="width" constant="200" id="fVt-RA-B9g"/>
+                                    <constraint firstItem="QIU-TH-WaY" firstAttribute="centerX" secondItem="71K-7t-YSS" secondAttribute="centerX" id="uMu-wA-jLP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-Ek-8f4">
+                                <rect key="frame" x="60" y="182.5" width="200" height="120"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Player 2's cards go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ecH-Vx-cuH">
+                                        <rect key="frame" x="40" y="0.0" width="121" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="6zR-0f-63X"/>
+                                    <constraint firstAttribute="width" constant="200" id="a0r-zP-cxY"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VQh-qU-edZ">
+                                <rect key="frame" x="595" y="305" width="200" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bet:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBq-6r-gfQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="vjw-06-kyo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ri0-mj-1hz">
+                                        <rect key="frame" x="158" y="0.0" width="42" height="30"/>
+                                        <state key="normal" title="Reset"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0VK-iz-ONc"/>
+                                    <constraint firstItem="ri0-mj-1hz" firstAttribute="height" secondItem="fBq-6r-gfQ" secondAttribute="height" id="bKt-UB-mb4"/>
+                                    <constraint firstItem="ri0-mj-1hz" firstAttribute="leading" secondItem="fBq-6r-gfQ" secondAttribute="trailing" constant="8" id="sEf-6Z-YDF"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2lb-yY-zEI">
+                                <rect key="frame" x="554" y="343" width="282" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIG-aE-7Fv" customClass="ChipGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyC-zO-AKU">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.63561178470000002" green="0.56013124609999998" blue="0.079650042810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="CyC-zO-AKU" secondAttribute="trailing" id="KAb-3k-pwm"/>
+                                            <constraint firstAttribute="width" secondItem="jIG-aE-7Fv" secondAttribute="height" multiplier="1:1" id="LKe-7S-n2P"/>
+                                            <constraint firstAttribute="bottom" secondItem="CyC-zO-AKU" secondAttribute="bottom" id="TkD-v5-7Ff"/>
+                                            <constraint firstItem="CyC-zO-AKU" firstAttribute="leading" secondItem="jIG-aE-7Fv" secondAttribute="leading" id="XmY-JG-hyD"/>
+                                            <constraint firstItem="CyC-zO-AKU" firstAttribute="top" secondItem="jIG-aE-7Fv" secondAttribute="top" id="nhQ-7H-ba4"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDM-tl-jW4" customClass="ChipGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
+                                        <rect key="frame" x="58" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bG-Rk-LPE">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" red="0.63561178470000002" green="0.56013124609999998" blue="0.079650042810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="2bG-Rk-LPE" secondAttribute="trailing" id="2sp-nE-zcs"/>
+                                            <constraint firstAttribute="width" secondItem="pDM-tl-jW4" secondAttribute="height" multiplier="1:1" id="Gwp-NK-hQn"/>
+                                            <constraint firstItem="2bG-Rk-LPE" firstAttribute="leading" secondItem="pDM-tl-jW4" secondAttribute="leading" id="g2p-0g-zvP"/>
+                                            <constraint firstItem="2bG-Rk-LPE" firstAttribute="top" secondItem="pDM-tl-jW4" secondAttribute="top" id="xyz-hT-MIb"/>
+                                            <constraint firstAttribute="bottom" secondItem="2bG-Rk-LPE" secondAttribute="bottom" id="zUt-lM-2Cr"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.5" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0EP-PK-DMm" customClass="ChipGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
+                                        <rect key="frame" x="116" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBK-7h-6jr">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                                <state key="normal" title="10">
+                                                    <color key="titleColor" red="0.63561178470000002" green="0.56013124609999998" blue="0.079650042810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="zBK-7h-6jr" firstAttribute="top" secondItem="0EP-PK-DMm" secondAttribute="top" id="2xx-pm-Rbg"/>
+                                            <constraint firstItem="zBK-7h-6jr" firstAttribute="leading" secondItem="0EP-PK-DMm" secondAttribute="leading" id="DRg-UY-0aj"/>
+                                            <constraint firstAttribute="bottom" secondItem="zBK-7h-6jr" secondAttribute="bottom" id="Hye-TY-Jdo"/>
+                                            <constraint firstAttribute="width" secondItem="0EP-PK-DMm" secondAttribute="height" multiplier="1:1" id="TiA-x6-HxA"/>
+                                            <constraint firstAttribute="trailing" secondItem="zBK-7h-6jr" secondAttribute="trailing" id="nF0-xP-n1B"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dV4-3y-tVs" customClass="ChipGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
+                                        <rect key="frame" x="174" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mH-ON-FTv">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                                                <state key="normal" title="25">
+                                                    <color key="titleColor" red="0.63561178470000002" green="0.56013124609999998" blue="0.079650042810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dV4-3y-tVs" secondAttribute="height" multiplier="1:1" id="Maw-1h-Pu1"/>
+                                            <constraint firstAttribute="bottom" secondItem="7mH-ON-FTv" secondAttribute="bottom" id="NbU-ZZ-KCP"/>
+                                            <constraint firstItem="7mH-ON-FTv" firstAttribute="top" secondItem="dV4-3y-tVs" secondAttribute="top" id="Zuw-il-7Hz"/>
+                                            <constraint firstAttribute="trailing" secondItem="7mH-ON-FTv" secondAttribute="trailing" id="yuJ-da-qca"/>
+                                            <constraint firstItem="7mH-ON-FTv" firstAttribute="leading" secondItem="dV4-3y-tVs" secondAttribute="leading" id="yyC-um-mdw"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.0" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Dw-n3-Et8" customClass="ChipGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
+                                        <rect key="frame" x="232" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvT-Aq-Fso">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
+                                                <state key="normal" title="100">
+                                                    <color key="titleColor" red="0.63561178470000002" green="0.56013124609999998" blue="0.079650042810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="VvT-Aq-Fso" secondAttribute="bottom" id="3Mt-Ca-cXW"/>
+                                            <constraint firstAttribute="trailing" secondItem="VvT-Aq-Fso" secondAttribute="trailing" id="FWC-hc-BW9"/>
+                                            <constraint firstItem="VvT-Aq-Fso" firstAttribute="top" secondItem="5Dw-n3-Et8" secondAttribute="top" id="SCb-K2-7Ur"/>
+                                            <constraint firstItem="VvT-Aq-Fso" firstAttribute="leading" secondItem="5Dw-n3-Et8" secondAttribute="leading" id="gfl-LH-zd5"/>
+                                            <constraint firstAttribute="width" secondItem="5Dw-n3-Et8" secondAttribute="height" multiplier="1:1" id="myE-cX-TWa"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.1215686275" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QfO-Mm-fet"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jH5-8L-c0O">
+                                <rect key="frame" x="348" y="20" width="200" height="120"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Dealer's cards go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5pu-Gp-VCM">
+                                        <rect key="frame" x="40" y="0.0" width="120" height="120"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="NyI-3X-uJC"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="5pu-Gp-VCM" firstAttribute="centerX" secondItem="jH5-8L-c0O" secondAttribute="centerX" id="DXs-P9-BTi"/>
+                                    <constraint firstAttribute="height" constant="120" id="Dcl-fj-poU"/>
+                                    <constraint firstItem="5pu-Gp-VCM" firstAttribute="top" secondItem="jH5-8L-c0O" secondAttribute="top" id="PGz-Ji-aJZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="5pu-Gp-VCM" secondAttribute="bottom" id="VeS-ND-L2u"/>
+                                    <constraint firstAttribute="width" constant="200" id="jVN-99-ebK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oii-9I-IMC">
+                                <rect key="frame" x="60" y="154" width="200" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="nkq-z4-2El"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFA-ew-AzT">
+                                <rect key="frame" x="656" y="154" width="200" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="cuh-wt-AaK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Ma8-Mg-UAg" firstAttribute="width" secondItem="71K-7t-YSS" secondAttribute="width" id="0AL-Eg-6Ny"/>
+                            <constraint firstItem="71K-7t-YSS" firstAttribute="centerX" secondItem="3M8-k2-LEd" secondAttribute="centerX" id="0Br-fc-cKP"/>
+                            <constraint firstItem="rm9-xV-4hf" firstAttribute="top" secondItem="Ma8-Mg-UAg" secondAttribute="bottom" constant="8" id="2na-pl-yqn"/>
+                            <constraint firstItem="u1T-yH-kLG" firstAttribute="centerX" secondItem="dIX-kI-kwb" secondAttribute="centerX" id="5Be-Oy-QyJ"/>
+                            <constraint firstItem="dIX-kI-kwb" firstAttribute="centerY" secondItem="8y6-Vp-Kpy" secondAttribute="centerY" id="5MV-64-l0G"/>
+                            <constraint firstItem="fn8-Ek-8f4" firstAttribute="top" secondItem="oii-9I-IMC" secondAttribute="bottom" constant="8" id="6Im-fF-Y2u"/>
+                            <constraint firstItem="hXX-ps-gOF" firstAttribute="bottom" secondItem="2lb-yY-zEI" secondAttribute="bottom" id="8U4-uc-60y"/>
+                            <constraint firstItem="jH5-8L-c0O" firstAttribute="top" secondItem="hXX-ps-gOF" secondAttribute="top" constant="20" id="J0T-XL-FFf"/>
+                            <constraint firstItem="u1T-yH-kLG" firstAttribute="top" secondItem="dFA-ew-AzT" secondAttribute="bottom" constant="8" id="JH4-NU-0LG"/>
+                            <constraint firstItem="dFA-ew-AzT" firstAttribute="height" secondItem="dIX-kI-kwb" secondAttribute="height" id="Nfa-Ys-LXA"/>
+                            <constraint firstItem="oii-9I-IMC" firstAttribute="top" secondItem="8y6-Vp-Kpy" secondAttribute="bottom" constant="8" id="PCn-Rb-rZb"/>
+                            <constraint firstAttribute="trailing" secondItem="u1T-yH-kLG" secondAttribute="trailing" constant="40" id="X2i-f2-Iib"/>
+                            <constraint firstItem="dFA-ew-AzT" firstAttribute="width" secondItem="dIX-kI-kwb" secondAttribute="width" id="X4e-nt-e5b"/>
+                            <constraint firstItem="2lb-yY-zEI" firstAttribute="centerX" secondItem="VQh-qU-edZ" secondAttribute="centerX" id="ZAw-ZM-8Bz"/>
+                            <constraint firstItem="dFA-ew-AzT" firstAttribute="top" secondItem="dIX-kI-kwb" secondAttribute="bottom" constant="8" id="Ztb-xq-Cbd"/>
+                            <constraint firstItem="fn8-Ek-8f4" firstAttribute="centerX" secondItem="8y6-Vp-Kpy" secondAttribute="centerX" id="Zvv-qm-uXm"/>
+                            <constraint firstItem="hXX-ps-gOF" firstAttribute="trailing" secondItem="2lb-yY-zEI" secondAttribute="trailing" constant="16" id="aC6-Sc-EbB"/>
+                            <constraint firstItem="u1T-yH-kLG" firstAttribute="centerY" secondItem="fn8-Ek-8f4" secondAttribute="centerY" id="ewV-9t-DWt"/>
+                            <constraint firstItem="71K-7t-YSS" firstAttribute="leading" secondItem="qoY-UY-KsV" secondAttribute="trailing" constant="8" id="gH7-g5-Eg9"/>
+                            <constraint firstItem="qoY-UY-KsV" firstAttribute="top" secondItem="fn8-Ek-8f4" secondAttribute="bottom" constant="70" id="hAV-iW-Gix"/>
                             <constraint firstItem="dyp-7N-ebH" firstAttribute="bottom" secondItem="hXX-ps-gOF" secondAttribute="bottom" id="hzS-gU-kUu"/>
+                            <constraint firstItem="fn8-Ek-8f4" firstAttribute="leading" secondItem="hXX-ps-gOF" secondAttribute="leading" constant="16" id="jmJ-c9-UnX"/>
+                            <constraint firstItem="Ma8-Mg-UAg" firstAttribute="centerX" secondItem="3M8-k2-LEd" secondAttribute="centerX" id="lqQ-5v-5YR"/>
+                            <constraint firstItem="jH5-8L-c0O" firstAttribute="centerX" secondItem="3M8-k2-LEd" secondAttribute="centerX" id="mJR-rK-e3Q"/>
+                            <constraint firstItem="71K-7t-YSS" firstAttribute="top" secondItem="rm9-xV-4hf" secondAttribute="bottom" constant="8" id="mWm-jX-wRR"/>
                             <constraint firstItem="dyp-7N-ebH" firstAttribute="leading" secondItem="hXX-ps-gOF" secondAttribute="leading" constant="20" id="nxM-6H-cnh"/>
+                            <constraint firstItem="2lb-yY-zEI" firstAttribute="top" secondItem="VQh-qU-edZ" secondAttribute="bottom" constant="8" id="rTd-GQ-y4p"/>
+                            <constraint firstItem="oii-9I-IMC" firstAttribute="width" secondItem="8y6-Vp-Kpy" secondAttribute="width" id="rlQ-1r-xsm"/>
+                            <constraint firstItem="hXX-ps-gOF" firstAttribute="bottom" secondItem="qoY-UY-KsV" secondAttribute="bottom" id="tMo-tx-CtV"/>
+                            <constraint firstItem="dFA-ew-AzT" firstAttribute="centerY" secondItem="oii-9I-IMC" secondAttribute="centerY" id="v3J-7g-7Jl"/>
+                            <constraint firstItem="u1T-yH-kLG" firstAttribute="width" secondItem="dIX-kI-kwb" secondAttribute="width" id="vkZ-ys-nmO"/>
+                            <constraint firstItem="hXX-ps-gOF" firstAttribute="bottom" secondItem="71K-7t-YSS" secondAttribute="bottom" id="vth-JZ-DJF"/>
+                            <constraint firstItem="oii-9I-IMC" firstAttribute="height" secondItem="8y6-Vp-Kpy" secondAttribute="height" id="x3w-1N-ztD"/>
+                            <constraint firstItem="dFA-ew-AzT" firstAttribute="centerX" secondItem="dIX-kI-kwb" secondAttribute="centerX" id="x73-um-sxw"/>
+                            <constraint firstItem="rm9-xV-4hf" firstAttribute="centerX" secondItem="3M8-k2-LEd" secondAttribute="centerX" id="xUQ-Rm-hTM"/>
+                            <constraint firstItem="fn8-Ek-8f4" firstAttribute="width" secondItem="8y6-Vp-Kpy" secondAttribute="width" id="y9j-CK-nDa"/>
+                            <constraint firstItem="oii-9I-IMC" firstAttribute="centerX" secondItem="8y6-Vp-Kpy" secondAttribute="centerX" id="z7G-TJ-qH1"/>
+                            <constraint firstItem="rm9-xV-4hf" firstAttribute="height" secondItem="Ma8-Mg-UAg" secondAttribute="height" id="zOI-OD-IMb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hXX-ps-gOF"/>
                     </view>
@@ -2624,7 +2897,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bS4-Lw-KoE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N5A-Pj-hlp">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2641,7 +2914,7 @@
             <objects>
                 <viewController title="Bets/Chips View Controller" id="Npy-qb-T10" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J74-lf-CJa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lvh-h3-lpr">
@@ -2654,7 +2927,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bets/Chips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEl-PX-K8X">
-                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <rect key="frame" x="69" y="64" width="758" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2679,20 +2952,20 @@
             <objects>
                 <viewController title="Dealing View Controller" id="Pn7-ga-MvM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7e0-VO-URX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ebd-Wf-5zx">
                                 <rect key="frame" x="25" y="161" width="364" height="718"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">Once the initial bet has been made, click deal or tap the screen to deal cards.   The player will be dealt two face up cards. However, one of the dealer's cards will be hidden.   The objective next is to decide to hit or stand to reach a value higher than the dealer's, but not bust.     </mutableString>
+                                <string key="text">Once the initial bet has been made, click deal or tap the screen to deal cards.   The player will be dealt two face up cards. However, one of the dealer's cards will be hidden.   The objective next is to decide to hit or stand to reach a value higher than the dealer's, but not bust.     </string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShJ-0u-uux">
-                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <rect key="frame" x="69" y="64" width="758" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2717,22 +2990,22 @@
             <objects>
                 <viewController title="Hit/Stand View Controller" id="AVx-GU-Ff3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0PV-Im-maA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BTI-zX-BGm">
                                 <rect key="frame" x="25" y="161" width="364" height="718"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">In order to get a high total than the dealer, you can decide to hit and add one card. 
+                                <string key="text">In order to get a high total than the dealer, you can decide to hit and add one card. 
 
-However, if your card total reaches above 21, you will lose automatically.   Once you are satisfied with your hand, swipe right or press stand to play your hand. The dealer will then reveal their hidden card and hit until they have a 17 or higher.     </mutableString>
+However, if your card total reaches above 21, you will lose automatically.   Once you are satisfied with your hand, swipe right or press stand to play your hand. The dealer will then reveal their hidden card and hit until they have a 17 or higher.     </string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hit/Stand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfh-m1-aIu">
-                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <rect key="frame" x="69" y="64" width="758" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2757,7 +3030,7 @@ However, if your card total reaches above 21, you will lose automatically.  �
             <objects>
                 <viewController title="Card Value View Controller" id="Q4q-xC-TAd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tnU-ah-EVc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="29v-ku-msi">
@@ -2770,7 +3043,7 @@ However, if your card total reaches above 21, you will lose automatically.  �
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N06-15-tn4">
-                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <rect key="frame" x="69" y="64" width="758" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2795,20 +3068,20 @@ However, if your card total reaches above 21, you will lose automatically.  �
             <objects>
                 <viewController title="Winning View Controller" id="GbR-01-0cC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Cz-AA-kgO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cza-p7-hB5">
                                 <rect key="frame" x="25" y="161" width="364" height="718"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">Whoever has the highest score between the dealer and player wins. If there is a tie (push), then the player will take their bet back.  If the dealer goes above 21 and you have not, then the player will win. Blackjack, a natural 21, beats any combination except another Blackjack. It will also beat a non-Blackjack 21.   Winning will double your bet. For example, a $1000 bet will award you an earnings of $1000. A Blackjack has a payout of 3 to 2. Therefore a $1000 bet will ward you an earnings of $1500.  </mutableString>
+                                <string key="text">Whoever has the highest score between the dealer and player wins. If there is a tie (push), then the player will take their bet back.  If the dealer goes above 21 and you have not, then the player will win. Blackjack, a natural 21, beats any combination except another Blackjack. It will also beat a non-Blackjack 21.   Winning will double your bet. For example, a $1000 bet will award you an earnings of $1000. A Blackjack has a payout of 3 to 2. Therefore a $1000 bet will ward you an earnings of $1500.  </string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7u-oT-cu6">
-                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <rect key="frame" x="69" y="64" width="758" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2833,20 +3106,20 @@ However, if your card total reaches above 21, you will lose automatically.  �
             <objects>
                 <viewController title="Insurance View Controller" id="q5Q-x7-FUB" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zzu-FN-uN4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CVo-D8-QoB">
                                 <rect key="frame" x="25" y="161" width="364" height="718"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">If the dealer's revealed card is an ace, you can decide to  place another bet on whether or not their hand is a Blackjack. This must be done right after initial cards are dealed, but before any actions after.   The bet is half of the initial bet. If the dealer does not have Blackjack, the insurance is lost and the game continues. If they do have Blackjack, you will win double of your insurance. However, you will still lose your initial bet. The end result is that you breakeven.</mutableString>
+                                <string key="text">If the dealer's revealed card is an ace, you can decide to  place another bet on whether or not their hand is a Blackjack. This must be done right after initial cards are dealed, but before any actions after.   The bet is half of the initial bet. If the dealer does not have Blackjack, the insurance is lost and the game continues. If they do have Blackjack, you will win double of your insurance. However, you will still lose your initial bet. The end result is that you breakeven.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insurance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZc-uh-XIi">
-                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <rect key="frame" x="69" y="64" width="758" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2871,20 +3144,20 @@ However, if your card total reaches above 21, you will lose automatically.  �
             <objects>
                 <viewController title="General Tips View Controller" id="fK3-5Q-xxS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VhG-ZQ-pD4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l8o-pf-fyj">
                                 <rect key="frame" x="25" y="161" width="364" height="718"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">Here are some general guidelines to have better odds to win:  - Never take insurance - Note that most cards in deck are face cards. Dealers with face cards or ace have high odds of getting 20+ - Think about the odds of the dealer busting. Dealers with revealed card of 6 have a high likelihood of busting  - To minimize house edge, use blackjack tables to decide strategy</mutableString>
+                                <string key="text">Here are some general guidelines to have better odds to win:  - Never take insurance - Note that most cards in deck are face cards. Dealers with face cards or ace have high odds of getting 20+ - Think about the odds of the dealer busting. Dealers with revealed card of 6 have a high likelihood of busting  - To minimize house edge, use blackjack tables to decide strategy</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Tips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4c-C8-ebK">
-                                <rect key="frame" x="25" y="108" width="364" height="43"/>
+                                <rect key="frame" x="69" y="64" width="758" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
