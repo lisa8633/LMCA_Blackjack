@@ -20,6 +20,7 @@ class MultiplayerViewController: UIViewController{
     var player2 = User()
     var dealer = Dealer()
     var num = 0
+    var currentBalance = 0.0
     
     var userCardsDealt : Int!
     var dealerCardsDealt : Int!
@@ -31,27 +32,52 @@ class MultiplayerViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         userName = RoomCode.name
+        currentBalance = RoomCode.coins
        
         // Database
         let ref = Database.database().reference()
         ref.child("\(RoomCode.code)").observeSingleEvent(of: .value, with: {(snapshot)in
             let playerData = snapshot.value!
-            print(playerData)
+            //print(playerData)
         })
         ref.child("\(RoomCode.code)/\(userName)/num").observeSingleEvent(of: .value, with: {(snapshot)in
-            self.userTurn = snapshot.value! as! Int
-            if self.userTurn == 3{
-                ref.child("\(RoomCode.code)/Dealer/cards").observeSingleEvent(of: .value) { (snapshot) in
-                let data = snapshot.value! as! String
-                if data != "none"{
-                    self.findDealer()
+            //if snapshot == null{
+                self.userTurn = snapshot.value! as! Int
+                if self.userTurn == 3 || self.userTurn == 4{
+                    ref.child("\(RoomCode.code)/Dealer/cards").observeSingleEvent(of: .value) { (snapshot) in
+                    let data = snapshot.value! as! String
+                    if data != "none"{
+                        self.dealer = Dealer()
+                        self.findDealer(data: data)
+                        if self.dealer.isBust(){
+                            print("Player wins")
+                        }
+                        else if !self.dealer.isBust() && !self.user.isBust(){
+                            if self.dealer.getValue() > self.user.getValue(){
+                                print("dealer wins")
+                                //dealerWinsRound(delay: dealerCardsDealt + 1)
+                                //dealer wins
+                            }else if self.dealer.getValue() == self.user.getValue(){
+                                print("tie")
+                                //self.endRound(delay: self.dealerCardsDealt + 1)
+                                // player ties
+                            }else{
+                                print("player wins")
+                                //userWinsRound(delay: dealerCardsDealt + 1)
+                            }
+                        }
+                    }
                 }
-            }
-            }
+                }
+            //}
         })
-        
+        ref.child("\(RoomCode.code)/players").observeSingleEvent(of: .value, with: {(snapshot)in
+            let players = snapshot.value! as! Int
+            RoomCode.players = players
+        })
         ref.child("\(RoomCode.code)/turn").observeSingleEvent(of: .value) { (snapshot) in
             self.turn = snapshot.value! as! Int
+            
             if self.turn == 1{
                 self.dealer = Dealer()
                     self.dealer = Dealer(card1: self.deck.deal(), card2: self.deck.deal())
@@ -63,7 +89,7 @@ class MultiplayerViewController: UIViewController{
                     ref.child("\(RoomCode.code)/turn").setValue(self.turn)
                     
             }
-            else if self.turn == 4{
+            else if self.turn == (RoomCode.players+2){
                 //everyone is done
                 if self.dealer.isBust(){
                     //player wins
@@ -80,7 +106,6 @@ class MultiplayerViewController: UIViewController{
                     }
                     let ref = Database.database().reference()
                     ref.child("\(RoomCode.code)/Dealer/cards").setValue("\(str)")
-                    print(str)
                     //animateCardDealer(dealer: dealer, cardNum: dealerCardsDealt)
                     
                     print("Dealer Hand Total \(self.dealer.getValue())")
@@ -107,6 +132,7 @@ class MultiplayerViewController: UIViewController{
                 }
                 self.turn = 1
                 ref.child("\(RoomCode.code)/turn").setValue(self.turn)
+                ref.child("\(RoomCode.code)/\(RoomCode.name)/cards").setValue("none")
                 self.dealtAlready = false
                 print("GAME OVER")
                 self.viewDidLoad()
@@ -116,11 +142,8 @@ class MultiplayerViewController: UIViewController{
         
             self.userBet = 10
     }
-    func findDealer(){
-        let ref = Database.database().reference()
-        ref.child("\(RoomCode.code)/Dealer/cards").observeSingleEvent(of: .value) { (snapshot) in
-                   let data = snapshot.value! as! String
-                   if data != "none"{
+    func findDealer(data: String){
+            if data != "none"{
                        /*
                        let start = data.firstIndex(of: ",")!
                        let index = data.firstIndex(of: ";")!
@@ -138,7 +161,6 @@ class MultiplayerViewController: UIViewController{
                        if data[data.index(before: data.endIndex)] == ";"{
                            data.dropLast()
                        }
-                       print(data)
                        let index = data.firstIndex(of: ";")!
                        let sub1 = "\(data[..<index])"
                        self.addDealer(data: sub1)
@@ -150,10 +172,10 @@ class MultiplayerViewController: UIViewController{
                            self.addDealer(data: sub1)
                            sub2 = "\(sub2[sub2.index(after: index)...])"
                        }
-                       self.addDealer(data: sub2)
-                   }
+                self.addDealer(data: sub2)
+            }
                    
-               }
+               
     }
     func addDealer(data: String){
         let start = data.firstIndex(of: ",")!
@@ -200,6 +222,7 @@ class MultiplayerViewController: UIViewController{
         let ref = Database.database().reference()
         ref.child("\(RoomCode.code)/turn").setValue(turn)
         //update turn
+        
         if user.blackjack && dealer.blackjack {
             print("tie")
             //flipCard(cardNum : 10)
@@ -305,13 +328,38 @@ class MultiplayerViewController: UIViewController{
             }
             }else{
                 endTurn()
-                endRound(delay: dealerCardsDealt + 1)
+                //endRound(delay: dealerCardsDealt + 1)
             }
     }
     @IBAction func stand(_ sender: Any) {
         self.endTurn()
     }
     @IBAction func doubleUp(_ sender: Any) {
+        let ref = Database.database().reference()
+        currentBalance = currentBalance - userBet
+        userBet = userBet * 2
+        //totalBet.text = "Bet: \(userBet)"
+        //balance.text = "Balance: \(currentBalance!)"
+        user.addCard(card: deck.deal())
+        //cardsDealt += 1
+        print(user.cards[2].getSymbol())
+        var str = ""
+        for c in self.user.cards{
+            str += "\(c.getValue()),\(c.getSuit());"
+        }
+        ref.child("\(RoomCode.code)/\(userName)/cards").setValue(str)
+        //userCardsDealt += 1
+        //animateCardUser(user: user, cardNum: userCardsDealt)
+        
+        print("Player Hand Total \(user.getValue())")
+        if user.isBust(){
+            print("Player lose")
+            //flipCard(cardNum : 10)
+            //dealerWinsRound(delay: dealerCardsDealt + 1)
+            //lose coins
+        }else{
+            self.endTurn()
+        }
     }
     
 }
