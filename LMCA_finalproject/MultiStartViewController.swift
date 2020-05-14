@@ -70,6 +70,8 @@ class MultiStartViewController: UIViewController, UITextFieldDelegate{
             print("Please provide room code")
         }else{
             var ref = Database.database().reference()
+            ref.child("\(RoomCode.code)/players").setValue(2)
+            RoomCode.players = 2
             ref.child("\(RoomCode.code)/players").observeSingleEvent(of: .value, with: {(snapshot)in
                 var players = snapshot.value! as! Int
                 RoomCode.players = players
@@ -78,13 +80,12 @@ class MultiStartViewController: UIViewController, UITextFieldDelegate{
                 }else{
                     ref.child("\(RoomCode.code)/\(self.userName)/num").setValue(4)
                     RoomCode.players = 3
-                    ref.child("\(RoomCode.code)/players").setValue(4)
+                    ref.child("\(RoomCode.code)/players").setValue(3)
                 }
                 print(players)
             })
             ref.child("\(RoomCode.code)/\(self.userName)").setValue(["coins" : self.userCoins, "cards": "none", "num": 3])
-            ref.child("\(RoomCode.code)/players").setValue(2)
-            RoomCode.players = 2
+            
             
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "MultiplayerViewController")

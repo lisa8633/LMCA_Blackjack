@@ -49,23 +49,7 @@ class MultiplayerViewController: UIViewController{
                     if data != "none"{
                         self.dealer = Dealer()
                         self.findDealer(data: data)
-                        if self.dealer.isBust(){
-                            print("Player wins")
-                        }
-                        else if !self.dealer.isBust() && !self.user.isBust(){
-                            if self.dealer.getValue() > self.user.getValue(){
-                                print("dealer wins")
-                                //dealerWinsRound(delay: dealerCardsDealt + 1)
-                                //dealer wins
-                            }else if self.dealer.getValue() == self.user.getValue(){
-                                print("tie")
-                                //self.endRound(delay: self.dealerCardsDealt + 1)
-                                // player ties
-                            }else{
-                                print("player wins")
-                                //userWinsRound(delay: dealerCardsDealt + 1)
-                            }
-                        }
+                        
                     }
                 }
                 }
