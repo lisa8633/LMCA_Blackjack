@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bS4-Lw-KoE">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,24 +12,24 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online Blackjack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1GW-st-T7T">
-                                <rect key="frame" x="64" y="20" width="768" height="36"/>
+                                <rect key="frame" x="20" y="64" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackjackIcon" translatesAutoresizingMaskIntoConstraints="NO" id="llo-1H-uxI">
-                                <rect key="frame" x="261" y="76" width="374" height="449"/>
+                                <rect key="frame" x="20" y="120" width="374" height="449"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="llo-1H-uxI" secondAttribute="height" multiplier="1:1.2" id="IzH-9y-Dcq"/>
                                     <constraint firstAttribute="width" constant="374" id="wL8-li-IgQ"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cr9-kR-QvQ">
-                                <rect key="frame" x="64" y="586" width="768" height="50"/>
+                                <rect key="frame" x="20" y="630" width="374" height="50"/>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="CL1-8h-4n7"/>
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZL-TW-WBJ">
-                                <rect key="frame" x="64" y="661" width="768" height="50"/>
+                                <rect key="frame" x="20" y="705" width="374" height="50"/>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Kl2-za-Vfv"/>
@@ -63,7 +63,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa6-tb-n6R">
-                                <rect key="frame" x="64" y="736" width="768" height="50"/>
+                                <rect key="frame" x="20" y="780" width="374" height="50"/>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="oCG-al-PSZ"/>
@@ -82,7 +82,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpT-I0-3aC">
-                                <rect key="frame" x="393.5" y="545" width="109" height="21"/>
+                                <rect key="frame" x="152.5" y="589" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -125,23 +125,23 @@
             <objects>
                 <viewController id="JWX-HW-4tm" customClass="BlackJackViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wzH-XP-y8A" customClass="SinglePlayerBoardView" customModule="LMCA_finalproject" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvQ-M9-THw">
-                                <rect key="frame" x="415.5" y="367.5" width="65.5" height="20.5"/>
+                                <rect key="frame" x="174.5" y="836.5" width="65.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiI-UJ-Vl1">
-                                <rect key="frame" x="64" y="363" width="30" height="30"/>
+                                <rect key="frame" x="20" y="832" width="30" height="30"/>
                                 <state key="normal" title="End"/>
                                 <connections>
                                     <action selector="SingleEndGame:" destination="JWX-HW-4tm" eventType="touchUpInside" id="b2t-9M-DP7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLc-uR-xVp">
-                                <rect key="frame" x="333" y="243.5" width="70" height="30"/>
+                                <rect key="frame" x="92" y="484.5" width="70" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.3533283390410959" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="NGZ-OS-7AT"/>
@@ -160,7 +160,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bet:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2R-SH-T8U">
-                                <rect key="frame" x="348" y="212" width="200" height="26.5"/>
+                                <rect key="frame" x="107" y="453" width="200" height="26.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="qVy-OI-Cv4"/>
                                 </constraints>
@@ -168,7 +168,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M7-rd-oZL">
-                                <rect key="frame" x="493" y="243.5" width="70" height="30"/>
+                                <rect key="frame" x="252" y="484.5" width="70" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.35332833899999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="OCW-0I-HbZ"/>
@@ -187,7 +187,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZZ-Zh-bMQ">
-                                <rect key="frame" x="413" y="243.5" width="70" height="30"/>
+                                <rect key="frame" x="172" y="484.5" width="70" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.35332833899999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="XOl-mt-5jK"/>
@@ -206,7 +206,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gtr-Eo-94P">
-                                <rect key="frame" x="282" y="283" width="332" height="60"/>
+                                <rect key="frame" x="41" y="752" width="332" height="60"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nA-1w-fC4" customClass="ChipGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -354,7 +354,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdE-k9-oQl">
-                                <rect key="frame" x="518" y="120" width="80" height="30"/>
+                                <rect key="frame" x="277" y="361" width="80" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.35332833899999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="GLQ-LN-1fD"/>
@@ -373,21 +373,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WQ-kc-Z2e">
-                                <rect key="frame" x="800" y="363" width="32" height="30"/>
+                                <rect key="frame" x="362" y="832" width="32" height="30"/>
                                 <state key="normal" title="Help"/>
                                 <connections>
                                     <action selector="helpAction:" destination="JWX-HW-4tm" eventType="touchUpInside" id="TAr-Nx-hND"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxa-c1-LiP">
-                                <rect key="frame" x="556" y="210" width="39" height="30"/>
+                                <rect key="frame" x="315" y="451" width="39" height="30"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="resetBetAction:" destination="JWX-HW-4tm" eventType="touchUpInside" id="c6S-gI-miy"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVw-ak-bs6">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vf-N7-QS6" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -469,7 +469,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ye5-pT-euK">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSz-gZ-Tp9" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -551,7 +551,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQA-OD-0bi">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEk-1r-dkb" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -633,7 +633,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOs-qZ-aNy">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMi-cn-9fj" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -715,7 +715,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K70-fR-UZr">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwd-VG-UuK" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -797,7 +797,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qee-4x-oBO">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGd-Vi-dN1" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -879,7 +879,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPe-C2-tEG">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWe-bQ-bTx" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -961,7 +961,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zll-0Q-385">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJq-hK-OKV" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1043,7 +1043,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3j-Us-CD3">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="If7-c1-iw2" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1125,7 +1125,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZh-gO-6nn">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWH-5j-USs" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1207,7 +1207,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fz3-TE-SY2">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAK-Ut-M8v" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1289,7 +1289,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZqU-QI-Kzu">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXU-Un-hHS" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1371,7 +1371,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8s-xa-gw8">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eUe-8c-0mh" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1453,7 +1453,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fN-bw-pnP">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOM-8v-bpi" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1535,7 +1535,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sR6-kb-sts">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kg9-bb-bDB" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1617,7 +1617,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8m-pz-34e">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yn4-ah-ujS" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1699,7 +1699,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g41-qG-66e">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CD0-ib-ZJP" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1781,7 +1781,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Obo-8h-7cZ">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOG-Wn-5sY" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
@@ -1863,7 +1863,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mi8-m7-0YJ" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
-                                <rect key="frame" x="398" y="57" width="100" height="150"/>
+                                <rect key="frame" x="157" y="298" width="100" height="150"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="LEL-bN-OVP"/>
@@ -1874,7 +1874,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMu-xl-K8P">
-                                <rect key="frame" x="394" y="107" width="108.5" height="50"/>
+                                <rect key="frame" x="153" y="348" width="108.5" height="50"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2251,17 +2251,17 @@
             <objects>
                 <viewController id="mif-Mp-9Ha" customClass="RulesViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4ar-yb-ylx">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blackjack Guide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AL-jN-U0w">
-                                <rect key="frame" x="69" y="64" width="758" height="39"/>
+                                <rect key="frame" x="25" y="108" width="364" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzk-Tf-orB">
-                                <rect key="frame" x="69" y="113" width="758" height="41"/>
+                                <rect key="frame" x="25" y="157" width="364" height="41"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="What is Blackjack?">
@@ -2272,7 +2272,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32z-gE-Aq1">
-                                <rect key="frame" x="69" y="159" width="758" height="41"/>
+                                <rect key="frame" x="25" y="203" width="364" height="41"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Bets/Chips">
@@ -2283,7 +2283,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6u-bH-c2h">
-                                <rect key="frame" x="69" y="205" width="758" height="41"/>
+                                <rect key="frame" x="25" y="249" width="364" height="41"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Dealing">
@@ -2294,7 +2294,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7o-yN-Rem">
-                                <rect key="frame" x="69" y="251" width="758" height="41"/>
+                                <rect key="frame" x="25" y="295" width="364" height="41"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Hit/Stand">
@@ -2305,7 +2305,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ko-F5-Cia">
-                                <rect key="frame" x="69" y="297" width="758" height="41"/>
+                                <rect key="frame" x="25" y="341" width="364" height="41"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Card Value">
@@ -2316,7 +2316,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDZ-dX-spI">
-                                <rect key="frame" x="69" y="343" width="758" height="41"/>
+                                <rect key="frame" x="25" y="387" width="364" height="41"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Winning">
@@ -2327,7 +2327,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfu-Tk-6L2">
-                                <rect key="frame" x="69" y="389" width="758" height="41"/>
+                                <rect key="frame" x="25" y="433" width="364" height="41"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Insurance">
@@ -2338,7 +2338,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qr-5m-3bT">
-                                <rect key="frame" x="69" y="435" width="758" height="41"/>
+                                <rect key="frame" x="25" y="479" width="364" height="41"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="General Tips">
@@ -2349,7 +2349,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackjackRulesImage" translatesAutoresizingMaskIntoConstraints="NO" id="eNW-HC-u8u">
-                                <rect key="frame" x="69" y="91" width="758" height="322"/>
+                                <rect key="frame" x="25" y="560" width="364" height="322"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="322" id="F9t-n0-Je3"/>
                                     <constraint firstAttribute="width" constant="364" id="Id2-ba-OKF"/>
@@ -2403,7 +2403,7 @@
             <objects>
                 <viewController title="What is Blackjack Viewcontroller" id="6Fd-OY-38w" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iqq-fh-Qls">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ViX-20-q3O">
@@ -2416,7 +2416,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is Blackjack?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ro9-0v-FWX">
-                                <rect key="frame" x="69" y="64" width="758" height="43"/>
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2441,7 +2441,7 @@
             <objects>
                 <viewController id="MSo-Dk-uC5" customClass="MultiStartViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YhQ-Bs-VGL">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3U-Vr-Vuo">
@@ -2486,18 +2486,18 @@
             <objects>
                 <viewController restorationIdentifier="MultiplayerViewController" storyboardIdentifier="MultiplayerViewController" id="fTZ-gQ-dT7" customClass="MultiplayerViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3M8-k2-LEd" customClass="MultiPlayerBoardView" customModule="LMCA_finalproject" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyp-7N-ebH">
-                                <rect key="frame" x="64" y="363" width="71" height="30"/>
+                                <rect key="frame" x="20" y="832" width="71" height="30"/>
                                 <state key="normal" title="End Game"/>
                                 <connections>
                                     <action selector="MultiEndGame:" destination="fTZ-gQ-dT7" eventType="touchUpInside" id="db0-EB-g9K"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1T-yH-kLG">
-                                <rect key="frame" x="656" y="182.5" width="200" height="120"/>
+                                <rect key="frame" x="174" y="651.5" width="200" height="120"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Player 3's cards go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fAf-89-al0">
                                         <rect key="frame" x="40" y="0.0" width="121" height="120"/>
@@ -2515,19 +2515,19 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ma8-Mg-UAg">
-                                <rect key="frame" x="348" y="197" width="200" height="30"/>
+                                <rect key="frame" x="107" y="666" width="200" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2 Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8y6-Vp-Kpy">
-                                <rect key="frame" x="60" y="125.5" width="200" height="20.5"/>
+                                <rect key="frame" x="16" y="594.5" width="200" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rm9-xV-4hf">
-                                <rect key="frame" x="348" y="235" width="200" height="30"/>
+                                <rect key="frame" x="107" y="704" width="200" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTa-Fx-EBw">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
@@ -2584,7 +2584,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoY-UY-KsV">
-                                <rect key="frame" x="240" y="372.5" width="100" height="20.5"/>
+                                <rect key="frame" x="-1" y="841.5" width="100" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="LHb-VS-k2w"/>
                                 </constraints>
@@ -2593,13 +2593,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 3 Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIX-kI-kwb">
-                                <rect key="frame" x="656" y="125.5" width="200" height="20.5"/>
+                                <rect key="frame" x="174" y="594.5" width="200" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71K-7t-YSS">
-                                <rect key="frame" x="348" y="273" width="200" height="120"/>
+                                <rect key="frame" x="107" y="742" width="200" height="120"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Player 1's cards go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QIU-TH-WaY">
                                         <rect key="frame" x="40" y="0.0" width="120" height="120"/>
@@ -2622,7 +2622,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-Ek-8f4">
-                                <rect key="frame" x="60" y="182.5" width="200" height="120"/>
+                                <rect key="frame" x="16" y="651.5" width="200" height="120"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Player 2's cards go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ecH-Vx-cuH">
                                         <rect key="frame" x="40" y="0.0" width="121" height="120"/>
@@ -2640,7 +2640,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VQh-qU-edZ">
-                                <rect key="frame" x="595" y="305" width="200" height="30"/>
+                                <rect key="frame" x="157" y="774" width="200" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bet:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBq-6r-gfQ">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
@@ -2663,7 +2663,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2lb-yY-zEI">
-                                <rect key="frame" x="554" y="343" width="282" height="50"/>
+                                <rect key="frame" x="116" y="812" width="282" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIG-aE-7Fv" customClass="ChipGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -2796,7 +2796,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jH5-8L-c0O">
-                                <rect key="frame" x="348" y="20" width="200" height="120"/>
+                                <rect key="frame" x="107" y="64" width="200" height="120"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Dealer's cards go here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5pu-Gp-VCM">
                                         <rect key="frame" x="40" y="0.0" width="120" height="120"/>
@@ -2819,7 +2819,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oii-9I-IMC">
-                                <rect key="frame" x="60" y="154" width="200" height="20.5"/>
+                                <rect key="frame" x="16" y="623" width="200" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="nkq-z4-2El"/>
                                 </constraints>
@@ -2828,7 +2828,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFA-ew-AzT">
-                                <rect key="frame" x="656" y="154" width="200" height="20.5"/>
+                                <rect key="frame" x="174" y="623" width="200" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="cuh-wt-AaK"/>
                                 </constraints>
@@ -2897,7 +2897,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bS4-Lw-KoE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N5A-Pj-hlp">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2914,7 +2914,7 @@
             <objects>
                 <viewController title="Bets/Chips View Controller" id="Npy-qb-T10" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J74-lf-CJa">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lvh-h3-lpr">
@@ -2927,7 +2927,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bets/Chips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEl-PX-K8X">
-                                <rect key="frame" x="69" y="64" width="758" height="43"/>
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2952,7 +2952,7 @@
             <objects>
                 <viewController title="Dealing View Controller" id="Pn7-ga-MvM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7e0-VO-URX">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ebd-Wf-5zx">
@@ -2965,7 +2965,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShJ-0u-uux">
-                                <rect key="frame" x="69" y="64" width="758" height="43"/>
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2990,7 +2990,7 @@
             <objects>
                 <viewController title="Hit/Stand View Controller" id="AVx-GU-Ff3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0PV-Im-maA">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BTI-zX-BGm">
@@ -3005,7 +3005,7 @@ However, if your card total reaches above 21, you will lose automatically. â€¨â€
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hit/Stand" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfh-m1-aIu">
-                                <rect key="frame" x="69" y="64" width="758" height="43"/>
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -3030,7 +3030,7 @@ However, if your card total reaches above 21, you will lose automatically. â€¨â€
             <objects>
                 <viewController title="Card Value View Controller" id="Q4q-xC-TAd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tnU-ah-EVc">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="29v-ku-msi">
@@ -3043,7 +3043,7 @@ However, if your card total reaches above 21, you will lose automatically. â€¨â€
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N06-15-tn4">
-                                <rect key="frame" x="69" y="64" width="758" height="43"/>
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -3068,7 +3068,7 @@ However, if your card total reaches above 21, you will lose automatically. â€¨â€
             <objects>
                 <viewController title="Winning View Controller" id="GbR-01-0cC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Cz-AA-kgO">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cza-p7-hB5">
@@ -3081,7 +3081,7 @@ However, if your card total reaches above 21, you will lose automatically. â€¨â€
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7u-oT-cu6">
-                                <rect key="frame" x="69" y="64" width="758" height="43"/>
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -3106,7 +3106,7 @@ However, if your card total reaches above 21, you will lose automatically. â€¨â€
             <objects>
                 <viewController title="Insurance View Controller" id="q5Q-x7-FUB" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zzu-FN-uN4">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CVo-D8-QoB">
@@ -3119,7 +3119,7 @@ However, if your card total reaches above 21, you will lose automatically. â€¨â€
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insurance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZc-uh-XIi">
-                                <rect key="frame" x="69" y="64" width="758" height="43"/>
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -3144,7 +3144,7 @@ However, if your card total reaches above 21, you will lose automatically. â€¨â€
             <objects>
                 <viewController title="General Tips View Controller" id="fK3-5Q-xxS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VhG-ZQ-pD4">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l8o-pf-fyj">
@@ -3157,7 +3157,7 @@ However, if your card total reaches above 21, you will lose automatically. â€¨â€
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Tips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4c-C8-ebK">
-                                <rect key="frame" x="69" y="64" width="758" height="43"/>
+                                <rect key="frame" x="25" y="108" width="364" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
