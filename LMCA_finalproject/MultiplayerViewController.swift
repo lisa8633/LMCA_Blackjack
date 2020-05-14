@@ -159,8 +159,6 @@ class MultiplayerViewController: UIViewController{
         let start = data.firstIndex(of: ",")!
         let v1:Int? = Int("\(data[..<start])")
         let s1:String? = String(data[data.index(after:start)...])
-        print(v1)
-        print(s1)
         let card = Card(value: v1!, suit: s1!)
         self.dealer.addCard(card: card)
     }
