@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import FirebaseDatabase
 
 
 class BlackJackViewController: UIViewController {
@@ -308,6 +309,7 @@ class BlackJackViewController: UIViewController {
     var players = [NSManagedObject]()
     var currentBalance : Double! //Set using Core Data
     var username : String!
+    var uniqueId : String!
     
     var dealtAlready = false // Checks if user has been dealt initial cards
     var cardsDealt = 0
@@ -560,6 +562,7 @@ class BlackJackViewController: UIViewController {
             let player = players[0]
             self.username = player.value(forKey: "name") as? String
             self.currentBalance = player.value(forKey: "coins") as? Double
+            self.uniqueId = player.value(forKey: "uniqueId") as? String
             
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
@@ -1093,6 +1096,8 @@ class BlackJackViewController: UIViewController {
             try managedContext.save()
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Player")
             players = try managedContext.fetch(fetchRequest)
+            let ref = Database.database().reference()
+            ref.child("Scoreboard/\(self.uniqueId!)").setValue(["coins" : updatedBalance, "name": self.username!])
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }

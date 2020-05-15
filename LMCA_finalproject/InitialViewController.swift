@@ -23,7 +23,7 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        pictureWidth.constant = self.view.bounds.width * 2.4 - 620
+        //pictureWidth.constant = self.view.bounds.width * 3 - 850
         //let ref = Database.database().reference()
         //ref.child("Scoreboard").setValue(["coins" : currentBalance, "name": username])
     }
@@ -32,9 +32,6 @@ class InitialViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        let ref = Database.database().reference()
-        let room = ref.child("Scoreboard").childByAutoId()
-        room.setValue(["coins" : currentBalance, "name": username])
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -85,8 +82,12 @@ class InitialViewController: UIViewController {
                     let player = NSManagedObject(entity: entity, insertInto: managedContext)
                   
                     // 3
+                    let ref = Database.database().reference()
+                    let room = ref.child("Scoreboard").childByAutoId()
+                    room.setValue(["coins" : 3000, "name": name])
                     player.setValue(name, forKeyPath: "name")
                     player.setValue(3000, forKey: "coins")
+                    player.setValue(room.key, forKey: "uniqueId")
                     // 4
                     do {
                         try managedContext.save()
@@ -97,6 +98,7 @@ class InitialViewController: UIViewController {
                     } catch let error as NSError {
                         print("Could not save. \(error), \(error.userInfo)")
                     }
+                
                 
 
             }

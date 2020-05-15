@@ -14,8 +14,8 @@
             filePath = "LMCA_finalproject/BlackJackViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "309"
-            endingLineNumber = "309"
+            startingLineNumber = "310"
+            endingLineNumber = "310"
             landmarkName = "BlackJackViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "LMCA_finalproject/BlackJackViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "306"
-            endingLineNumber = "306"
+            startingLineNumber = "307"
+            endingLineNumber = "307"
             landmarkName = "BlackJackViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -46,9 +46,9 @@
             filePath = "LMCA_finalproject/BlackJackViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "869"
-            endingLineNumber = "869"
-            landmarkName = "dealOrHitAction(_:)"
+            startingLineNumber = "872"
+            endingLineNumber = "872"
+            landmarkName = "dealOrHitFunction()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -62,9 +62,9 @@
             filePath = "LMCA_finalproject/BlackJackViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "742"
-            endingLineNumber = "742"
-            landmarkName = "dealerWinsRound(delay:)"
+            startingLineNumber = "745"
+            endingLineNumber = "745"
+            landmarkName = "userWinsRoundBJ(delay:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -78,9 +78,9 @@
             filePath = "LMCA_finalproject/BlackJackViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "712"
-            endingLineNumber = "712"
-            landmarkName = "userWinsRoundBJ(delay:)"
+            startingLineNumber = "715"
+            endingLineNumber = "715"
+            landmarkName = "userWinsRound(delay:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,9 +94,9 @@
             filePath = "LMCA_finalproject/BlackJackViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "684"
-            endingLineNumber = "684"
-            landmarkName = "userWinsRound(delay:)"
+            startingLineNumber = "687"
+            endingLineNumber = "687"
+            landmarkName = "addTwentyFive(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -110,8 +110,8 @@
             filePath = "LMCA_finalproject/BlackJackViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1621"
-            endingLineNumber = "1621"
+            startingLineNumber = "1626"
+            endingLineNumber = "1626"
             landmarkName = "returnCards()"
             landmarkType = "7">
          </BreakpointContent>
