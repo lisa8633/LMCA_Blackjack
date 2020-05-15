@@ -10,6 +10,10 @@
 		572FC77C460A08F41BB5DE38 /* Pods_LMCA_finalproject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EB5E6DBF5EFFA010552545 /* Pods_LMCA_finalproject.framework */; };
 		8E10D26E245E0A040054B29D /* SinglePlayerBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E10D26D245E0A040054B29D /* SinglePlayerBoardView.swift */; };
 		8E535B63246888320015A596 /* MultiPlayerBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E535B62246888320015A596 /* MultiPlayerBoardView.swift */; };
+		D52FA094246F4DE500EAD858 /* pokerBackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D52FA090246F4DE500EAD858 /* pokerBackgroundMusic.mp3 */; };
+		D52FA095246F4DE500EAD858 /* cardSlide8.wav in Resources */ = {isa = PBXBuildFile; fileRef = D52FA091246F4DE500EAD858 /* cardSlide8.wav */; };
+		D52FA096246F4DE500EAD858 /* chipSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D52FA092246F4DE500EAD858 /* chipSound.mp3 */; };
+		D52FA097246F4DE500EAD858 /* cardPlace1.wav in Resources */ = {isa = PBXBuildFile; fileRef = D52FA093246F4DE500EAD858 /* cardPlace1.wav */; };
 		D599A50D2454C9CB00AAA7FC /* MultiStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A50C2454C9CB00AAA7FC /* MultiStartViewController.swift */; };
 		D599A50F2454C9E500AAA7FC /* BlackJackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A50E2454C9E500AAA7FC /* BlackJackViewController.swift */; };
 		D599A53B245A5E5300AAA7FC /* SuitGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A53A245A5E5300AAA7FC /* SuitGraphics.swift */; };
@@ -19,10 +23,6 @@
 		D599A543245AB21000AAA7FC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A542245AB21000AAA7FC /* User.swift */; };
 		D599A545245AB21D00AAA7FC /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A544245AB21D00AAA7FC /* Dealer.swift */; };
 		D97DC283246F26BB00DDA423 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97DC282246F26BB00DDA423 /* AVFoundation.framework */; };
-		D97DC285246F28C200DDA423 /* pokerBackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D97DC284246F28C200DDA423 /* pokerBackgroundMusic.mp3 */; };
-		D97DC287246F2AF100DDA423 /* chipSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D97DC286246F2AF100DDA423 /* chipSound.mp3 */; };
-		D97DC289246F310900DDA423 /* cardPlace1.wav in Resources */ = {isa = PBXBuildFile; fileRef = D97DC288246F310900DDA423 /* cardPlace1.wav */; };
-		D97DC28B246F318400DDA423 /* cardSlide8.wav in Resources */ = {isa = PBXBuildFile; fileRef = D97DC28A246F318400DDA423 /* cardSlide8.wav */; };
 		D9ECFE522457931E0029E57F /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECFE512457931E0029E57F /* RulesViewController.swift */; };
 		E20BA24624537E3C00E39FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA24524537E3C00E39FE3 /* AppDelegate.swift */; };
 		E20BA24824537E3C00E39FE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA24724537E3C00E39FE3 /* SceneDelegate.swift */; };
@@ -43,6 +43,10 @@
 		494A0F5981AE7DFCD6F142A9 /* Pods-LMCA_finalproject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMCA_finalproject.release.xcconfig"; path = "Target Support Files/Pods-LMCA_finalproject/Pods-LMCA_finalproject.release.xcconfig"; sourceTree = "<group>"; };
 		8E10D26D245E0A040054B29D /* SinglePlayerBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerBoardView.swift; sourceTree = "<group>"; };
 		8E535B62246888320015A596 /* MultiPlayerBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPlayerBoardView.swift; sourceTree = "<group>"; };
+		D52FA090246F4DE500EAD858 /* pokerBackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pokerBackgroundMusic.mp3; sourceTree = "<group>"; };
+		D52FA091246F4DE500EAD858 /* cardSlide8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cardSlide8.wav; sourceTree = "<group>"; };
+		D52FA092246F4DE500EAD858 /* chipSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chipSound.mp3; sourceTree = "<group>"; };
+		D52FA093246F4DE500EAD858 /* cardPlace1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cardPlace1.wav; sourceTree = "<group>"; };
 		D599A50C2454C9CB00AAA7FC /* MultiStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiStartViewController.swift; sourceTree = "<group>"; };
 		D599A50E2454C9E500AAA7FC /* BlackJackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackJackViewController.swift; sourceTree = "<group>"; };
 		D599A53A245A5E5300AAA7FC /* SuitGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuitGraphics.swift; sourceTree = "<group>"; };
@@ -52,10 +56,6 @@
 		D599A542245AB21000AAA7FC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D599A544245AB21D00AAA7FC /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
 		D97DC282246F26BB00DDA423 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		D97DC284246F28C200DDA423 /* pokerBackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pokerBackgroundMusic.mp3; path = ../../../../../Downloads/pokerBackgroundMusic.mp3; sourceTree = "<group>"; };
-		D97DC286246F2AF100DDA423 /* chipSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = chipSound.mp3; path = ../../../../../Downloads/chipSound.mp3; sourceTree = "<group>"; };
-		D97DC288246F310900DDA423 /* cardPlace1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = cardPlace1.wav; path = "../../../../../Downloads/Casino sound package/cardPlace1.wav"; sourceTree = "<group>"; };
-		D97DC28A246F318400DDA423 /* cardSlide8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = cardSlide8.wav; path = "../../../../../Downloads/Casino sound package/cardSlide8.wav"; sourceTree = "<group>"; };
 		D9ECFE512457931E0029E57F /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		E20BA24224537E3C00E39FE3 /* LMCA_finalproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMCA_finalproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20BA24524537E3C00E39FE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +92,17 @@
 				494A0F5981AE7DFCD6F142A9 /* Pods-LMCA_finalproject.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D52FA08F246F4DE500EAD858 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				D52FA090246F4DE500EAD858 /* pokerBackgroundMusic.mp3 */,
+				D52FA091246F4DE500EAD858 /* cardSlide8.wav */,
+				D52FA092246F4DE500EAD858 /* chipSound.mp3 */,
+				D52FA093246F4DE500EAD858 /* cardPlace1.wav */,
+			);
+			path = sounds;
 			sourceTree = "<group>";
 		};
 		E20BA23924537E3C00E39FE3 = {
@@ -138,10 +149,7 @@
 				E20BA25624537E3D00E39FE3 /* Info.plist */,
 				E20BA24E24537E3C00E39FE3 /* LMCA_finalproject.xcdatamodeld */,
 				E2CB7D142461D15D00D7510A /* GoogleService-Info.plist */,
-				D97DC286246F2AF100DDA423 /* chipSound.mp3 */,
-				D97DC288246F310900DDA423 /* cardPlace1.wav */,
-				D97DC28A246F318400DDA423 /* cardSlide8.wav */,
-				D97DC284246F28C200DDA423 /* pokerBackgroundMusic.mp3 */,
+				D52FA08F246F4DE500EAD858 /* sounds */,
 			);
 			path = LMCA_finalproject;
 			sourceTree = "<group>";
@@ -215,14 +223,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D97DC285246F28C200DDA423 /* pokerBackgroundMusic.mp3 in Resources */,
+				D52FA094246F4DE500EAD858 /* pokerBackgroundMusic.mp3 in Resources */,
+				D52FA095246F4DE500EAD858 /* cardSlide8.wav in Resources */,
+				D52FA097246F4DE500EAD858 /* cardPlace1.wav in Resources */,
+				D52FA096246F4DE500EAD858 /* chipSound.mp3 in Resources */,
 				E20BA25524537E3D00E39FE3 /* LaunchScreen.storyboard in Resources */,
-				D97DC287246F2AF100DDA423 /* chipSound.mp3 in Resources */,
 				E2CB7D152461D15E00D7510A /* GoogleService-Info.plist in Resources */,
 				E20BA25224537E3D00E39FE3 /* Assets.xcassets in Resources */,
-				D97DC28B246F318400DDA423 /* cardSlide8.wav in Resources */,
 				E20BA24D24537E3C00E39FE3 /* Main.storyboard in Resources */,
-				D97DC289246F310900DDA423 /* cardPlace1.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
