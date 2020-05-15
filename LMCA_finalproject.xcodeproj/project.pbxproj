@@ -18,6 +18,8 @@
 		D599A541245A9F7200AAA7FC /* MultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A540245A9F7200AAA7FC /* MultiplayerViewController.swift */; };
 		D599A543245AB21000AAA7FC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A542245AB21000AAA7FC /* User.swift */; };
 		D599A545245AB21D00AAA7FC /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599A544245AB21D00AAA7FC /* Dealer.swift */; };
+		D97DC283246F26BB00DDA423 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D97DC282246F26BB00DDA423 /* AVFoundation.framework */; };
+		D97DC285246F28C200DDA423 /* pokerBackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D97DC284246F28C200DDA423 /* pokerBackgroundMusic.mp3 */; };
 		D9ECFE522457931E0029E57F /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ECFE512457931E0029E57F /* RulesViewController.swift */; };
 		E20BA24624537E3C00E39FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA24524537E3C00E39FE3 /* AppDelegate.swift */; };
 		E20BA24824537E3C00E39FE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA24724537E3C00E39FE3 /* SceneDelegate.swift */; };
@@ -46,6 +48,8 @@
 		D599A540245A9F7200AAA7FC /* MultiplayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerViewController.swift; sourceTree = "<group>"; };
 		D599A542245AB21000AAA7FC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D599A544245AB21D00AAA7FC /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
+		D97DC282246F26BB00DDA423 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D97DC284246F28C200DDA423 /* pokerBackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pokerBackgroundMusic.mp3; path = ../../../../../Downloads/pokerBackgroundMusic.mp3; sourceTree = "<group>"; };
 		D9ECFE512457931E0029E57F /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		E20BA24224537E3C00E39FE3 /* LMCA_finalproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMCA_finalproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20BA24524537E3C00E39FE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D97DC283246F26BB00DDA423 /* AVFoundation.framework in Frameworks */,
 				572FC77C460A08F41BB5DE38 /* Pods_LMCA_finalproject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +132,7 @@
 				E20BA25624537E3D00E39FE3 /* Info.plist */,
 				E20BA24E24537E3C00E39FE3 /* LMCA_finalproject.xcdatamodeld */,
 				E2CB7D142461D15D00D7510A /* GoogleService-Info.plist */,
+				D97DC284246F28C200DDA423 /* pokerBackgroundMusic.mp3 */,
 			);
 			path = LMCA_finalproject;
 			sourceTree = "<group>";
@@ -134,6 +140,7 @@
 		E7D9F307C4B6244B6141C62F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D97DC282246F26BB00DDA423 /* AVFoundation.framework */,
 				20EB5E6DBF5EFFA010552545 /* Pods_LMCA_finalproject.framework */,
 			);
 			name = Frameworks;
@@ -199,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D97DC285246F28C200DDA423 /* pokerBackgroundMusic.mp3 in Resources */,
 				E20BA25524537E3D00E39FE3 /* LaunchScreen.storyboard in Resources */,
 				E2CB7D152461D15E00D7510A /* GoogleService-Info.plist in Resources */,
 				E20BA25224537E3D00E39FE3 /* Assets.xcassets in Resources */,

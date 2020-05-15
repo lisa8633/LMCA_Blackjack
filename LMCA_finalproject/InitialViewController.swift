@@ -9,12 +9,14 @@
 import UIKit
 import CoreData
 import FirebaseDatabase
+import AVFoundation
 
 class InitialViewController: UIViewController {
 
     var players = [NSManagedObject]()
     var username : String!
     var currentBalance : Int64!
+    var backgroundMusic = AVAudioPlayer()
     
     @IBOutlet weak var pictureWidth: NSLayoutConstraint!
     
@@ -26,6 +28,16 @@ class InitialViewController: UIViewController {
         //pictureWidth.constant = self.view.bounds.width * 3 - 850
         //let ref = Database.database().reference()
         //ref.child("Scoreboard").setValue(["coins" : currentBalance, "name": username])
+        
+        let path = Bundle.main.path(forResource: "pokerBackgroundMusic.mp3", ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+
+        backgroundMusic = try! AVAudioPlayer(contentsOf: url)
+        backgroundMusic.prepareToPlay()
+        backgroundMusic.numberOfLoops = -1
+        backgroundMusic.play()
+
+        
     }
     
     
