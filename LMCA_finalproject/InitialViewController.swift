@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import FirebaseDatabase
 
 class InitialViewController: UIViewController {
 
@@ -23,12 +24,17 @@ class InitialViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         pictureWidth.constant = self.view.bounds.width * 2.4 - 620
-
+        //let ref = Database.database().reference()
+        //ref.child("Scoreboard").setValue(["coins" : currentBalance, "name": username])
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        let ref = Database.database().reference()
+        let room = ref.child("Scoreboard").childByAutoId()
+        room.setValue(["coins" : currentBalance, "name": username])
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return

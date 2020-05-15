@@ -59,7 +59,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="MSo-Dk-uC5" kind="show" identifier="toJoinMulti" id="CPE-e3-wZF"/>
+                                    <segue destination="FcE-Dj-Sw8" kind="show" id="gRZ-Gl-j4m"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa6-tb-n6R">
@@ -2436,50 +2436,103 @@
             </objects>
             <point key="canvasLocation" x="1722" y="1124"/>
         </scene>
-        <!--Multi Start View Controller-->
+        <!--Scoreboard Table View Controller-->
+        <scene sceneID="bq6-yR-DLk">
+            <objects>
+                <tableViewController id="FcE-Dj-Sw8" customClass="ScoreboardTableViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gn7-Aj-kQf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="player" id="Pig-oz-2H1" customClass="HeadlineTableViewCell" customModule="LMCA_finalproject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="62"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pig-oz-2H1" id="9VR-XW-PDR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VCh-2q-vQn">
+                                            <rect key="frame" x="21" y="-4" width="372" height="70"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep0-FE-Okb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="61.5" height="70"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4WX-fG-cXn">
+                                                    <rect key="frame" x="69.5" y="0.0" width="101" height="70"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="101" id="FkM-u7-rda"/>
+                                                    </constraints>
+                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coins: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcA-oh-bxT">
+                                                    <rect key="frame" x="178.5" y="0.0" width="68.5" height="70"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YJI-jR-GV1">
+                                                    <rect key="frame" x="255" y="0.0" width="117" height="70"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="VCh-2q-vQn" firstAttribute="centerY" secondItem="9VR-XW-PDR" secondAttribute="centerY" id="0kB-jr-ZkV"/>
+                                        <constraint firstItem="VCh-2q-vQn" firstAttribute="leading" secondItem="9VR-XW-PDR" secondAttribute="leadingMargin" constant="1" id="Iqb-ro-jzJ"/>
+                                        <constraint firstItem="VCh-2q-vQn" firstAttribute="top" secondItem="9VR-XW-PDR" secondAttribute="topMargin" constant="-15" id="bhd-j5-40m"/>
+                                        <constraint firstItem="VCh-2q-vQn" firstAttribute="centerX" secondItem="9VR-XW-PDR" secondAttribute="centerX" id="iqE-x8-28n"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="player"/>
+                                <connections>
+                                    <outlet property="coinLabel" destination="xcA-oh-bxT" id="vt1-iI-SEL"/>
+                                    <outlet property="coins" destination="YJI-jR-GV1" id="0Zm-JJ-fhX"/>
+                                    <outlet property="name" destination="4WX-fG-cXn" id="R6t-51-SSm"/>
+                                    <outlet property="nameLabel" destination="Ep0-FE-Okb" id="sQ7-u1-ygs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FcE-Dj-Sw8" id="ECf-Eu-eWy"/>
+                            <outlet property="delegate" destination="FcE-Dj-Sw8" id="EvH-7v-69D"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="BEH-ml-KFX"/>
+                    <connections>
+                        <outlet property="PlayerTableView" destination="gn7-Aj-kQf" id="VcB-Bs-saW"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6W-m1-EeK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="370"/>
+        </scene>
+        <!--Scoreboard View Controller-->
         <scene sceneID="LZy-0D-KrA">
             <objects>
-                <viewController id="MSo-Dk-uC5" customClass="MultiStartViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MSo-Dk-uC5" customClass="ScoreboardViewController" customModule="LMCA_finalproject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YhQ-Bs-VGL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3U-Vr-Vuo">
-                                <rect key="frame" x="170" y="225" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New Room"/>
-                                <connections>
-                                    <action selector="newRoom:" destination="MSo-Dk-uC5" eventType="touchUpInside" id="Ooh-IV-ESW"/>
-                                    <segue destination="fTZ-gQ-dT7" kind="show" identifier="toMulti" id="ave-Hc-rBx"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Code Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Gv-j3-GYy">
-                                <rect key="frame" x="118" y="388" width="178" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cs1-Rg-ask">
-                                <rect key="frame" x="171" y="331" width="72" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Join Room"/>
-                                <connections>
-                                    <action selector="joinRoom:" destination="MSo-Dk-uC5" eventType="touchUpInside" id="XS0-Oz-sIs"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="x0F-j4-4Te"/>
                     </view>
                     <navigationItem key="navigationItem" id="Eti-Ze-F60"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <connections>
-                        <outlet property="roomCode" destination="8Gv-j3-GYy" id="AlE-a2-Bgg"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hva-3U-R1F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721.7391304347827" y="455.35714285714283"/>
+            <point key="canvasLocation" x="2532" y="-290"/>
         </scene>
         <!--Multiplayer View Controller-->
         <scene sceneID="JCm-kn-5Wy">

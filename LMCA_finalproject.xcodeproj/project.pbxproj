@@ -28,6 +28,7 @@
 		E20BA25524537E3D00E39FE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20BA25324537E3D00E39FE3 /* LaunchScreen.storyboard */; };
 		E20BA25D2453889600E39FE3 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA25C2453889600E39FE3 /* Card.swift */; };
 		E20BA25F245388A300E39FE3 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BA25E245388A300E39FE3 /* Deck.swift */; };
+		E23C2C0B246E081D00ECD87F /* ScoreboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C2C0A246E081D00ECD87F /* ScoreboardTableViewController.swift */; };
 		E2CB7D152461D15E00D7510A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2CB7D142461D15D00D7510A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		E20BA25624537E3D00E39FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E20BA25C2453889600E39FE3 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E20BA25E245388A300E39FE3 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		E23C2C0A246E081D00ECD87F /* ScoreboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardTableViewController.swift; sourceTree = "<group>"; };
 		E2CB7D142461D15D00D7510A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				D599A544245AB21D00AAA7FC /* Dealer.swift */,
 				D599A540245A9F7200AAA7FC /* MultiplayerViewController.swift */,
 				D599A50C2454C9CB00AAA7FC /* MultiStartViewController.swift */,
+				E23C2C0A246E081D00ECD87F /* ScoreboardTableViewController.swift */,
 				D9ECFE512457931E0029E57F /* RulesViewController.swift */,
 				E20BA25C2453889600E39FE3 /* Card.swift */,
 				E20BA25E245388A300E39FE3 /* Deck.swift */,
@@ -257,6 +260,7 @@
 				E20BA25F245388A300E39FE3 /* Deck.swift in Sources */,
 				E20BA24A24537E3C00E39FE3 /* InitialViewController.swift in Sources */,
 				D599A53F245A8D6800AAA7FC /* CardGraphics.swift in Sources */,
+				E23C2C0B246E081D00ECD87F /* ScoreboardTableViewController.swift in Sources */,
 				E20BA24624537E3C00E39FE3 /* AppDelegate.swift in Sources */,
 				D599A543245AB21000AAA7FC /* User.swift in Sources */,
 				D9ECFE522457931E0029E57F /* RulesViewController.swift in Sources */,
