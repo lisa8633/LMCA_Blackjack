@@ -33,6 +33,7 @@ class InitialViewController: UIViewController {
         let url = URL(fileURLWithPath: path)
 
         backgroundMusic = try! AVAudioPlayer(contentsOf: url)
+        backgroundMusic.volume = 0.25
         backgroundMusic.prepareToPlay()
         backgroundMusic.numberOfLoops = -1
         backgroundMusic.play()

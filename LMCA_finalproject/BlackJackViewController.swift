@@ -9,9 +9,13 @@
 import UIKit
 import CoreData
 import FirebaseDatabase
+import AVFoundation
 
 
 class BlackJackViewController: UIViewController {
+    
+    
+    
     //Card Back
     @IBOutlet weak var deckTop: CardGraphics!
     //1
@@ -316,6 +320,10 @@ class BlackJackViewController: UIViewController {
     var insuranceBet = 0
     var tempVal = [Int]()
 
+    var chipSound = AVAudioPlayer()
+    var cardPlace = AVAudioPlayer()
+    var cardTake = AVAudioPlayer()
+    
     @IBOutlet weak var oneBet: UIButton!
     @IBOutlet weak var fiveBet: UIButton!
     @IBOutlet weak var tenBet: UIButton!
@@ -545,6 +553,31 @@ class BlackJackViewController: UIViewController {
         
     }
     
+    func playChipSound(){
+        let path = Bundle.main.path(forResource: "chipSound.mp3", ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+        
+        chipSound = try! AVAudioPlayer(contentsOf: url)
+        chipSound.play()
+    }
+    
+    func playCardPlace(loops: Int){
+        let path = Bundle.main.path(forResource: "cardPlace1.wav", ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+        
+        cardPlace = try! AVAudioPlayer(contentsOf: url)
+        cardPlace.play()
+    }
+    
+    func playCardTake(loops:Int){
+        let path = Bundle.main.path(forResource: "cardSlide8.wav", ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+        
+        
+        cardTake = try! AVAudioPlayer(contentsOf: url)
+        cardTake.numberOfLoops = loops
+        cardTake.play()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -671,6 +704,7 @@ class BlackJackViewController: UIViewController {
             currentBalance -= 1
             totalBet.text = "Bet: \(userBet)"
             balance.text = "Balance: \(currentBalance!)"
+            playChipSound()
         }
     }
     
@@ -680,6 +714,7 @@ class BlackJackViewController: UIViewController {
             currentBalance -= 5
             totalBet.text = "Bet: \(userBet)"
             balance.text = "Balance: \(currentBalance!)"
+            playChipSound()
         }
     }
     
@@ -689,6 +724,7 @@ class BlackJackViewController: UIViewController {
             currentBalance -= 10
             totalBet.text = "Bet: \(userBet)"
             balance.text = "Balance: \(currentBalance!)"
+            playChipSound()
         }
     }
     
@@ -698,6 +734,7 @@ class BlackJackViewController: UIViewController {
             currentBalance -= 25
             totalBet.text = "Bet: \(userBet)"
             balance.text = "Balance: \(currentBalance!)"
+            playChipSound()
         }
     }
     
@@ -707,6 +744,7 @@ class BlackJackViewController: UIViewController {
             currentBalance -= 100
             totalBet.text = "Bet: \(userBet)"
             balance.text = "Balance: $\(currentBalance!)"
+            playChipSound()
         }
     }
     func userWinsRound(delay: Int){
@@ -723,9 +761,11 @@ class BlackJackViewController: UIViewController {
         self.doubleDown.alpha = 0
         self.splitAndInsurance.alpha = 0
         
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay-2)) {
             self.animateWinnerDisplay(winner: "Player Wins!")
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(2)) {
+                self.playCardTake(loops: self.userCardsDealt + self.dealerCardsDealt)
                 self.dealtAlready = false
                 self.deck = Deck(numofDeck: 6)
                 self.deck.shuffle()
@@ -758,9 +798,11 @@ class BlackJackViewController: UIViewController {
         self.doubleDown.alpha = 0
         self.splitAndInsurance.alpha = 0
         
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + Double(3)) {
             self.animateWinnerDisplay(winner: "Player Blackjack!")
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(2)) {
+                self.playCardTake(loops: self.userCardsDealt + self.dealerCardsDealt)
                 self.dealtAlready = false
                 self.deck = Deck(numofDeck: 6)
                 self.deck.shuffle()
@@ -795,9 +837,11 @@ class BlackJackViewController: UIViewController {
         self.doubleDown.alpha = 0
         self.splitAndInsurance.alpha = 0
         
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay-2)) {
             self.animateWinnerDisplay(winner: "Dealer Wins")
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(2)) {
+                self.playCardTake(loops: self.userCardsDealt + self.dealerCardsDealt)
                 self.dealtAlready = false
                 self.deck = Deck(numofDeck: 6)
                 self.deck.shuffle()
@@ -836,6 +880,7 @@ class BlackJackViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + Double(delay-2)) {
             self.animateWinnerDisplay(winner: "Push!")
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(2)) {
+                self.playCardTake(loops: self.userCardsDealt + self.dealerCardsDealt)
                 self.dealtAlready = false
                 self.deck = Deck(numofDeck: 6)
                 self.deck.shuffle()
@@ -883,6 +928,7 @@ class BlackJackViewController: UIViewController {
                 print(user.cards[0].getSymbol())
                 print(user.cards[1].getSymbol())
                 print("Player Hand Total \(user.getValue())")
+                playCardPlace(loops: 4)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.9) {
                     self.userTotalView.alpha = 0.7
                     self.userTotalLabel.text = "\(self.user.getValue())"
@@ -951,6 +997,7 @@ class BlackJackViewController: UIViewController {
                 cardsDealt += 1
                 print(user.cards[2].getSymbol())
                 print("Player Hand Total \(user.getValue())")
+                playCardPlace(loops: 0)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     self.userTotalLabel.text = "\(self.user.getValue())"
                 }
@@ -987,6 +1034,7 @@ class BlackJackViewController: UIViewController {
         
         userCardsDealt += 1
         animateCardUser(user: user, cardNum: userCardsDealt)
+        playCardPlace(loops: 0)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.userTotalLabel.text = "\(self.user.getValue())"
         }
