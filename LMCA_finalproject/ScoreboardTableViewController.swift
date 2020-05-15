@@ -36,9 +36,9 @@ class ScoreboardTableViewController: UITableViewController {
         
         ref.child("Scoreboard").queryOrderedByKey().observe(.childAdded, with: { (snapshot) in
                 let results = snapshot.value as? [String : AnyObject]
-                print(results)
+                //print(results)
                 let name = results?["name"]
-            print(name)
+                //print(name)
                 let coins = results?["coins"]
                 let play = P(name: name as! String, coins: coins as! Double?)
                 self.players.append(play)
@@ -46,7 +46,7 @@ class ScoreboardTableViewController: UITableViewController {
                     self.PlayerTableView.reloadData()
                 }
         })
-        print(players)
+        //print(players)
     }
     
         
