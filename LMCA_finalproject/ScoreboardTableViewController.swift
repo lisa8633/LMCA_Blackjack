@@ -10,8 +10,9 @@ import UIKit
 import FirebaseDatabase
 import CoreData
 class HeadlineTableViewCell: UITableViewCell{
-    @IBOutlet weak var name: UITextView!
-    @IBOutlet weak var coins: UITextView!
+
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var coins: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var coinLabel: UILabel!
 }
@@ -66,7 +67,7 @@ class ScoreboardTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "player", for: indexPath) as! HeadlineTableViewCell
-
+        players = players.sorted(by: {$0.coins! > $1.coins!})
         let test = players[indexPath.row]
         cell.name?.text = test.name
         cell.coinLabel.text = "Coin: "

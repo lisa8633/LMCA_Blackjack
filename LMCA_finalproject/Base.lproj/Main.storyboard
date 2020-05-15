@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bS4-Lw-KoE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bS4-Lw-KoE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -2535,60 +2535,63 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="player" id="Pig-oz-2H1" customClass="HeadlineTableViewCell" customModule="LMCA_finalproject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="68"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="player" rowHeight="71" id="Pig-oz-2H1" customClass="HeadlineTableViewCell" customModule="LMCA_finalproject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pig-oz-2H1" id="9VR-XW-PDR">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VCh-2q-vQn">
-                                            <rect key="frame" x="21" y="-4" width="372" height="76"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VCh-2q-vQn">
+                                            <rect key="frame" x="10" y="7" width="143.5" height="29"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep0-FE-Okb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="68" height="76"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="72.5" height="29"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nve-lX-k7b">
+                                                    <rect key="frame" x="88.5" y="0.0" width="55" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="DTX-zw-WQF">
+                                            <rect key="frame" x="234" y="7" width="160" height="29"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Coins: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcA-oh-bxT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="85" height="29"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="se2-N4-XFr">
+                                                    <rect key="frame" x="103" y="0.0" width="57" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4WX-fG-cXn">
-                                                    <rect key="frame" x="76" y="0.0" width="101" height="76"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="101" id="FkM-u7-rda"/>
-                                                    </constraints>
-                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coins: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcA-oh-bxT">
-                                                    <rect key="frame" x="185" y="0.0" width="68.5" height="76"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YJI-jR-GV1">
-                                                    <rect key="frame" x="261.5" y="0.0" width="110.5" height="76"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="160" id="Gmd-hI-QO1"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="VCh-2q-vQn" firstAttribute="centerY" secondItem="9VR-XW-PDR" secondAttribute="centerY" id="0kB-jr-ZkV"/>
-                                        <constraint firstItem="VCh-2q-vQn" firstAttribute="leading" secondItem="9VR-XW-PDR" secondAttribute="leadingMargin" constant="1" id="Iqb-ro-jzJ"/>
-                                        <constraint firstItem="VCh-2q-vQn" firstAttribute="top" secondItem="9VR-XW-PDR" secondAttribute="topMargin" constant="-15" id="bhd-j5-40m"/>
-                                        <constraint firstItem="VCh-2q-vQn" firstAttribute="centerX" secondItem="9VR-XW-PDR" secondAttribute="centerX" id="iqE-x8-28n"/>
+                                        <constraint firstItem="VCh-2q-vQn" firstAttribute="top" secondItem="9VR-XW-PDR" secondAttribute="top" constant="7" id="MBs-1I-0Ud"/>
+                                        <constraint firstItem="DTX-zw-WQF" firstAttribute="top" secondItem="9VR-XW-PDR" secondAttribute="top" constant="7" id="chv-f1-vBm"/>
+                                        <constraint firstAttribute="trailing" secondItem="DTX-zw-WQF" secondAttribute="trailing" constant="20" id="jHA-uz-Mvj"/>
+                                        <constraint firstItem="VCh-2q-vQn" firstAttribute="leading" secondItem="9VR-XW-PDR" secondAttribute="leading" constant="10" id="uas-my-btJ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="player"/>
                                 <connections>
                                     <outlet property="coinLabel" destination="xcA-oh-bxT" id="vt1-iI-SEL"/>
-                                    <outlet property="coins" destination="YJI-jR-GV1" id="0Zm-JJ-fhX"/>
-                                    <outlet property="name" destination="4WX-fG-cXn" id="R6t-51-SSm"/>
+                                    <outlet property="coins" destination="se2-N4-XFr" id="HXx-8a-VFS"/>
+                                    <outlet property="name" destination="nve-lX-k7b" id="Kg0-hL-e3A"/>
                                     <outlet property="nameLabel" destination="Ep0-FE-Okb" id="sQ7-u1-ygs"/>
                                 </connections>
                             </tableViewCell>
