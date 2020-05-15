@@ -314,6 +314,7 @@ class BlackJackViewController: UIViewController {
     var dealtAlready = false // Checks if user has been dealt initial cards
     var cardsDealt = 0
     var insuranceBet = 0
+    var tempVal = [Int]()
 
     @IBOutlet weak var oneBet: UIButton!
     @IBOutlet weak var fiveBet: UIButton!
@@ -327,6 +328,11 @@ class BlackJackViewController: UIViewController {
     @IBOutlet weak var resetBet: UIButton!
     @IBOutlet weak var helpButton: UIButton!
     
+    
+    @IBOutlet weak var dealerTotalView: CardGraphics!
+    @IBOutlet weak var dealerTotalLabel: UILabel!
+    @IBOutlet weak var userTotalLabel: UILabel!
+    @IBOutlet weak var userTotalView: CardGraphics!
     
     @IBOutlet weak var winnerLabel: UILabel!
     @IBOutlet weak var winnerLabelX: NSLayoutConstraint!
@@ -601,6 +607,9 @@ class BlackJackViewController: UIViewController {
         
         winnerLabel.text = ""
         
+        userTotalView.alpha = 0
+        dealerTotalView.alpha = 0
+        
         deck.shuffle()
     }
 
@@ -874,6 +883,10 @@ class BlackJackViewController: UIViewController {
                 print(user.cards[0].getSymbol())
                 print(user.cards[1].getSymbol())
                 print("Player Hand Total \(user.getValue())")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.9) {
+                    self.userTotalView.alpha = 0.7
+                    self.userTotalLabel.text = "\(self.user.getValue())"
+                }
                 dealer = Dealer(card1: deck.deal(), card2: deck.deal())
                 print(dealer.cards[0].getSymbol())
                 print(dealer.cards[1].getSymbol())
@@ -938,6 +951,9 @@ class BlackJackViewController: UIViewController {
                 cardsDealt += 1
                 print(user.cards[2].getSymbol())
                 print("Player Hand Total \(user.getValue())")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.userTotalLabel.text = "\(self.user.getValue())"
+                }
                 
                 userCardsDealt += 1
                 animateCardUser(user: user, cardNum: userCardsDealt)
@@ -971,6 +987,9 @@ class BlackJackViewController: UIViewController {
         
         userCardsDealt += 1
         animateCardUser(user: user, cardNum: userCardsDealt)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.userTotalLabel.text = "\(self.user.getValue())"
+        }
         
         print("Player Hand Total \(user.getValue())")
         if user.isBust(){
@@ -1004,6 +1023,8 @@ class BlackJackViewController: UIViewController {
         
         if dealerCardsDealt == 2 {
             flipCard(cardNum : 10)
+            dealerTotalView.alpha = 0.7
+            dealerTotalLabel.text = "\(dealer.getValue())"
         }
         
         //dealer's turn
@@ -1020,6 +1041,7 @@ class BlackJackViewController: UIViewController {
             
             dealerCardsDealt += 1
             animateCardDealer(dealer: dealer, cardNum: dealerCardsDealt)
+            tempVal.append(dealer.getValue())
             
             print("Dealer Hand Total \(dealer.getValue())")
             if dealer.isBust(){
@@ -1400,7 +1422,9 @@ class BlackJackViewController: UIViewController {
                 self.card12Horizontal.constant += self.view.bounds.height * 0.07 - 3
                 self.view.layoutIfNeeded()
             }, completion: {finished in
-                if finished { self.flipCard(cardNum: cardNum + 9) }
+                if finished { self.flipCard(cardNum: cardNum + 9)
+                    self.dealerTotalLabel.text = "\(self.tempVal[cardNum-3])"
+                }
             })
         }
         else if cardNum  == 4 {
@@ -1414,7 +1438,9 @@ class BlackJackViewController: UIViewController {
                 self.card13Horizontal.constant += self.view.bounds.height * 0.07 - 3
                 self.view.layoutIfNeeded()
             }, completion: {finished in
-                if finished { self.flipCard(cardNum: cardNum + 9) }
+                if finished { self.flipCard(cardNum: cardNum + 9)
+                    self.dealerTotalLabel.text = "\(self.tempVal[cardNum-3])"
+                }
             })
         }
         else if cardNum  == 5 {
@@ -1430,7 +1456,9 @@ class BlackJackViewController: UIViewController {
                 self.card14Horizontal.constant += 4 * (self.view.bounds.height * 0.07 - 3) / 3
                 self.view.layoutIfNeeded()
             }, completion: {finished in
-                if finished { self.flipCard(cardNum: cardNum + 9) }
+                if finished { self.flipCard(cardNum: cardNum + 9)
+                    self.dealerTotalLabel.text = "\(self.tempVal[cardNum-3])"
+                }
             })
         }
         else if cardNum  == 6 {
@@ -1447,7 +1475,9 @@ class BlackJackViewController: UIViewController {
                 self.card15Horizontal.constant += 5 * (self.view.bounds.height * 0.07 - 3) / 3
                 self.view.layoutIfNeeded()
             }, completion: {finished in
-                if finished { self.flipCard(cardNum: cardNum + 9) }
+                if finished { self.flipCard(cardNum: cardNum + 9)
+                    self.dealerTotalLabel.text = "\(self.tempVal[cardNum-3])"
+                }
             })
         }
         else if cardNum  == 7 {
@@ -1465,7 +1495,9 @@ class BlackJackViewController: UIViewController {
                 self.card16Horizontal.constant += 6 * (self.view.bounds.height * 0.07 - 3) / 3
                 self.view.layoutIfNeeded()
             }, completion: {finished in
-                if finished { self.flipCard(cardNum: cardNum + 9) }
+                if finished { self.flipCard(cardNum: cardNum + 9)
+                    self.dealerTotalLabel.text = "\(self.tempVal[cardNum-3])"
+                }
             })
         }
         else if cardNum  == 8 {
@@ -1484,7 +1516,9 @@ class BlackJackViewController: UIViewController {
                 self.card17Horizontal.constant += 7 * (self.view.bounds.height * 0.07 - 3) / 3
                 self.view.layoutIfNeeded()
             }, completion: {finished in
-                if finished { self.flipCard(cardNum: cardNum + 9) }
+                if finished { self.flipCard(cardNum: cardNum + 9)
+                    self.dealerTotalLabel.text = "\(self.tempVal[cardNum-3])"
+                }
             })
         }
         else if cardNum  == 9 {
@@ -1504,7 +1538,9 @@ class BlackJackViewController: UIViewController {
                 self.card18Horizontal.constant += 8 * (self.view.bounds.height * 0.07 - 3) / 3
                 self.view.layoutIfNeeded()
             }, completion: {finished in
-                if finished { self.flipCard(cardNum: cardNum + 9) }
+                if finished { self.flipCard(cardNum: cardNum + 9)
+                    self.dealerTotalLabel.text = "\(self.tempVal[cardNum-3])"
+                }
             })
         }
     }
@@ -1685,6 +1721,11 @@ class BlackJackViewController: UIViewController {
         
         userCardsDealt = 0
         dealerCardsDealt = 0
+        
+        userTotalView.alpha = 0
+        dealerTotalView.alpha = 0
+        
+        tempVal.removeAll()
     }
     
     func animateWinnerDisplay(winner: String) {

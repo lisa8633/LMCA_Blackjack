@@ -13,10 +13,11 @@ class CardGraphics: UIView {
 
     @IBInspectable var isBack: Bool = false
     @IBInspectable var BackColor: UIColor = UIColor.purple
+    @IBInspectable var strokeColor1: UIColor = UIColor.white
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
-        let strokeColor1 = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
+        //let strokeColor1 = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
         
         var lineWidth: CGFloat = 1.0
         

@@ -1883,6 +1883,56 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="3" height="2"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfu-aB-RGx" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
+                                <rect key="frame" x="379" y="54" width="25" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieR-nL-8i3">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ieR-nL-8i3" secondAttribute="trailing" id="0V2-yt-6CG"/>
+                                    <constraint firstAttribute="width" constant="25" id="RZD-pP-b8N"/>
+                                    <constraint firstItem="ieR-nL-8i3" firstAttribute="top" secondItem="lfu-aB-RGx" secondAttribute="top" id="dRW-Lk-iLq"/>
+                                    <constraint firstAttribute="height" constant="25" id="h2j-4t-E3S"/>
+                                    <constraint firstAttribute="bottom" secondItem="ieR-nL-8i3" secondAttribute="bottom" id="tzu-bl-dNE"/>
+                                    <constraint firstItem="ieR-nL-8i3" firstAttribute="leading" secondItem="lfu-aB-RGx" secondAttribute="leading" id="zg0-MO-CiT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor1">
+                                        <color key="value" red="0.48790043068979894" green="0.27735330855828144" blue="0.036641268194715193" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZC-ih-qD8" customClass="CardGraphics" customModule="LMCA_finalproject" customModuleProvider="target">
+                                <rect key="frame" x="379" y="717" width="25" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6T-Sy-EU0">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="N6T-Sy-EU0" firstAttribute="leading" secondItem="cZC-ih-qD8" secondAttribute="leading" id="Mp6-Wm-d4v"/>
+                                    <constraint firstAttribute="bottom" secondItem="N6T-Sy-EU0" secondAttribute="bottom" id="UYN-6r-9Tg"/>
+                                    <constraint firstAttribute="height" constant="25" id="bBG-Cy-zxM"/>
+                                    <constraint firstItem="N6T-Sy-EU0" firstAttribute="top" secondItem="cZC-ih-qD8" secondAttribute="top" id="o5b-g5-ySH"/>
+                                    <constraint firstAttribute="width" constant="25" id="o7P-RZ-Aqf"/>
+                                    <constraint firstAttribute="trailing" secondItem="N6T-Sy-EU0" secondAttribute="trailing" id="wGL-ei-dYZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="strokeColor1">
+                                        <color key="value" red="0.0" green="0.35332833899999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -1921,12 +1971,15 @@
                             <constraint firstItem="VPe-C2-tEG" firstAttribute="centerX" secondItem="wzH-XP-y8A" secondAttribute="centerX" id="P5c-y4-QTf"/>
                             <constraint firstItem="FiI-UJ-Vl1" firstAttribute="top" secondItem="gtr-Eo-94P" secondAttribute="bottom" constant="20" id="PPN-mT-TWp"/>
                             <constraint firstItem="c3j-Us-CD3" firstAttribute="centerY" secondItem="wzH-XP-y8A" secondAttribute="centerY" constant="-75" id="STU-ca-Mj9"/>
+                            <constraint firstItem="lfu-aB-RGx" firstAttribute="top" secondItem="sjU-yp-Z5e" secondAttribute="top" constant="10" id="TRi-LA-Sp7"/>
+                            <constraint firstItem="gtr-Eo-94P" firstAttribute="top" secondItem="cZC-ih-qD8" secondAttribute="bottom" constant="10" id="Tqv-Jx-z5w"/>
                             <constraint firstItem="K70-fR-UZr" firstAttribute="centerX" secondItem="wzH-XP-y8A" secondAttribute="centerX" id="U5n-wW-dyH"/>
                             <constraint firstItem="3fN-bw-pnP" firstAttribute="width" secondItem="3fN-bw-pnP" secondAttribute="height" multiplier="2:3" id="UfW-u1-eLf"/>
                             <constraint firstItem="c3j-Us-CD3" firstAttribute="centerX" secondItem="wzH-XP-y8A" secondAttribute="centerX" id="Ugy-mf-8fa"/>
                             <constraint firstItem="vOs-qZ-aNy" firstAttribute="centerX" secondItem="wzH-XP-y8A" secondAttribute="centerX" id="UvK-dB-nbM"/>
                             <constraint firstItem="q8s-xa-gw8" firstAttribute="centerY" secondItem="wzH-XP-y8A" secondAttribute="centerY" constant="-75" id="VQP-D6-Uiw"/>
                             <constraint firstItem="Qee-4x-oBO" firstAttribute="centerX" secondItem="wzH-XP-y8A" secondAttribute="centerX" id="Vb3-1A-6pS"/>
+                            <constraint firstItem="sjU-yp-Z5e" firstAttribute="trailing" secondItem="lfu-aB-RGx" secondAttribute="trailing" constant="10" id="XBU-BI-c6G"/>
                             <constraint firstItem="mi8-m7-0YJ" firstAttribute="centerX" secondItem="wzH-XP-y8A" secondAttribute="centerX" id="YKv-z4-LEM"/>
                             <constraint firstItem="Ye5-pT-euK" firstAttribute="centerY" secondItem="wzH-XP-y8A" secondAttribute="centerY" constant="-75" id="YbD-9e-7hr"/>
                             <constraint firstItem="FiI-UJ-Vl1" firstAttribute="bottom" secondItem="sjU-yp-Z5e" secondAttribute="bottom" id="aKN-aD-wfW"/>
@@ -1944,6 +1997,7 @@
                             <constraint firstItem="ZdE-k9-oQl" firstAttribute="leading" secondItem="mi8-m7-0YJ" secondAttribute="trailing" constant="20" id="huo-QA-umg"/>
                             <constraint firstItem="i2R-SH-T8U" firstAttribute="centerX" secondItem="wzH-XP-y8A" secondAttribute="centerX" id="hwr-8S-dXg"/>
                             <constraint firstItem="zll-0Q-385" firstAttribute="centerY" secondItem="wzH-XP-y8A" secondAttribute="centerY" constant="-75" id="juf-yh-eyY"/>
+                            <constraint firstItem="sjU-yp-Z5e" firstAttribute="trailing" secondItem="cZC-ih-qD8" secondAttribute="trailing" constant="10" id="k1Z-9Z-tv4"/>
                             <constraint firstItem="Fz3-TE-SY2" firstAttribute="centerX" secondItem="wzH-XP-y8A" secondAttribute="centerX" id="kmH-67-7OA"/>
                             <constraint firstItem="Fz3-TE-SY2" firstAttribute="centerY" secondItem="wzH-XP-y8A" secondAttribute="centerY" constant="-75" id="lsv-gn-KsP"/>
                             <constraint firstItem="uvQ-M9-THw" firstAttribute="centerX" secondItem="wzH-XP-y8A" secondAttribute="centerX" id="m74-RO-8HX"/>
@@ -2190,6 +2244,8 @@
                         <outlet property="containerView9Height" destination="sOi-qi-rJX" id="YM2-PI-MJZ"/>
                         <outlet property="containerViewHeight" destination="6cN-nA-Wtx" id="omq-wZ-Awi"/>
                         <outlet property="dealAndHit" destination="jZZ-Zh-bMQ" id="eRh-Wh-ey6"/>
+                        <outlet property="dealerTotalLabel" destination="ieR-nL-8i3" id="RI5-kZ-mil"/>
+                        <outlet property="dealerTotalView" destination="lfu-aB-RGx" id="UK8-Vt-Vkj"/>
                         <outlet property="deckTop" destination="mi8-m7-0YJ" id="im2-oc-Ccy"/>
                         <outlet property="deckTopHeight" destination="LEL-bN-OVP" id="TEp-uH-lbb"/>
                         <outlet property="deckTopHorizontal" destination="YKv-z4-LEM" id="Y8Z-Fh-ehh"/>
@@ -2227,6 +2283,8 @@
                         <outlet property="testVertical" destination="F5k-hg-Ut2" id="uY9-qM-9pW"/>
                         <outlet property="totalBet" destination="i2R-SH-T8U" id="i5F-gF-l17"/>
                         <outlet property="twentyFiveBet" destination="HIh-rk-qxQ" id="JKx-G7-iDr"/>
+                        <outlet property="userTotalLabel" destination="N6T-Sy-EU0" id="G2k-zj-cgJ"/>
+                        <outlet property="userTotalView" destination="cZC-ih-qD8" id="U4m-ZA-oyy"/>
                         <outlet property="winnerLabel" destination="tMu-xl-K8P" id="byP-Po-lhA"/>
                         <outlet property="winnerLabelX" destination="zuP-yJ-PPJ" id="2RN-DJ-Ehw"/>
                         <outlet property="winnerLabelY" destination="3cd-fN-xfi" id="VYz-lb-pdg"/>
@@ -2451,23 +2509,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="player" id="Pig-oz-2H1" customClass="HeadlineTableViewCell" customModule="LMCA_finalproject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="62.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pig-oz-2H1" id="9VR-XW-PDR">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="62.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VCh-2q-vQn">
-                                            <rect key="frame" x="21" y="-4" width="372" height="70.5"/>
+                                            <rect key="frame" x="21" y="-4" width="372" height="71"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ep0-FE-Okb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="61.5" height="70.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="61.5" height="71"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4WX-fG-cXn">
-                                                    <rect key="frame" x="69.5" y="0.0" width="101" height="70.5"/>
+                                                    <rect key="frame" x="69.5" y="0.0" width="101" height="71"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="101" id="FkM-u7-rda"/>
@@ -2477,13 +2535,13 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coins: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcA-oh-bxT">
-                                                    <rect key="frame" x="178.5" y="0.0" width="68.5" height="70.5"/>
+                                                    <rect key="frame" x="178.5" y="0.0" width="68.5" height="71"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YJI-jR-GV1">
-                                                    <rect key="frame" x="255" y="0.0" width="117" height="70.5"/>
+                                                    <rect key="frame" x="255" y="0.0" width="117" height="71"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -3019,7 +3077,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebd-Wf-5zx">
                                 <rect key="frame" x="25" y="159" width="364" height="720"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">Once the initial bet has been made, click deal or tap the screen to deal cards.   The player will be dealt two face up cards. However, one of the dealer's cards will be hidden.   The objective next is to decide to hit or stand to reach a value higher than the dealer's, but not bust.     </mutableString>
+                                <string key="text">Once the initial bet has been made, click deal or tap the screen to deal cards.   The player will be dealt two face up cards. However, one of the dealer's cards will be hidden.   The objective next is to decide to hit or stand to reach a value higher than the dealer's, but not bust.     </string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -3144,7 +3202,7 @@ However, if your card total reaches above 21, you will lose automatically.  �
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cza-p7-hB5">
                                 <rect key="frame" x="25" y="159" width="364" height="720"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">Whoever has the highest score between the dealer and player wins. If there is a tie (push), then the player will take their bet back.  If the dealer goes above 21 and you have not, then the player will win. Blackjack, a natural 21, beats any combination except another Blackjack. It will also beat a non-Blackjack 21.   Winning will double your bet. For example, a $1000 bet will award you an earnings of $1000. A Blackjack has a payout of 3 to 2. Therefore a $1000 bet will ward you an earnings of $1500.  </mutableString>
+                                <string key="text">Whoever has the highest score between the dealer and player wins. If there is a tie (push), then the player will take their bet back.  If the dealer goes above 21 and you have not, then the player will win. Blackjack, a natural 21, beats any combination except another Blackjack. It will also beat a non-Blackjack 21.   Winning will double your bet. For example, a $1000 bet will award you an earnings of $1000. A Blackjack has a payout of 3 to 2. Therefore a $1000 bet will ward you an earnings of $1500.  </string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
