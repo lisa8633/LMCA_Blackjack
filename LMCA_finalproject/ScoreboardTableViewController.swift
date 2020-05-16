@@ -19,15 +19,19 @@ class HeadlineTableViewCell: UITableViewCell{
 class P {
     var name: String?
     var coins: Double?
+    var uniqueId: String?
 
-    init(name: String?, coins: Double?) {
+    init(name: String?, coins: Double?, uniqueId: String?) {
         self.name = name
         self.coins = coins
+        self.uniqueId = uniqueId
     }
 }
 class ScoreboardTableViewController: UITableViewController {
     @IBOutlet weak var PlayerTableView: UITableView!
     var players = [P]()
+    var players2 = [NSManagedObject]()
+    var uniqueIdCore : String!
    let ref = Database.database().reference()
     
     override func viewDidLoad() {
@@ -35,16 +39,37 @@ class ScoreboardTableViewController: UITableViewController {
         PlayerTableView.delegate = self
         PlayerTableView.dataSource = self
         
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        //2
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Player")
+        
+        //3
+        do {
+            players2 = try managedContext.fetch(fetchRequest)
+            let player1 = players2[0]
+            self.uniqueIdCore = player1.value(forKey: "uniqueId") as? String
+            
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
         ref.child("Scoreboard").queryOrderedByKey().observe(.childAdded, with: { (snapshot) in
                 let results = snapshot.value as? [String : AnyObject]
                 //print(results)
                 let name = results?["name"]
+                let uniqueId = snapshot.key
                 //print(name)
                 let coins = results?["coins"]
-                let play = P(name: name as! String, coins: coins as! Double?)
+                let play = P(name: name as! String, coins: coins as! Double?, uniqueId: uniqueId as! String)
                 self.players.append(play)
                 DispatchQueue.main.async {
                     self.PlayerTableView.reloadData()
+                    //print(self.players)
                 }
         })
         //print(players)
@@ -69,6 +94,9 @@ class ScoreboardTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "player", for: indexPath) as! HeadlineTableViewCell
         players = players.sorted(by: {$0.coins! > $1.coins!})
         let test = players[indexPath.row]
+        if test.uniqueId == uniqueIdCore {
+            cell.backgroundColor = UIColor.systemGray6
+        }
         cell.name?.text = test.name
         cell.coinLabel.text = "Coin: "
         cell.nameLabel.text = "Name: "
