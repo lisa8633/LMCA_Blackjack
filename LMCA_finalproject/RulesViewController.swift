@@ -11,12 +11,22 @@ import UIKit
 class RulesViewController: UIViewController {
 
     @IBOutlet weak var rulesText: UITextView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        scrollView.isScrollEnabled = true
         //self.rulesText.text = "LMCA Blackjack Rules:\n6-Decks Played\nBlackjack pays 3:2\nPays 2 to 1\nInsuranced Allowed\nDouble Down Allowed\nDealer must draw to 16, stand on 17\n\nThe objective of Blackjack is to beat the dealer. If the player has a card total that is greater than the dealer, but less than or equal to 21, they win.\n\nAces are worth 1 or 11\nFace cards are worth 10\nNumbered cards are worth their respective number\n\n"
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        // Do any additional setup after loading the view
+        scrollView.contentSize = CGSize(width: 500, height: 1000)
     }
     
 
